@@ -15,7 +15,6 @@ const HomeCoverSection = ({ blogs }) => {
         <div
           className="absolute top-0 left-0 bottom-0 right-0 h-70% w-full
             dark:bg-gradient-to-b from-transparent from-40% to-dark
-            light:bg-gradient-to-b from-transparent from-40% to-light
              rounded-xl z-0
             "
         />

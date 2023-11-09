@@ -24,7 +24,7 @@ const HomeCoverSection = ({ blogs }) => {
           blurDataURL={blog.image.blurhashDataUrl}
           alt={blog.title}
           fill
-          className="h-90% w-90%  object-bottom object-cover rounded-2xl -z-10 "
+          className="h-90% w-90%  object-bottom object-cover rounded-xl -z-10 "
           sizes="80vw"
           priority
         />

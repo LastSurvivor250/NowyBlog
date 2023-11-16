@@ -11,7 +11,7 @@ const HomeCoverSection = ({ blogs }) => {
 
   return (
     <div className="w-100% inline-block">
-      <article className="flex flex-row items-start justify-end mx-5 sm:mx-10 relative h-[60vh] sm:h-[85vh]">
+      <article className="flex flex-row items-start justify-end mx-5 sm:mx-10 relative h-[64vh] sm:h-[85vh] ml-7.5rem, mr-7,5rem">
         <div
           className="absolute top-0 left-0 bottom-0 right-0 h-100% w-full
             dark:bg-gradient-to-b from-transparent from-40% to-dark
@@ -60,7 +60,7 @@ const HomeCoverSection = ({ blogs }) => {
           blurDataURL={blog.image.blurhashDataUrl}
           alt={blog.title}
           fill
-          className="h-40% w-h-400%  object-bottom object-cover rounded-medium -z-10 "
+          className="h-40% w-h-400% w-50% object-bottom object-cover rounded-medium -z-10 "
           sizes="100vw"
           priority
         />

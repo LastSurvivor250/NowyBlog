@@ -9,8 +9,8 @@ const BlogLayoutOne = ({ blog }) => {
     <div className="group inline-block overflow-hidden rounded-lg">
       <div
         className="absolute top-0 left-0 bottom-0 right-0 w-full
-            bg-gradient-to-b from-transparent from-0% to-dark/90 rounded-lg z-10
-            "
+          bg-gradient-to-b from-transparent from-0% to-dark/90 rounded-lg z-10
+        "
       />
       <Image
         src={blog.image.filePath.replace("../public", "")}
@@ -19,11 +19,11 @@ const BlogLayoutOne = ({ blog }) => {
         alt={blog.title}
         width={blog.image.width}
         height={blog.image.height}
-        className="w-full  object-bottom object-cover rounded-xl group-hover:scale-105 transition-all ease duration-300"
+        className="w-full   object-cover rounded-xl object-fit:fill group-hover:scale-105 transition-all ease duration-300"
         sizes="(max-width: 1180px) 100vw, 50vw"
       />
 
-      <div className="w-full absolute bottom-0 p-4 xs:p-6 sm:p-10 z-20">
+      <div className="absolute bottom-0 p-4 xs:p-6 sm:p-10 z-20 position-absolute top:0">
         <Tag
           link={`/categories/${slug(blog.tags[0])}`}
           name={blog.tags[0]}

@@ -8,7 +8,7 @@ const BlogLayoutFour = ({ blog }) => {
     <div className="z-index-3 group grid grid-rows-12   gap-4 items-center text-dark dark:text-light">
       <Link
         href={blog.url}
-        className=" row-span-12   lg:col-span-4 h-full rounded-xl overflow-hidden"
+        className=" row-span-12   lg:col-span-4 h-full overflow-hidden"
       >
         <Image
           src={blog.image.filePath.replace("../public", "")}

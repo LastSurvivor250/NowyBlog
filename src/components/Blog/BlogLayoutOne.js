@@ -19,7 +19,7 @@ const BlogLayoutOne = ({ blog }) => {
         alt={blog.title}
         width={blog.image.width}
         height={blog.image.height}
-        className="w-full   object-cover rounded-xl object-fit:fill group-hover:scale-105 transition-all ease duration-300"
+        className="w-full   object-cover  object-fit:fill group-hover:scale-105 transition-all ease duration-300"
         sizes="(max-width: 1180px) 100vw, 50vw"
       />
 

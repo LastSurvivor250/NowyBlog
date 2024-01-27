@@ -36,18 +36,18 @@ const HomeCoverSection = ({ blogs }) => {
                 <BlogLayoutOne blog={sortedBlogs[7]} />
               </article>
               <article className=" col-span-2 sm:col-span-1 row-span-1 relative">
-                <BlogLayoutThree blog={sortedBlogs[9]} />
+                <BlogLayoutFour blog={sortedBlogs[9]} />
               </article>
             </div>
             <div className="flex justify-between align-items ">
               <article className=" col-span-1 sm:col-span-1 row-span-1 relative">
-                <BlogLayoutThree blog={sortedBlogs[2]} />
+                <BlogLayoutFour blog={sortedBlogs[0]} />
               </article>
               <article className="col-span-1 sm:col-span-1 row-span-1 relative">
-                <BlogLayoutThree blog={sortedBlogs[8]} />
+                <BlogLayoutFour blog={sortedBlogs[6]} />
               </article>
               <article className="col-span-1 sm:col-span-1 row-span-1 relative">
-                <BlogLayoutThree blog={sortedBlogs[4]} />
+                <BlogLayoutFour blog={sortedBlogs[10]} />
               </article>
               <br /> <br /> <br /> <br /> <br /> <br /> <br />
             </div>

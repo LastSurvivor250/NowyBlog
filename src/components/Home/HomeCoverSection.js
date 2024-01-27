@@ -31,15 +31,12 @@ const HomeCoverSection = ({ blogs }) => {
             Recent Dramas Will Make Year Head Spin in 2024
           </h2>
           <div className="grid grid-rows-2 gap-6 ">
-            <div className="grid grid-cols-2 grid-rows-2 gap-6   sm:mt-16 space-between">
+            <div className="grid grid-cols-2 grid-rows-1 gap-6   sm:mt-16 space-between">
               <article className=" col-span-2  sxl:col-span-1 row-span-2 relative">
-                <BlogLayoutOne blog={sortedBlogs[4]} />
+                <BlogLayoutOne blog={sortedBlogs[1]} />
               </article>
               <article className=" col-span-2 sm:col-span-1 row-span-1 relative">
-                <BlogLayoutFour blog={sortedBlogs[1]} />
-              </article>
-              <article className="col-span-2 sm:col-span-1 row-span-1 relative">
-                <BlogLayoutFour blog={sortedBlogs[6]} />
+                <BlogLayoutFour blog={sortedBlogs[3]} />
               </article>
             </div>
             <div className="flex justify-between align-items ">
@@ -50,7 +47,7 @@ const HomeCoverSection = ({ blogs }) => {
                 <BlogLayoutFour blog={sortedBlogs[8]} />
               </article>
               <article className="col-span-1 sm:col-span-1 row-span-1 relative">
-                <BlogLayoutFour blog={sortedBlogs[8]} />
+                <BlogLayoutFour blog={sortedBlogs[7]} />
               </article>
               <br /> <br /> <br /> <br /> <br /> <br /> <br />
             </div>

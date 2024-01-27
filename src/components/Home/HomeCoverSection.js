@@ -5,7 +5,7 @@ import React from "react";
 import Tag from "../Elements/Tag";
 import { slug } from "github-slugger";
 import BlogLayoutOne from "../Blog/BlogLayoutOne";
-import BlogLayoutTwo from "../Blog/BlogLayoutTwo";
+import BlogLayoutThree from "../Blog/BlogLayoutTwo";
 import BlogLayoutFour from "../Blog/BlogLayoutFour";
 
 const HomeCoverSection = ({ blogs }) => {
@@ -36,18 +36,18 @@ const HomeCoverSection = ({ blogs }) => {
                 <BlogLayoutOne blog={sortedBlogs[7]} />
               </article>
               <article className=" col-span-2 sm:col-span-1 row-span-1 relative">
-                <BlogLayoutFour blog={sortedBlogs[3]} />
+                <BlogLayoutThree blog={sortedBlogs[9]} />
               </article>
             </div>
             <div className="flex justify-between align-items ">
               <article className=" col-span-1 sm:col-span-1 row-span-1 relative">
-                <BlogLayoutFour blog={sortedBlogs[2]} />
+                <BlogLayoutThree blog={sortedBlogs[2]} />
               </article>
               <article className="col-span-1 sm:col-span-1 row-span-1 relative">
-                <BlogLayoutFour blog={sortedBlogs[8]} />
+                <BlogLayoutThree blog={sortedBlogs[8]} />
               </article>
               <article className="col-span-1 sm:col-span-1 row-span-1 relative">
-                <BlogLayoutFour blog={sortedBlogs[4]} />
+                <BlogLayoutThree blog={sortedBlogs[4]} />
               </article>
               <br /> <br /> <br /> <br /> <br /> <br /> <br />
             </div>

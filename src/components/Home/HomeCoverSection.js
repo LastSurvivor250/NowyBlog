@@ -32,10 +32,16 @@ const HomeCoverSection = ({ blogs }) => {
           </h2>
           <div className="grid grid-rows-2 gap-6 ">
             <div className="grid grid-cols-2 grid-rows-1 gap-6   sm:mt-16 space-between">
-              <article className=" col-span-2  sxl:col-span-1 row-span-2 relative w-121%">
+              <article
+                className=" col-span-2  sxl:col-span-1 row-span-2 relative"
+                style="width:121%"
+              >
                 <BlogLayoutOne blog={sortedBlogs[9]} />
               </article>
-              <article className=" col-span-2 sm:col-span-1 row-span-1 relative w-75% left-110px">
+              <article
+                className=" col-span-2 sm:col-span-1 row-span-1 relative "
+                style="width:72% left:119px"
+              >
                 <BlogLayoutFour blog={sortedBlogs[9]} />
               </article>
             </div>

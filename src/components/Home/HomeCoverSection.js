@@ -34,7 +34,7 @@ const HomeCoverSection = ({ blogs }) => {
             <div className="grid grid-cols-2 grid-rows-1 gap-6   sm:mt-16 space-between">
               <article
                 className=" col-span-2  sxl:col-span-1 row-span-2 relative"
-                style={{ width: "121%" }}
+                style={{ width: "125%" }}
               >
                 <BlogLayoutOne blog={sortedBlogs[7]} />
               </article>

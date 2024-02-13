@@ -28,7 +28,7 @@ const HomeCoverSection = ({ blogs }) => {
         />
         <section className="w-full mt-0 sm:mt-24   sm:px-10 md:px-24  sxl:px-32 flex flex-col items-center justify-center z-10">
           <h2 className="w-full inline-block font-bold capitalize text-2xl md:text-4xl text-dark dark:text-light">
-            Recent Dramas Will Make Year Head Spin in 2024
+            Whole Mental Construct
           </h2>
           <div className="grid grid-rows-2 gap-6 ">
             <div className="grid grid-cols-2 grid-rows-1 gap-6   sm:mt-16 space-between">

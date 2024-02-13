@@ -16,16 +16,6 @@ const HomeCoverSection = ({ blogs }) => {
     <div className="">
       <br /> <br />
       <article className="flex flex-row items-start justify-end  sm:mx-10 relative h-[164vh] sm:h-[85vh] ">
-        <Image
-          src={blog.image.filePath.replace("../public", "")}
-          placeholder="blur"
-          blurDataURL={blog.image.blurhashDataUrl}
-          alt={blog.title}
-          fill
-          className="width-100% object-bottom object-cover rounded-medium -z-1 "
-          sizes="100vw"
-          priority
-        />
         <section className="w-full mt-0 sm:mt-24   sm:px-10 md:px-24  sxl:px-32 flex flex-col items-center justify-center z-10">
           <h2 className="w-full inline-block font-bold capitalize text-2xl md:text-4xl text-dark dark:text-light">
             This powerful tool will guide you through the jungle of social media

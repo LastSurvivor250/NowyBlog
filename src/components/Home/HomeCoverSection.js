@@ -14,11 +14,10 @@ const HomeCoverSection = ({ blogs }) => {
 
   return (
     <div className="">
-      <br /> <br />
       <article className="flex flex-row items-start justify-end  sm:mx-10 relative h-[164vh] sm:h-[85vh] ">
         <section className="w-full mt-0 sm:mt-24   sm:px-10 md:px-24  sxl:px-32 flex flex-col items-center justify-center z-10">
-          <h2 className="w-full inline-block font-bold capitalize text-2xl md:text-4xl text-dark dark:text-light">
-            This powerful tool will guide you through the jungle of social media
+          <h2 className="text-center w-full inline-block font-bold capitalize text-2xl md:text-4xl text-dark dark:text-light">
+            Mental Health For Dummies
           </h2>
           <div className="grid grid-rows-2 gap-6 ">
             <div className="grid grid-cols-2 grid-rows-1 gap-6   sm:mt-16 space-between">

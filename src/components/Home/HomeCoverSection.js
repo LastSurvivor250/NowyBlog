@@ -7,6 +7,7 @@ import { slug } from "github-slugger";
 import BlogLayoutOne from "../Blog/BlogLayoutOne";
 import BlogLayoutThree from "../Blog/BlogLayoutTwo";
 import BlogLayoutFour from "../Blog/BlogLayoutFour";
+import ConnectedSite from "../ConnectedSite/ConnectedSite";
 
 const HomeCoverSection = ({ blogs }) => {
   const sortedBlogs = sortBlogs(blogs);
@@ -15,6 +16,7 @@ const HomeCoverSection = ({ blogs }) => {
   return (
     <div className="">
       <article className="flex flex-row items-start justify-end  sm:mx-10 relative h-[164vh] sm:h-[85vh] ">
+        <ConnectedSite />
         <section className="w-full mt-0 sm:mt-24   sm:px-10 md:px-24  sxl:px-32 flex flex-col items-center justify-center z-10">
           <h2 className="text-center w-full inline-block font-bold capitalize text-2xl md:text-4xl text-dark dark:text-light">
             Doors To Your Digital Wisdom

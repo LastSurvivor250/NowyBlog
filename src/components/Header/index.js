@@ -100,7 +100,7 @@ const Header = () => {
 
       <nav
         className=" w-max py-3 px-8 border border-solid border-light  font-medium capitalize  items-center hidden sm:flex
-        fixed top-6 right-1/2 translate-x-1/2 bg-dark backdrop-blur-sm z-50"
+        fixed top-6 right-1/2 translate-x-1/2 bg-dark2 text-light backdrop-blur-sm z-50"
       >
         <Link href="/" className="mr-2">
           Home

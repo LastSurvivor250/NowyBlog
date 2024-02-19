@@ -32,8 +32,8 @@ const FeaturedPosts = ({ blogs }) => {
             <div className="grid grid-rows-2 gap-6 ">
               <div className="grid grid-cols-2 grid-rows-1 gap-6   sm:mt-16 space-between margin-left:170px ">
                 <article
-                  className=" col-span-2 sm:col-span-1 row-span-1 relative width:72px left:130"
-                  style={{ width: "70%", left: "175px" }}
+                  className=" col-span-2 sm:col-span-1 row-span-1 relative width:72px "
+                  style={{ width: "70%", left: "275px" }}
                 >
                   <BlogLayoutFour blog={sortedBlogs[8]} />
                 </article>

@@ -30,7 +30,7 @@ const FeaturedPosts = ({ blogs }) => {
               Doors To Your Digital Wisdom
             </h2>
             <div className="grid grid-rows-2 gap-6 ">
-              <div className="grid grid-cols-2 grid-rows-1 gap-6   sm:mt-16 space-between">
+              <div className="grid grid-cols-2 grid-rows-1 gap-6   sm:mt-16 space-between margin-right:11rem margin-left:-174px">
                 <article
                   className=" col-span-2 sm:col-span-1 row-span-1 relative width:72px left:130"
                   style={{ width: "70%", left: "175px" }}

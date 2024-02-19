@@ -73,13 +73,13 @@ const Header = () => {
           top: click ? "1rem" : "-5rem",
         }}
       >
-        <Link href="/" className="mr-2">
+        <Link href="/" className="mr-2 text-light2">
           Home
         </Link>
-        <Link href="/about" className="mx-2">
+        <Link href="/about" className="mx-2 text-light2">
           About
         </Link>
-        <Link href="/contact" className="mx-2">
+        <Link href="/contact" className="mx-2 text-light2">
           Contact
         </Link>
         <button

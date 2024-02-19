@@ -5,7 +5,7 @@ import BlogLayoutOne from "../Blog/BlogLayoutOne";
 import BlogLayoutFour from "./../Blog/BlogLayoutFour";
 import ConnectedSite from "../ConnectedSite/ConnectedSite";
 
-const FeaturedPosts = ({ blogs }) => {
+const FeaturedPosts1 = ({ blogs }) => {
   const sortedBlogs = sortBlogs(blogs);
   const blog = sortedBlogs[0];
   return (

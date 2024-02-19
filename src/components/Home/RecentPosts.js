@@ -48,6 +48,8 @@ const RecentPosts = ({ blogs }) => {
 
       <br />
       <br />
+      <br />
+      <br />
     </>
   );
 };

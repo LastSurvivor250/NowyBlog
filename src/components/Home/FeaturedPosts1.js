@@ -26,6 +26,8 @@ const FeaturedPosts1 = ({ blogs }) => {
           </h2>
           <br />
           <br />
+          <br />
+          <br />
           <div className="grid grid-cols-2 grid-rows-3 gap-4">
             <article className="row-span-1 col-span-1">
               <BlogLayoutFour blog={sortedBlogs[9]} />
@@ -56,6 +58,8 @@ const FeaturedPosts1 = ({ blogs }) => {
       <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br />;
       <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br />;
       <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br />;
+      <br />
+      <br />
       <br />
       <br />
     </>

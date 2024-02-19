@@ -56,6 +56,8 @@ const FeaturedPosts1 = ({ blogs }) => {
       <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br />;
       <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br />;
       <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br />;
+      <br />
+      <br />
     </>
   );
 };

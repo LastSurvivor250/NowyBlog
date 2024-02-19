@@ -65,7 +65,7 @@ const Header = () => {
       </button>
 
       <nav
-        className=" w-max py-3 px-6 sm:px-8 border border-solid border-light rounded-full font-medium capitalize  items-center flex  sm:hidden
+        className=" w-max py-3 px-6 sm:px-8 border border-solid border-light text-light rounded-full font-medium capitalize  items-center flex  sm:hidden
         fixed top-6 right-1/2 translate-x-1/2 bg-light/80 backdrop-blur-sm z-50
         transition-all ease duration-300
         "

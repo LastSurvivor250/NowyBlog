@@ -22,7 +22,7 @@ const HomeCoverSection = ({ blogs }) => {
             Doors To Your Digital Wisdom
           </h2>
           <div className="grid grid-rows-2 gap-6 ">
-            <div className="grid grid-cols-2 grid-rows-1 gap-6   sm:mt-16 space-between margin-left:170px">
+            <div className="grid grid-cols-2 grid-rows-1 gap-6   sm:mt-16 space-between ">
               <article
                 className=" col-span-2  sxl:col-span-1 row-span-2 relative"
                 style={{ width: "125%" }}

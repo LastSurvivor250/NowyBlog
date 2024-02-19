@@ -19,19 +19,55 @@ const FeaturedPosts1 = ({ blogs }) => {
       <br />
       <br />
       <div className="grid grid-cols-3 grid-rows-3 gap-4">
-        <div className="row-span-2 col-start-2 row-start-1">2</div>
-        <div className="row-span-2 col-start-3 row-start-1">3</div>
-        <div className="col-start-3 row-start-3">4</div>
-        <div className="col-start-1 row-start-1">5</div>
-        <div className="col-start-1 row-start-2">6</div>
-        <div className="col-span-2 col-start-1 row-start-3">7</div>
+        <div className="row-span-2 col-start-2 row-start-1">
+          <article
+            className=" col-span-2 sm:col-span-1 row-span-1 relative width:72px "
+            style={{ width: "70%", left: "0px", bottom: "-5px" }}
+          >
+            <BlogLayoutFour blog={sortedBlogs[9]} />
+          </article>
+        </div>
+        <div className="row-span-2 col-start-3 row-start-1">
+          <article
+            className=" col-span-2 sm:col-span-1 row-span-1 relative width:72px "
+            style={{ width: "70%", left: "0px", bottom: "-5px" }}
+          >
+            <BlogLayoutFour blog={sortedBlogs[9]} />
+          </article>
+        </div>
+        <div className="col-start-3 row-start-3">
+          <article
+            className=" col-span-2 sm:col-span-1 row-span-1 relative width:72px "
+            style={{ width: "70%", left: "0px", bottom: "-5px" }}
+          >
+            <BlogLayoutFour blog={sortedBlogs[9]} />
+          </article>
+        </div>
+        <div className="col-start-1 row-start-1">
+          <article
+            className=" col-span-2 sm:col-span-1 row-span-1 relative width:72px "
+            style={{ width: "70%", left: "0px", bottom: "-5px" }}
+          >
+            <BlogLayoutFour blog={sortedBlogs[9]} />
+          </article>
+        </div>
+        <div className="col-start-1 row-start-2">
+          <article
+            className=" col-span-2 sm:col-span-1 row-span-1 relative width:72px "
+            style={{ width: "70%", left: "0px", bottom: "-5px" }}
+          >
+            <BlogLayoutFour blog={sortedBlogs[9]} />
+          </article>
+        </div>
+        <div className="col-span-2 col-start-1 row-start-3">
+          <article
+            className=" col-span-2 sm:col-span-1 row-span-1 relative width:72px "
+            style={{ width: "70%", left: "0px", bottom: "-5px" }}
+          >
+            <BlogLayoutFour blog={sortedBlogs[9]} />
+          </article>
+        </div>
       </div>
-      <div
-        className="absolute top-0 left-0 bottom-0 right-0 h-100% w-full
-            dark:bg-gradient-to-b from-transparent from-[-150%] to-dark
-             rounded-xl z-0
-            "
-      />
       <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br />;
     </>
   );

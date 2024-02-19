@@ -102,19 +102,19 @@ const Header = () => {
         className=" w-max py-2 px-12 border border-solid border-light  font-medium capitalize  items-center hidden sm:flex
         fixed top-6 right-1/2 translate-x-1/2 bg-dark2 text-light backdrop-blur-sm z-50"
       >
-        <Link href="/" className="mr-2">
+        <Link href="/" className="mr-4">
           Home
         </Link>
-        <Link href="/about" className="mx-2">
+        <Link href="/about" className="mx-4">
           About
         </Link>
-        <Link href="/contact" className="mx-2">
+        <Link href="/contact" className="mx-4">
           Contact
         </Link>
-        <Link href="/" className="mr-2">
+        <Link href="/" className="mr-4">
           Services
         </Link>
-        <Link href="/" className="mr-2">
+        <Link href="/" className="mr-4">
           More
         </Link>
         <button

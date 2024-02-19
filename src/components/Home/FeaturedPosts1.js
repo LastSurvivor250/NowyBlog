@@ -40,7 +40,7 @@ const FeaturedPosts1 = ({ blogs }) => {
             </article>
 
             <article className="row-span-1 col-span-1">
-              <BlogLayoutFour blog={sortedBlogs[9]} />
+              <BlogLayoutFour blog={sortedBlogs[10]} />
             </article>
 
             <article className="row-span-1 col-span-1">

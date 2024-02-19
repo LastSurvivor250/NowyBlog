@@ -21,7 +21,7 @@ const FeaturedPosts1 = ({ blogs }) => {
       <div className="grid grid-cols-3 grid-rows-3 gap-4">
         <div className="row-span-2 col-start-2 row-start-1">
           <article
-            className=" col-span-2 sm:col-span-1 row-span-1 relative width:72px "
+            className=" "
             style={{ width: "70%", left: "0px", bottom: "-5px" }}
           >
             <BlogLayoutFour blog={sortedBlogs[9]} />
@@ -29,7 +29,7 @@ const FeaturedPosts1 = ({ blogs }) => {
         </div>
         <div className="row-span-2 col-start-3 row-start-1">
           <article
-            className=" col-span-2 sm:col-span-1 row-span-1 relative width:72px "
+            className="  "
             style={{ width: "70%", left: "0px", bottom: "-5px" }}
           >
             <BlogLayoutFour blog={sortedBlogs[9]} />
@@ -37,7 +37,7 @@ const FeaturedPosts1 = ({ blogs }) => {
         </div>
         <div className="col-start-3 row-start-3">
           <article
-            className=" col-span-2 sm:col-span-1 row-span-1 relative width:72px "
+            className="  "
             style={{ width: "70%", left: "0px", bottom: "-5px" }}
           >
             <BlogLayoutFour blog={sortedBlogs[9]} />

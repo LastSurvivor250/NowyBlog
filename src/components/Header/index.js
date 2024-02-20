@@ -111,10 +111,10 @@ const Header = () => {
         <Link href="/contact" className="mx-4">
           Contact
         </Link>
-        <Link href="/" className="mr-4">
+        <Link href="/" className="mx-4">
           Services
         </Link>
-        <Link href="/" className="mr-4">
+        <Link href="/" className="ml-4">
           More
         </Link>
         <button

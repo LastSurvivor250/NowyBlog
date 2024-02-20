@@ -14,7 +14,7 @@ const Newsletter = () => {
   console.log(errors);
 
   return (
-    <div className="mt-6  bg-dark2 items-end content-end dark:bg-dark2 m-2 sm:m-10 flex flex-col  text-light dark:text-light">
+    <div className="mt-6  bg-dark2 items-end content-end  border border-solid border-light dark:bg-dark2 m-2 sm:m-10 flex flex-col  text-light dark:text-light">
       <form
         onSubmit={handleSubmit(onSubmit)}
         className="mt-1 mb-1 mr-3 w-fit justify-end sm:min-w-[384px] flex items-stretch bg-light2 dark:bg-dark p-1 sm:p-2 rounded mx04"

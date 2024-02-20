@@ -15,9 +15,6 @@ const FeaturedPosts = ({ blogs }) => {
       <br />
       <br />
       <br />
-      <br />
-      <br />
-      <br />
       <div className="">
         <article className="flex flex-row items-start justify-end  sm:mx-10 relative h-[164vh] sm:h-[85vh] ">
           <ConnectedSite />

@@ -20,7 +20,7 @@ const Newsletter = () => {
           type="email"
           placeholder="Enter your email"
           {...register("email", { required: true, maxLength: 80 })}
-          class="w-full bg-transparent pl-2 sm:pl-0 text-white focus:border-sky-500 focus:ring-0 border-0 border-b mr-2 pb-1"
+          class="w-full bg-light pl-2 sm:pl-0 text-white focus:border-sky-500 focus:ring-0 border-0 border-b mr-2 pb-1"
         />
         <input
           type="submit"

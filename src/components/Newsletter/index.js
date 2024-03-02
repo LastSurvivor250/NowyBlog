@@ -21,7 +21,7 @@ const modalStyles = {
   justifyContent: "center",
   alignItems: "center",
   backgroundColor: "rgba(0, 0, 0, 0.3)",
-  zIndex: 9999,
+  zIndex: 999,
 };
 
 const closeIconStyles = {

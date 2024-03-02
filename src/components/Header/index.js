@@ -104,7 +104,7 @@ const Header = () => {
   <Link href="/contact" className="mx-4">Contact</Link>
   <Link href="/" className="mx-4">Services</Link>
   <Link href="/" className="ml-4">More</Link>
-  <button onClick={() => setMode(mode === "light" ? "dark" : "light")} class="w-6 h-6 ml-2 rounded-full flex items-center justify-center focus:outline-none">
+  <button onClick={() => setMode(mode === "light" ? "dark" : "light")} class="w-6 h-6 ml-2 bg-dark rounded-full flex items-center justify-center focus:outline-none">
     <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
       <path d="M5.67 4.39l1.76 1.76c1.28-1.56 3.26-2.67 5.23-2.67 2.14 0 4.01 1.11 5.23 2.67l1.76-1.76L19.08 7.11a1 1 0 0 1 0 1.41L14.33 12l4.75 4.75a1 1 0 0 1 0 1.41l-1.41 1.41A11.5 11.5 0 0 1 12 18c-3.87 0-7.17-1.91-9.26-4.74L2.92 11.7a1 1 0 0 1 0-1.41L5.67 4.39z" {mode === "light" ? "fill-dark" : "fill-white"} />
     </svg>

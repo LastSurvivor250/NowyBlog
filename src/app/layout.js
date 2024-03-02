@@ -6,6 +6,7 @@ import Footer from "../components/Footer";
 import siteMetadata from "../utils/siteMetaData";
 import Script from "next/script";
 import Newsletter from "../components/Newsletter";
+import NewsletterPopup from "../components/Newsletter";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -72,7 +73,7 @@ export default function RootLayout({ children }) {
   }`}
         </Script>
         <Header />
-        <Newsletter />
+        <NewsletterPopup />
         {children}
         <Footer />
       </body>

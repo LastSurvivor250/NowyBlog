@@ -8,18 +8,20 @@ import Modal from "react-modal"; // Import a modal library like react-modal
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"; // Import Font Awesome
 import { faTimes } from "@fortawesome/free-solid-svg-icons"; // Import close icon
 
-// Define the modal styles
+// Define the modal styles with a fixed size
 const modalStyles = {
-  position: "fixed", // Ensure fixed positioning for stacking
-  top: 0,
-  left: 0,
-  width: "100vw", // Set full width and height
-  height: "100vh",
+  position: "fixed",
+  top: 50, // Adjust vertical position as needed
+  left: 50, // Adjust horizontal position as needed
+  transform: "translate(-50%, -50%)", // Center the modal
+  width: 400, // Set a fixed width
+  height: 400, // Set a fixed height
   display: "flex",
+  flexDirection: "column", // Arrange content vertically
   justifyContent: "center",
   alignItems: "center",
-  backgroundColor: "rgba(0, 0, 0, 0.3)", // Adjust background opacity if needed
-  zIndex: 9999, // High z-index to ensure it's on top
+  backgroundColor: "rgba(0, 0, 0, 0.3)",
+  zIndex: 9999,
 };
 
 const closeIconStyles = {

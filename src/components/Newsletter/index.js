@@ -1,4 +1,5 @@
 "use client";
+// use client
 import React, { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import Link from "next/link";
@@ -19,10 +20,19 @@ const modalStyles = {
     backgroundColor: "white",
     boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.1)",
     borderRadius: "10px",
+    zIndex: 9999, // High z-index to ensure it's on top
   },
   overlay: {
     backgroundColor: "rgba(0, 0, 0, 0.3)",
   },
+};
+
+const closeIconStyles = {
+  // Customize styles for the close icon (e.g., size, position)
+  position: "absolute",
+  top: "-10px", // Adjust position as needed
+  right: "-10px", // Adjust position as needed
+  cursor: "pointer",
 };
 
 const NewsletterPopup = () => {
@@ -67,6 +77,12 @@ const NewsletterPopup = () => {
             className="bg-indigo-500 hover:bg-indigo-700 text-white font-medium rounded px-3 sm:px-5 py-1"
           />
         </form>
+        <i
+          className="fas fa-times"
+          style={closeIconStyles}
+          onClick={closeModal}
+        ></i>{" "}
+        {/* Add close icon */}
       </div>
     </Modal>
   );

@@ -64,37 +64,27 @@ const Header = () => {
         </div>
       </button>
 
-      <nav
-        className=" w-max py-3 px-6 sm:px-8 border border-solid border-light text-light rounded-full font-medium capitalize  items-center flex  sm:hidden
-        fixed top-6 right-1/2 translate-x-1/2 bg-light/80 backdrop-blur-sm z-50
-        transition-all ease duration-300
-        "
-        style={{
-          top: click ? "1rem" : "-5rem",
-        }}
-      >
-        <Link href="/" className="mr-2 text-light2">
+      <nav class="fixed top-6 right-1/2 translate-x-1/2 bg-gradient-to-r from-sky-500 to-indigo-500 p-3 px-6 sm:px-8 rounded-full text-white font-medium capitalize items-center flex sm:hidden transition-all ease duration-300">
+        <Link href="/" className="mr-2">
           Home
         </Link>
-        <Link href="/about" className="mx-2 text-light2">
+        <Link href="/about" className="mx-2">
           About
         </Link>
-        <Link href="/contact" className="mx-2 text-light2">
+        <Link href="/contact" className="mx-2">
           Contact
         </Link>
         <button
           onClick={() => setMode(mode === "light" ? "dark" : "light")}
-          className={cx(
-            "w-6 h-6 ease ml-2 flex items-center justify-center rounded-full p-1",
-            mode === "light" ? "bg-dark text-light" : "bg-light text-dark"
-          )}
-          aria-label="theme-switcher"
+          class="w-6 h-6 ml-2 rounded-full flex items-center justify-center focus:outline-none"
         >
-          {mode === "light" ? (
-            <MoonIcon className={"fill-dark"} />
-          ) : (
-            <SunIcon className={"fill-dark"} />
-          )}
+          <svg
+            class="fill-current"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+          >
+            <path d="M5.67 4.39l1.76 1.76c1.28-1.56 3.26-2.67 5.23-2.67 2.14 0 4.01 1.11 5.23 2.67l1.76-1.76L19.08 7.11a1 1 0 0 1 0 1.41L14.33 12l4.75 4.75a1 1 0 0 1 0 1.41l-1.41 1.41A11.5 11.5 0 0 1 12 18c-3.87 0-7.17-1.91-9.26-4.74L2.92 11.7a1 1 0 0 1 0-1.41L5.67 4.39z" />
+          </svg>
         </button>
       </nav>
 

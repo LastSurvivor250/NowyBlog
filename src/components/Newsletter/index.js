@@ -14,21 +14,18 @@ const Newsletter = () => {
   console.log(errors);
 
   return (
-    <div className="mt-6  bg-dark2 items-end content-end  border border-solid border-light dark:bg-dark2 m-2 sm:m-10 flex flex-col  text-light dark:text-light">
-      <form
-        onSubmit={handleSubmit(onSubmit)}
-        className="mt-1 mb-1 mr-1 w-fit justify-end sm:min-w-[384px] flex items-stretch bg-light2 dark:bg-dark p-1 sm:p-2 rounded mx04"
-      >
+    <div class="flex flex-col bg-gradient-to-r from-sky-500 to-indigo-500 p-8 rounded-xl shadow-md text-white">
+      <form onSubmit={handleSubmit(onSubmit)}>
         <input
           type="email"
           placeholder="Enter your email"
           {...register("email", { required: true, maxLength: 80 })}
-          className="w-full bg-transparent pl-2 sm:pl-0 text-light2 focus:border-dark focus:ring-0 border-0 border-b mr-2 pb-1"
+          class="w-full bg-transparent pl-2 sm:pl-0 text-white focus:border-sky-500 focus:ring-0 border-0 border-b mr-2 pb-1"
         />
-
         <input
           type="submit"
-          className="bg-dark text-light dark:text-dark dark:bg-light cursor-pointer font-medium rounded px-3 sm:px-5 py-1"
+          value="Subscribe"
+          class="bg-indigo-500 hover:bg-indigo-700 text-white font-medium rounded px-3 sm:px-5 py-1"
         />
       </form>
     </div>

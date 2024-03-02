@@ -5,45 +5,41 @@ import { useForm } from "react-hook-form";
 import Link from "next/link";
 import siteMetadata from "@/src/utils/siteMetaData";
 import Modal from "react-modal"; // Import a modal library like react-modal
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"; // Import Font Awesome
+import { faTimes } from "@fortawesome/free-solid-svg-icons"; // Import close icon
 
 // Define the modal styles
 const modalStyles = {
-  content: {
-    top: "50%",
-    left: "50%",
-    right: "auto",
-    bottom: "auto",
-    marginRight: "-50%",
-    transform: "translate(-50%, -50%)",
-    padding: 0,
-    border: "none",
-    backgroundColor: "white",
-    boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.1)",
-    borderRadius: "10px",
-    zIndex: 9999, // High z-index to ensure it's on top
-  },
-  overlay: {
-    backgroundColor: "rgba(0, 0, 0, 0.3)",
-  },
+  position: "fixed", // Ensure fixed positioning for stacking
+  top: 0,
+  left: 0,
+  width: "100vw", // Set full width and height
+  height: "100vh",
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  backgroundColor: "rgba(0, 0, 0, 0.3)", // Adjust background opacity if needed
+  zIndex: 9999, // High z-index to ensure it's on top
 };
 
 const closeIconStyles = {
-  // Customize styles for the close icon (e.g., size, position)
   position: "absolute",
-  top: "-10px", // Adjust position as needed
-  right: "-10px", // Adjust position as needed
+  top: 20, // Adjust position as needed
+  right: 20, // Adjust position as needed
   cursor: "pointer",
+  color: "white",
+  fontSize: "2rem",
 };
 
 const NewsletterPopup = () => {
-  const [isOpen, setIsOpen] = useState(false); // State to control the modal visibility
+  const [isOpen, setIsOpen] = useState(true); // Show on every reload (remove for first-time logic)
 
   useEffect(() => {
-    // Show the modal only on the first page load
-    if (localStorage.getItem("newsletterShown") === null) {
-      setIsOpen(true);
-      localStorage.setItem("newsletterShown", true); // Mark the modal as shown
-    }
+    // Optional: Remove this if you want to show on every reload
+    // if (localStorage.getItem("newsletterShown") === null) {
+    //   setIsOpen(true);
+    //   localStorage.setItem("newsletterShown", true); // Mark the modal as shown
+    // }
   }, []);
 
   const {
@@ -77,12 +73,12 @@ const NewsletterPopup = () => {
             className="bg-indigo-500 hover:bg-indigo-700 text-white font-medium rounded px-3 sm:px-5 py-1"
           />
         </form>
-        <i
-          className="fas fa-times"
+        <FontAwesomeIcon
+          icon={faTimes}
           style={closeIconStyles}
           onClick={closeModal}
-        ></i>{" "}
-        {/* Add close icon */}
+        />{" "}
+        {/* Close icon */}
       </div>
     </Modal>
   );

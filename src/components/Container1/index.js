@@ -10,22 +10,21 @@ const Container1 = () => {
       <br />
       <br />
       <br />
-      <div className="mt-6 py-12 my-12 mx-12 w-fit bg-dark2 items-end content-end  border border-solid border-light dark:bg-dark2 m-2 sm:m-10 flex flex-col  text-light dark:text-light">
-        <div>
-          <p className="mt-1 mb-1 mr-1 w-fit justify-end sm:min-w-[384px] flex items-stretch bg-light2 dark:bg-dark p-1 sm:p-2 rounded mx04">
-            This BLOG is brought to Your By RESOLVEREVOLT. We are working on it
-            day and night to provide You only with BEST up to date content. I
-            thank You for all Your support from the depths of my heart.
+      <div class="flex flex-col bg-gradient-to-r from-sky-500 to-indigo-500 p-8 rounded-xl shadow-md text-white">
+        <div class="flex flex-col items-center space-y-4">
+          <p class="text-xl font-bold">
+            This BLOG is brought to you by RESOLVEREVOLT.
           </p>
-          <p className="mt-1 mb-1 mr-1 w-fit justify-end sm:min-w-[384px] flex items-stretch bg-light2 dark:bg-dark p-1 sm:p-2 rounded mx04">
-            Did You check My Automatic-Writing Course Yet? The Most Fundamental
-            Skill Most of Us Avoid. And There's no need for that. Make writing
-            Your new Favourite Activity. There's a Few Psychological tricks to
-            fall in love with writing. Don't let The most crucial skill of
-            content creation be neglected. Infuse Your Mind With the Ability To
-            Elocquently Put Concepts into Word. Learn what Automatic-Writing
-            really stands for. '
+          <p class="text-base leading-relaxed">
+            We work day and night to provide you with only the BEST up-to-date
+            content. Thank you for all your support!
           </p>
+          <a
+            href="#"
+            class="inline-flex items-center px-4 py-2 bg-gray-800 hover:bg-gray-700 text-white font-bold rounded-lg"
+          >
+            Check out our Automatic-Writing Course!
+          </a>
         </div>
       </div>
     </>

@@ -8,20 +8,37 @@ import Modal from "react-modal"; // Import a modal library like react-modal
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"; // Import Font Awesome
 import { faTimes } from "@fortawesome/free-solid-svg-icons"; // Import close icon
 
-// Define the modal styles with a fixed size
+// Define the modal styles with adjustments
 const modalStyles = {
   position: "fixed",
   top: 50, // Adjust vertical position as needed
   left: 50, // Adjust horizontal position as needed
   transform: "translate(-50%, -50%)", // Center the modal
-  width: 400, // Set a fixed width
+  width: "66.66%", // Set width to 2/3 of viewport
+  maxWidth: 400, // Set a maximum width for smaller screens
   height: 400, // Set a fixed height
   display: "flex",
   flexDirection: "column", // Arrange content vertically
   justifyContent: "center",
   alignItems: "center",
-  backgroundColor: "rgba(0, 0, 0, 0.3)",
-  zIndex: 999,
+  backgroundColor: "transparent", // Remove background color
+  padding: "2rem", // Add padding around content
+  borderRadius: "10px", // Add rounded corners
+  boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.1)", // Add shadow
+  zIndex: 9999,
+};
+
+const subscribeButtonStyle = {
+  display: "block", // Make it a block element for centering
+  margin: "1rem auto", // Add margin for spacing and centering
+  padding: "1rem 2rem", // Add padding to the button
+  backgroundColor: "indigo-500", // Set button color
+  color: "white", // Set button text color
+  fontSize: "16px", // Adjust button font size
+  fontWeight: "bold", // Set button font weight
+  borderRadius: "5px", // Add rounded corners to the button
+  border: "none", // Remove border from the button
+  cursor: "pointer", // Set cursor to pointer on hover
 };
 
 const closeIconStyles = {
@@ -73,6 +90,8 @@ const NewsletterPopup = () => {
             type="submit"
             value="Subscribe"
             className="bg-indigo-500 hover:bg-indigo-700 text-white font-medium rounded px-3 sm:px-5 py-1"
+            // Apply the subscribeButtonStyle here:
+            style={subscribeButtonStyle}
           />
         </form>
         <FontAwesomeIcon

@@ -15,8 +15,8 @@ const modalStyles = {
   left: 50, // Adjust horizontal position as needed
   transform: "translate(-50%, -50%)", // Center the modal
   width: "66.66%", // Set width to 2/3 of viewport
-  maxWidth: 400, // Set a maximum width for smaller screens
-  height: 400, // Set a fixed height
+  maxWidth: "400px", // Set a maximum width for larger screens"400, // Set a maximum width for smaller screens
+  height: "400px", // Set a fixed height
   display: "flex",
   flexDirection: "column", // Arrange content vertically
   justifyContent: "center",

@@ -17,13 +17,14 @@ const Container1 = () => {
           </p>
           <p class="text-base leading-relaxed">
             We work day and night to provide you with only the BEST up-to-date
-            content. Thank you for all your support!
+            content. Thank you for all your support! Normal and Yet Para Writing
+            moves our Page forward.
           </p>
           <a
             href="#"
             class="inline-flex items-center px-4 py-2 bg-gray-800 hover:bg-gray-700 text-white font-bold rounded-lg"
           >
-            Check out our Automatic-Writing Course!
+            Wanna support the page? YOu can do it Here!
           </a>
         </div>
       </div>

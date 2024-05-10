@@ -21,7 +21,7 @@ const modalStyles = {
   flexDirection: "column", // Arrange content vertically
   justifyContent: "center",
   alignItems: "center",
-  backgroundColor: "transparent", // Remove background color
+
   padding: "2rem", // Add padding around content
   borderRadius: "10px", // Add rounded corners
   boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.1)", // Add shadow

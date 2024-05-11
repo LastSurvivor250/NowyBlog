@@ -7,6 +7,7 @@ import siteMetadata from "../utils/siteMetaData";
 import Script from "next/script";
 import Newsletter from "../components/Newsletter";
 import NewsletterPopup from "../components/Newsletter";
+import Navbar from "../components/Navbar";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -73,6 +74,7 @@ export default function RootLayout({ children }) {
   }`}
         </Script>
         <Header />
+        <Navbar />
         <NewsletterPopup className="zIndex: 9999" />
         {children}
         <Footer />

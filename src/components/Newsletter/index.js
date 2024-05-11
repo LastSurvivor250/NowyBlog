@@ -71,8 +71,8 @@ const NewsletterPopup = () => {
   const closeModal = () => setIsOpen(false);
 
   return (
-    <Modal isOpen={isOpen} onRequestClose={closeModal}>
-      <div className="flex flex-col bg-gradient-to-r from-sky-500 to-indigo-500 z-999 p-8 rounded-xl shadow-md text-white zIndex-9999">
+    <Modal isOpen={isOpen} onRequestClose={closeModal} style={modalStyles}>
+      <div className="flex flex-col bg-gradient-to-r from-sky-500 to-indigo-500 z-9999 p-8 rounded-xl shadow-md text-white">
         <h3 className="text-center font-medium text-2xl mb-4">
           Subscribe to our newsletter!
         </h3>

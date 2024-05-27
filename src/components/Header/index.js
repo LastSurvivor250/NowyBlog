@@ -137,7 +137,9 @@ const Header = () => {
         >
           {" "}
           Get My FREE EBOOK
-          {showModal && <Model onCLose={() => setShowModal(false)} />}
+          {showModal && (
+            <Model onCLose={() => setShowModal(false)} className="z-999" />
+          )}
         </button>
         <a
           href={siteMetadata.linkedin}

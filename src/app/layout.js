@@ -6,8 +6,9 @@ import Footer from "../components/Footer";
 import siteMetadata from "../utils/siteMetaData";
 import Script from "next/script";
 import Newsletter from "../components/Newsletter";
-import NewsletterPopup from "../components/Newsletter";
+import Modal from "../components/Newsletter";
 import Navbar from "../components/Navbar";
+import { Modal } from "react-modal";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -75,7 +76,7 @@ export default function RootLayout({ children }) {
         </Script>
         <Header />
         <Navbar />
-        <NewsletterPopup className="zIndex: 9999" />
+        <Modal className="zIndex: 9999" />
         {children}
         <Footer />
       </body>

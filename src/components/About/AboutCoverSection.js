@@ -14,18 +14,6 @@ const AboutCoverSection = () => {
           sizes="(max-width: 768px) 100vw,(max-width: 1180px) 50vw, 50vw"
         />
       </div>
-      <div className="w-full md:w-1/2 flex flex-col text-left items-start justify-center px-5 xs:p-10 pb-10 lg:px-16">
-        <h2 className="font-bold capitalize text-4xl xs:text-5xl sxl:text-6xl  text-center lg:text-left">
-          Dream Fairly Big, Work Kinda Hard, Achieve Cool Sh**! Sounds
-          half-ass-ed? Well, Fu** You too.
-        </h2>
-        <p className="font-medium capitalize mt-4 text-base">
-          I mix cutting-edge tech with classic design to create engaging digital
-          experiences. Inspired by nature and literature, I'm always learning
-          and ready to tackle new challenges. Every project is a chance to make
-          a lasting impact—one pixel at a time.
-        </p>
-      </div>
     </section>
   );
 };

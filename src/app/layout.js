@@ -8,7 +8,6 @@ import Script from "next/script";
 
 import Model from "../components/Newsletter";
 import Navbar from "../components/Navbar";
-import { Modal } from "react-modal";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -67,7 +66,7 @@ export default function RootLayout({ children }) {
           " zIndex: 99 font-mr bg-light dark:bg-dark"
         )}
       >
-        <Script id="theme-switcher" strategy="beforeInteractive">
+        <Script id="theme-switcher">
           {`if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
     document.documentElement.classList.add('dark')
   } else {

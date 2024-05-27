@@ -129,15 +129,14 @@ const Header = () => {
           </svg>
         </button>
       </nav>
-      <div>
+
+      <div className=" hidden sm:flex items-center">
         <button
           onClick={() => setShowModal(true)}
           className="bg-indigo-500 hover:bg-indigo-100 px-4 py-2 rounded-xl text-lg"
         >
           {showModal && <Model onCLose={() => setShowModal(false)} />}
         </button>
-      </div>
-      <div className=" hidden sm:flex items-center">
         <a
           href={siteMetadata.linkedin}
           className="inline-block w-6 h-6 mr-4"

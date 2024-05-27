@@ -135,6 +135,8 @@ const Header = () => {
           onClick={() => setShowModal(true)}
           className="bg-indigo-500 hover:bg-indigo-100 px-4 py-2 rounded-xl text-lg"
         >
+          {" "}
+          Get My FREE EBOOK
           {showModal && <Model onCLose={() => setShowModal(false)} />}
         </button>
         <a

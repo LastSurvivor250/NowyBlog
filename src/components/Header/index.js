@@ -134,7 +134,7 @@ const Header = () => {
           onClick={() => setShowModal(true)}
           className="bg-indigo-500 hover:bg-indigo-100 px-4 py-2 rounded-xl text-lg"
         >
-          {showModal && <Model />}
+          {showModal && <Model onCLose={() => setShowModal(false)} />}
         </button>
       </div>
       <div className=" hidden sm:flex items-center">

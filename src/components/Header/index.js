@@ -138,7 +138,10 @@ const Header = () => {
           {" "}
           Get My FREE EBOOK
           {showModal && (
-            <Model onCLose={() => setShowModal(false)} className="z-999" />
+            <Model
+              onCLose={() => setShowModal(false)}
+              className="zIndex: 999"
+            />
           )}
         </button>
         <a

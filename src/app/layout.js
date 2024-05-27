@@ -61,7 +61,7 @@ export default function RootLayout({ children }) {
         className={cx(
           inter.variable,
           manrope.variable,
-          " zIndex: 99 font-mr bg-light dark:bg-dark"
+          " font-mr bg-light dark:bg-dark"
         )}
       >
         <Script id="theme-switcher">

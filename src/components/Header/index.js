@@ -139,8 +139,8 @@ const Header = () => {
           Get My FREE EBOOK
           {showModal && (
             <Model
+              style={{ zIndex: 999 }}
               onCLose={() => setShowModal(false)}
-              className="zIndex: 999"
             />
           )}
         </button>

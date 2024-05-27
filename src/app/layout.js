@@ -6,7 +6,7 @@ import Footer from "../components/Footer";
 import siteMetadata from "../utils/siteMetaData";
 import Script from "next/script";
 import Newsletter from "../components/Newsletter";
-import Modal from "../components/Newsletter";
+import Model from "../components/Newsletter";
 import Navbar from "../components/Navbar";
 import { Modal } from "react-modal";
 
@@ -76,7 +76,7 @@ export default function RootLayout({ children }) {
         </Script>
         <Header />
         <Navbar />
-        <Modal className="zIndex: 9999" />
+        <Model className="zIndex: 9999" />
         {children}
         <Footer />
       </body>

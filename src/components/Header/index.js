@@ -13,10 +13,12 @@ import siteMetadata from "@/src/utils/siteMetaData";
 import { useThemeSwitch } from "../Hooks/useThemeSwitch";
 import { useState } from "react";
 import { cx } from "@/src/utils";
+import Model from "../Newsletter";
 
 const Header = () => {
   const [mode, setMode] = useThemeSwitch();
   const [click, setClick] = useState(false);
+  const [showModal, setShowModal] = useState(false);
 
   const toggle = () => {
     setClick(!click);
@@ -128,8 +130,11 @@ const Header = () => {
         </button>
       </nav>
       <div>
-        <button className="bg-indigo-500 hover:bg-indigo-100 px-4 py-2 rounded-xl text-lg">
-          Get The Book
+        <button
+          onClick={() => setShowModal(true)}
+          className="bg-indigo-500 hover:bg-indigo-100 px-4 py-2 rounded-xl text-lg"
+        >
+          {showModal && <Model />}
         </button>
       </div>
       <div className=" hidden sm:flex items-center">

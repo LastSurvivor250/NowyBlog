@@ -20,7 +20,7 @@ const Model = () => {
               required
               className="w-full px-4 py-3 text-black border-gray-300 rounded-md"
             />
-            <button className="mt-4 w-full flex items-center justify-center px-5 py-3 font-medium rounded-md">
+            <button className="mt-4 w-full flex items-center justify-center px-5 py-3 font-medium rounded-md bg-black">
               <Download /> Download Link
             </button>
           </form>

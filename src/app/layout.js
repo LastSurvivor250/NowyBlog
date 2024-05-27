@@ -5,8 +5,8 @@ import Header from "@/src/components/Header";
 import Footer from "../components/Footer";
 import siteMetadata from "../utils/siteMetaData";
 import Script from "next/script";
+import { useState } from "react";
 
-import Model from "../components/Newsletter";
 import Navbar from "../components/Navbar";
 
 const inter = Inter({
@@ -75,7 +75,7 @@ export default function RootLayout({ children }) {
         </Script>
         <Header />
         <Navbar />
-        <Model className="zIndex: 9999" />
+
         {children}
         <Footer />
       </body>

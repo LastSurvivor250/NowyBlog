@@ -1,9 +1,19 @@
-import React from "react";
+import React, { useRef } from "react";
 import { X, Download } from "lucide-react";
 
 const Model = (onCLose) => {
+  const modalRef = useRef();
+  const closeModal = (e) => {
+    if (modalRef.current === e.target) {
+      onCLose();
+    }
+  };
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-25 backdrop-blur-sm flex- justify-center items-center">
+    <div
+      ref={modalRef}
+      onClick={closeModal}
+      className="fixed inset-0 bg-black bg-opacity-25 backdrop-blur-sm flex- justify-center items-center"
+    >
       <div className="mt-10 flex-col gap-5 text-white">
         <button onClick={onCLose} className="place-self-end">
           <X size={30} />

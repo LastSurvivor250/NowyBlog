@@ -127,7 +127,11 @@ const Header = () => {
           </svg>
         </button>
       </nav>
-
+      <div>
+        <button className="bg-indigo-500 hover:bg-indigo-100 px-4 py-2 rounded-xl text-lg">
+          Get The Book
+        </button>
+      </div>
       <div className=" hidden sm:flex items-center">
         <a
           href={siteMetadata.linkedin}

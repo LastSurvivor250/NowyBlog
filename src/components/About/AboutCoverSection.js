@@ -23,10 +23,10 @@ const AboutCoverSection = () => {
           half-assed? Well, Fu** You too.
         </h2>
         <p className="font-medium capitalize mt-4 text-base">
-          As a passionate freelancer, I live by a simple mantra: "Sky's the
-          limit, but keep it real." I mix cutting-edge tech with classic design
+          As a passionate freelancer, I live by a simple mantra: Sky is the
+          limit, but keep it real. I mix cutting-edge tech with classic design
           to create engaging digital experiences. Inspired by nature and
-          literature, I'm always learning and ready to tackle new challenges.
+          literature, I am always learning and ready to tackle new challenges.
           Every project is a chance to make a lasting impact—one pixel at a
           time.
         </p>

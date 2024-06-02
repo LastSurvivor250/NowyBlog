@@ -5,7 +5,7 @@ import React from "react";
 
 const BlogLayoutFour = ({ blog }) => {
   return (
-    <div className="z-index-3 group grid grid-rows-12   gap-4 items-center text-dark dark:text-light">
+    <div className="group grid grid-rows-12   gap-4 items-center text-dark dark:text-light">
       <Link
         href={blog.url}
         className=" row-span-12   lg:col-span-4 h-full overflow-hidden"

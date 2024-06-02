@@ -12,7 +12,7 @@ const Model = (onCLose) => {
     <div
       ref={modalRef}
       onClick={closeModal}
-      className="fixed inset-0 bg-black bg-opacity-25 backdrop-blur-sm flex- justify-center items-center"
+      className="fixed inset-0 bg-black bg-opacity-25 backdrop-blur-sm flex- justify-center items-center z-10"
     >
       <div className="mt-10 flex-col gap-5 text-white">
         <button onClick={onCLose} className="place-self-end">

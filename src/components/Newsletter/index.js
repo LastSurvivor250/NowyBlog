@@ -1,11 +1,11 @@
 import React, { useRef } from "react";
 import { X, Download } from "lucide-react";
 
-const Model = (onCLose) => {
+const Model = (onClose) => {
   const modalRef = useRef();
   const closeModal = (e) => {
     if (modalRef.current === e.target) {
-      onCLose();
+      onClose();
     }
   };
   return (
@@ -15,7 +15,7 @@ const Model = (onCLose) => {
       className="fixed inset-0 bg-black bg-opacity-25 backdrop-blur-sm flex- justify-center items-center z-10"
     >
       <div className="mt-10 flex-col gap-5 text-white">
-        <button onClick={onCLose} className="place-self-end">
+        <button onClick={onClose} className="place-self-end">
           <X size={30} />
         </button>
         <div className="bg-indigo-600 rounded-xl px-20 py-10 flex flex-col gap-5 items-center mx-4">

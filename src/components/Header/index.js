@@ -137,13 +137,10 @@ const Header = () => {
         >
           {" "}
           Get My FREE EBOOK
-          {showModal && (
-            <Model
-              style={{ zIndex: 999 }}
-              onClose={() => setShowModal(false)}
-            />
-          )}
         </button>
+        {showModal && (
+          <Model style={{ zIndex: 999 }} onClose={() => setShowModal(false)} />
+        )}
         <a
           href={siteMetadata.linkedin}
           className="inline-block w-6 h-6 mr-4"

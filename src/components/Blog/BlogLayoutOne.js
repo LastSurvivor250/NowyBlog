@@ -23,7 +23,7 @@ const BlogLayoutOne = ({ blog }) => {
         sizes="(max-width: 1180px) 100vw, 50vw"
       />
 
-      <div className="absolute bottom-0 p-4 xs:p-6 sm:p-10 z-20 position-absolute top:0">
+      <div className="absolute bottom-0 p-4 xs:p-6 sm:p-10 z-2 position-absolute top:0">
         <Tag
           link={`/categories/${slug(blog.tags[0])}`}
           name={blog.tags[0]}

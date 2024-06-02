@@ -140,7 +140,7 @@ const Header = () => {
           {showModal && (
             <Model
               style={{ zIndex: 999 }}
-              onCLose={() => setShowModal(false)}
+              onClose={() => setShowModal(false)}
             />
           )}
         </button>

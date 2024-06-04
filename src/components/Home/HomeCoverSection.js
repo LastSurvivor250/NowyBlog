@@ -33,7 +33,7 @@ const HomeCoverSection = ({ blogs }) => {
                 className=" col-span-2 sm:col-span-1 row-span-1 relative width:72px left:130"
                 style={{ width: "70%", left: "175px" }}
               >
-                <BlogLayoutFour blog={sortedBlogs[6]} />
+                <BlogLayoutFour blog={sortedBlogs[0]} />
               </article>
             </div>
             <div className="flex justify-between align-items ">

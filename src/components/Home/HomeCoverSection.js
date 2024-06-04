@@ -27,13 +27,13 @@ const HomeCoverSection = ({ blogs }) => {
                 className=" col-span-2  sxl:col-span-1 row-span-2 relative"
                 style={{ width: "125%" }}
               >
-                <BlogLayoutOne blog={sortedBlogs[9]} />
+                <BlogLayoutOne blog={sortedBlogs[8]} />
               </article>
               <article
                 className=" col-span-2 sm:col-span-1 row-span-1 relative width:72px left:130"
                 style={{ width: "70%", left: "175px" }}
               >
-                <BlogLayoutFour blog={sortedBlogs[11]} />
+                <BlogLayoutFour blog={sortedBlogs[6]} />
               </article>
             </div>
             <div className="flex justify-between align-items ">
@@ -41,10 +41,10 @@ const HomeCoverSection = ({ blogs }) => {
                 <BlogLayoutFour blog={sortedBlogs[10]} />
               </article>
               <article className="col-span-1 sm:col-span-1 row-span-1 relative">
-                <BlogLayoutFour blog={sortedBlogs[8]} />
+                <BlogLayoutFour blog={sortedBlogs[9]} />
               </article>
               <article className="col-span-1 sm:col-span-1 row-span-1 relative">
-                <BlogLayoutFour blog={sortedBlogs[4]} />
+                <BlogLayoutFour blog={sortedBlogs[7]} />
               </article>
               <br /> <br /> <br /> <br /> <br /> <br /> <br />
             </div>

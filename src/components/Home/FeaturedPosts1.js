@@ -34,11 +34,11 @@ const FeaturedPosts1 = ({ blogs }) => {
             </article>
 
             <article className="row-span-1 col-span-1">
-              <BlogLayoutFour blog={sortedBlogs[8]} />
+              <BlogLayoutFour blog={sortedBlogs[2]} />
             </article>
 
             <article className="row-span-1 col-span-1">
-              <BlogLayoutFour blog={sortedBlogs[6]} />
+              <BlogLayoutFour blog={sortedBlogs[3]} />
             </article>
 
             <article className="row-span-1 col-span-1">
@@ -50,7 +50,7 @@ const FeaturedPosts1 = ({ blogs }) => {
             </article>
 
             <article className="row-span-1 col-span-1">
-              <BlogLayoutFour blog={sortedBlogs[4]} />
+              <BlogLayoutFour blog={sortedBlogs[1]} />
             </article>
           </div>
         </section>

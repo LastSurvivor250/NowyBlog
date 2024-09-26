@@ -14,7 +14,7 @@ const Navbar = () => {
                 <li class="inline-block mx-2">
                   <a
                     href="/about"
-                    class="no-underline text-white font-bold px-2.5 py-1 rounded-md transition duration-300 hover:bg-gray-300"
+                    class="no-underline text-white font-bold px-3 py-1.5 rounded-md transition duration-300 hover:bg-gray-300"
                   >
                     Categories by Niche
                   </a>
@@ -22,7 +22,7 @@ const Navbar = () => {
                 <li class="inline-block mx-2">
                   <a
                     href="#"
-                    class="no-underline text-white font-bold px-2.5 py-1 rounded-md transition duration-300 hover:bg-gray-300"
+                    class="no-underline text-white font-bold px-3 py-1.5 rounded-md transition duration-300 hover:bg-gray-300"
                   >
                     Trending
                   </a>
@@ -30,7 +30,7 @@ const Navbar = () => {
                 <li class="inline-block mx-2">
                   <a
                     href="#"
-                    class="no-underline text-white font-bold px-2.5 py-1 rounded-md transition duration-300 hover:bg-gray-300"
+                    class="no-underline text-white font-bold px-3 py-1.5 rounded-md transition duration-300 hover:bg-gray-300"
                   >
                     Resources
                   </a>
@@ -38,7 +38,7 @@ const Navbar = () => {
                 <li class="inline-block mx-2">
                   <a
                     href="#"
-                    class="no-underline text-white font-bold px-2.5 py-1 rounded-md transition duration-300 hover:bg-gray-300"
+                    class="no-underline text-white font-bold px-3 py-1.5 rounded-md transition duration-300 hover:bg-gray-300"
                   >
                     Case Studies
                   </a>
@@ -46,7 +46,7 @@ const Navbar = () => {
                 <li class="inline-block mx-2">
                   <a
                     href="#"
-                    class="no-underline text-white font-bold px-2.5 py-1 rounded-md transition duration-300 hover:bg-gray-300"
+                    class="no-underline text-white font-bold px-3 py-1 rounded-md transition duration-300 hover:bg-gray-300"
                   >
                     Community
                   </a>
@@ -54,7 +54,7 @@ const Navbar = () => {
                 <li class="inline-block mx-2">
                   <a
                     href="#"
-                    class="no-underline text-white font-bold px-2.5 py-1 rounded-md transition duration-300 hover:bg-gray-300"
+                    class="no-underline text-white font-bold px-3 py-1.5 rounded-md transition duration-300 hover:bg-gray-300"
                   >
                     Courses
                   </a>
@@ -62,7 +62,7 @@ const Navbar = () => {
                 <li class="inline-block mx-2">
                   <a
                     href="#"
-                    class="no-underline text-white font-bold px-2.5 py-1 rounded-md transition duration-300 hover:bg-gray-300"
+                    class="no-underline text-white font-bold px-3 py-1.5 rounded-md transition duration-300 hover:bg-gray-300"
                   >
                     Store
                   </a>

@@ -24,7 +24,7 @@ const Navbar = () => {
                   <li class="inline-block mx-2">
                     <a
                       href="#"
-                      onClick={toggleMenu("menu1")}
+                      onClick={() => toggleMenu("menu1")}
                       class="no-underline text-white font-bold px-5 py-1.5 rounded-md transition duration-300 hover:bg-gray-300"
                     >
                       Categories by Niche
@@ -51,7 +51,7 @@ const Navbar = () => {
                   <li class="inline-block mx-2">
                     <a
                       href="#"
-                      onClick={toggleMenu("menu2")}
+                      onClick={() => toggleMenu("menu2")}
                       class="no-underline text-white font-bold px-7 py-1.5 rounded-md transition duration-300 hover:bg-gray-300"
                     >
                       Trending

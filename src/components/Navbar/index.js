@@ -34,8 +34,6 @@ const Navbar = () => {
                   >
                     Resources
                   </a>
-                <
-           
                 </li>
               </ul>
             </div>

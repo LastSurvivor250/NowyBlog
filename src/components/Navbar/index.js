@@ -21,7 +21,7 @@ const Navbar = () => {
               <ul class="list-none ">
                 <li class="inline-block mx-2">
                   <a
-                    href="/about"
+                    href="#"
                     class="no-underline text-white font-bold px-3 py-1.5 rounded-md transition duration-300 hover:bg-gray-300"
                   >
                     Categories by Niche

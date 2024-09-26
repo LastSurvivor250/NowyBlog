@@ -34,46 +34,8 @@ const Navbar = () => {
                   >
                     Resources
                   </a>
-                </li>
-                <li class="inline-block mx-2">
-                  <a
-                    href="#"
-                    class="no-underline text-white font-bold px-2.5 py-1 rounded-md transition duration-300 hover:bg-gray-300"
-                  >
-                    Case Studies
-                  </a>
-                </li>
-                <li class="inline-block mx-2">
-                  <a
-                    href="#"
-                    class="no-underline text-white font-bold px-2.5 py-1 rounded-md transition duration-300 hover:bg-gray-300"
-                  >
-                    Community
-                  </a>
-                </li>
-                <li class="inline-block mx-2">
-                  <a
-                    href="#"
-                    class="no-underline text-white font-bold px-2.5 py-1 rounded-md transition duration-300 hover:bg-gray-300"
-                  >
-                    Courses
-                  </a>
-                </li>
-                <li class="inline-block mx-2">
-                  <a
-                    href="#"
-                    class="no-underline text-white font-bold px-2.5 py-1 rounded-md transition duration-300 hover:bg-gray-300"
-                  >
-                    Store
-                  </a>
-                </li>
-                <li class="inline-block mx-2">
-                  <a
-                    href="#"
-                    class="no-underline text-white font-bold px-2.5 py-1 rounded-md transition duration-300 hover:bg-gray-300"
-                  >
-                    X
-                  </a>
+                <
+           
                 </li>
               </ul>
             </div>

@@ -120,7 +120,7 @@ const Navbar = () => {
             </div>
           </div>
         </div>
-        <div className="flex h-20 items-center justify-between">
+        <div className="flex h-30 items-center justify-between">
           <div className="flex flex-1 items-center justify-center md:items-stretch md:justify-start">
             <div className="thematic-nav bg-gray-200 py-2 text-center">
               <ul className="list-none ">

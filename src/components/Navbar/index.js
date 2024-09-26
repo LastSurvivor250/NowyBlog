@@ -1,8 +1,16 @@
+import { useState } from "react";
+
 const Navbar = () => {
   const linkClass = ({ isActive }) =>
     isActive
       ? "bg-black text-white hover:bg-gray-900 hover:text-white rounded-md px-3 py-2"
       : "text-white hover:bg-gray-900 hover:text-white rounded-md px-3 py-2";
+
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
 
   return (
     <nav className="bg-gradient-to-r from-sky-500 to-indigo-500 border-b border-indigo-500">
@@ -18,11 +26,26 @@ const Navbar = () => {
                   >
                     Categories by Niche
                   </a>
+                  {isMenuOpen && (
+                    <div className="absolute mt-2 w-48 bg-white border border-gray-200 rounded-md shadow-lg">
+                      <ul className="py-2">
+                        <li className="px-4 py-2 hover:bg-gray-100">
+                          <a href="/option1">Option 1</a>
+                        </li>
+                        <li className="px-4 py-2 hover:bg-gray-100">
+                          <a href="/option2">Option 2</a>
+                        </li>
+                        <li className="px-4 py-2 hover:bg-gray-100">
+                          <a href="/option3">Option 3</a>
+                        </li>
+                      </ul>
+                    </div>
+                  )}
                 </li>
                 <li class="inline-block mx-2">
                   <a
                     href="#"
-                    class="no-underline text-white font-bold px-3 py-1.5 rounded-md transition duration-300 hover:bg-gray-300"
+                    class="no-underline text-white font-bold px-5 py-1.5 rounded-md transition duration-300 hover:bg-gray-300"
                   >
                     Trending
                   </a>
@@ -30,7 +53,7 @@ const Navbar = () => {
                 <li class="inline-block mx-2">
                   <a
                     href="#"
-                    class="no-underline text-white font-bold px-3 py-1.5 rounded-md transition duration-300 hover:bg-gray-300"
+                    class="no-underline text-white font-bold px-5 py-1.5 rounded-md transition duration-300 hover:bg-gray-300"
                   >
                     Resources
                   </a>
@@ -38,7 +61,7 @@ const Navbar = () => {
                 <li class="inline-block mx-2">
                   <a
                     href="#"
-                    class="no-underline text-white font-bold px-3 py-1.5 rounded-md transition duration-300 hover:bg-gray-300"
+                    class="no-underline text-white font-bold px-5 py-1.5 rounded-md transition duration-300 hover:bg-gray-300"
                   >
                     Case Studies
                   </a>
@@ -46,7 +69,7 @@ const Navbar = () => {
                 <li class="inline-block mx-2">
                   <a
                     href="#"
-                    class="no-underline text-white font-bold px-3 py-1 rounded-md transition duration-300 hover:bg-gray-300"
+                    class="no-underline text-white font-bold px-5 py-1 rounded-md transition duration-300 hover:bg-gray-300"
                   >
                     Community
                   </a>
@@ -54,7 +77,7 @@ const Navbar = () => {
                 <li class="inline-block mx-2">
                   <a
                     href="#"
-                    class="no-underline text-white font-bold px-3 py-1.5 rounded-md transition duration-300 hover:bg-gray-300"
+                    class="no-underline text-white font-bold px-5 py-1.5 rounded-md transition duration-300 hover:bg-gray-300"
                   >
                     Courses
                   </a>
@@ -62,7 +85,7 @@ const Navbar = () => {
                 <li class="inline-block mx-2">
                   <a
                     href="#"
-                    class="no-underline text-white font-bold px-3 py-1.5 rounded-md transition duration-300 hover:bg-gray-300"
+                    class="no-underline text-white font-bold px-5 py-1.5 rounded-md transition duration-300 hover:bg-gray-300"
                   >
                     Store
                   </a>

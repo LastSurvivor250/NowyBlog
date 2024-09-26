@@ -57,7 +57,7 @@ const Navbar = () => {
                   >
                     Trending
                   </a>
-                  {setOpenMenu === "menu2" && (
+                  {OpenMenu === "menu2" && (
                     <div className="absolute mt-2 w-48 bg-white border border-gray-200 rounded-md shadow-lg">
                       <ul className="py-2">
                         <li className="px-4 py-2 hover:bg-gray-100">

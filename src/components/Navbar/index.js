@@ -71,6 +71,70 @@ const Navbar = () => {
             </div>
           </div>
         </div>
+        <div className="flex h-20 items-center justify-between">
+          <div className="flex flex-1 items-center justify-center md:items-stretch md:justify-start">
+            <div class="thematic-nav bg-gray-200 py-2 text-center">
+              <ul class="list-none ">
+                <li class="inline-block mx-2">
+                  <a
+                    href="/about"
+                    class="no-underline text-white font-bold px-2.5 py-1 rounded-md transition duration-300 hover:bg-gray-300"
+                  >
+                    Categories by Niche
+                  </a>
+                </li>
+                <li class="inline-block mx-2">
+                  <a
+                    href="#"
+                    class="no-underline text-white font-bold px-2.5 py-1 rounded-md transition duration-300 hover:bg-gray-300"
+                  >
+                    Trending
+                  </a>
+                </li>
+                <li class="inline-block mx-2">
+                  <a
+                    href="#"
+                    class="no-underline text-white font-bold px-2.5 py-1 rounded-md transition duration-300 hover:bg-gray-300"
+                  >
+                    Resources
+                  </a>
+                </li>
+                <li class="inline-block mx-2">
+                  <a
+                    href="#"
+                    class="no-underline text-white font-bold px-2.5 py-1 rounded-md transition duration-300 hover:bg-gray-300"
+                  >
+                    Case Studies
+                  </a>
+                </li>
+                <li class="inline-block mx-2">
+                  <a
+                    href="#"
+                    class="no-underline text-white font-bold px-2.5 py-1 rounded-md transition duration-300 hover:bg-gray-300"
+                  >
+                    Community
+                  </a>
+                </li>
+                <li class="inline-block mx-2">
+                  <a
+                    href="#"
+                    class="no-underline text-white font-bold px-2.5 py-1 rounded-md transition duration-300 hover:bg-gray-300"
+                  >
+                    Courses
+                  </a>
+                </li>
+                <li class="inline-block mx-2">
+                  <a
+                    href="#"
+                    class="no-underline text-white font-bold px-2.5 py-1 rounded-md transition duration-300 hover:bg-gray-300"
+                  >
+                    Store
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
     </nav>
   );

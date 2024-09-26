@@ -25,7 +25,7 @@ const Navbar = () => {
                   <a
                     href="#"
                     onClick={toggleMenu}
-                    class="no-underline text-white font-bold px-3 py-1.5 rounded-md transition duration-300 hover:bg-gray-300"
+                    class="no-underline text-white font-bold px-5 py-1.5 rounded-md transition duration-300 hover:bg-gray-300"
                   >
                     Categories by Niche
                   </a>
@@ -33,13 +33,16 @@ const Navbar = () => {
                     <div className="absolute mt-2 w-48 bg-white border border-gray-200 rounded-md shadow-lg">
                       <ul className="py-2">
                         <li className="px-4 py-2 hover:bg-gray-100">
-                          <a href="/option1">Option 1</a>
+                          <a href="/about">ADHD</a>
                         </li>
                         <li className="px-4 py-2 hover:bg-gray-100">
-                          <a href="/option2">Option 2</a>
+                          <a href="/about">Online Business</a>
                         </li>
                         <li className="px-4 py-2 hover:bg-gray-100">
-                          <a href="/option3">Option 3</a>
+                          <a href="/about">Self Development</a>
+                        </li>
+                        <li className="px-4 py-2 hover:bg-gray-100">
+                          <a href="/about">Material Science</a>
                         </li>
                       </ul>
                     </div>
@@ -48,23 +51,42 @@ const Navbar = () => {
                 <li class="inline-block mx-2">
                   <a
                     href="#"
-                    class="no-underline text-white font-bold px-5 py-1.5 rounded-md transition duration-300 hover:bg-gray-300"
+                    onClick={toggleMenu}
+                    class="no-underline text-white font-bold px-7 py-1.5 rounded-md transition duration-300 hover:bg-gray-300"
                   >
                     Trending
                   </a>
+                  {isMenuOpen && (
+                    <div className="absolute mt-2 w-48 bg-white border border-gray-200 rounded-md shadow-lg">
+                      <ul className="py-2">
+                        <li className="px-4 py-2 hover:bg-gray-100">
+                          <a href="/about">ADHD</a>
+                        </li>
+                        <li className="px-4 py-2 hover:bg-gray-100">
+                          <a href="/about">Online Business</a>
+                        </li>
+                        <li className="px-4 py-2 hover:bg-gray-100">
+                          <a href="/about">Self Development</a>
+                        </li>
+                        <li className="px-4 py-2 hover:bg-gray-100">
+                          <a href="/about">Material Science</a>
+                        </li>
+                      </ul>
+                    </div>
+                  )}
                 </li>
                 <li class="inline-block mx-2">
                   <a
                     href="#"
-                    class="no-underline text-white font-bold px-5 py-1.5 rounded-md transition duration-300 hover:bg-gray-300"
+                    class="no-underline text-white font-bold px-7 py-1.5 rounded-md transition duration-300 hover:bg-gray-300"
                   >
                     Resources
                   </a>
                 </li>
                 <li class="inline-block mx-2">
                   <a
-                    href="#"
-                    class="no-underline text-white font-bold px-5 py-1.5 rounded-md transition duration-300 hover:bg-gray-300"
+                    href="about"
+                    class="no-underline text-white font-bold px-7 py-1.5 rounded-md transition duration-300 hover:bg-gray-300"
                   >
                     Case Studies
                   </a>
@@ -72,7 +94,7 @@ const Navbar = () => {
                 <li class="inline-block mx-2">
                   <a
                     href="#"
-                    class="no-underline text-white font-bold px-5 py-1 rounded-md transition duration-300 hover:bg-gray-300"
+                    class="no-underline text-white font-bold px-7 py-1 rounded-md transition duration-300 hover:bg-gray-300"
                   >
                     Community
                   </a>
@@ -80,7 +102,7 @@ const Navbar = () => {
                 <li class="inline-block mx-2">
                   <a
                     href="#"
-                    class="no-underline text-white font-bold px-5 py-1.5 rounded-md transition duration-300 hover:bg-gray-300"
+                    class="no-underline text-white font-bold px-7 py-1.5 rounded-md transition duration-300 hover:bg-gray-300"
                   >
                     Courses
                   </a>
@@ -88,7 +110,7 @@ const Navbar = () => {
                 <li class="inline-block mx-2">
                   <a
                     href="#"
-                    class="no-underline text-white font-bold px-5 py-1.5 rounded-md transition duration-300 hover:bg-gray-300"
+                    class="no-underline text-white font-bold px-7 py-1.5 rounded-md transition duration-300 hover:bg-gray-300"
                   >
                     Store
                   </a>
@@ -106,7 +128,7 @@ const Navbar = () => {
                     href="/about"
                     class="no-underline text-white font-bold px-2.5 py-1 rounded-md transition duration-300 hover:bg-gray-300"
                   >
-                    Categories by Niche
+                    IT
                   </a>
                 </li>
                 <li class="inline-block mx-2">
@@ -114,7 +136,7 @@ const Navbar = () => {
                     href="#"
                     class="no-underline text-white font-bold px-2.5 py-1 rounded-md transition duration-300 hover:bg-gray-300"
                   >
-                    Trending
+                    VIDEO
                   </a>
                 </li>
                 <li class="inline-block mx-2">
@@ -122,7 +144,7 @@ const Navbar = () => {
                     href="#"
                     class="no-underline text-white font-bold px-2.5 py-1 rounded-md transition duration-300 hover:bg-gray-300"
                   >
-                    Resources
+                    LINKS
                   </a>
                 </li>
                 <li class="inline-block mx-2">
@@ -130,7 +152,7 @@ const Navbar = () => {
                     href="#"
                     class="no-underline text-white font-bold px-2.5 py-1 rounded-md transition duration-300 hover:bg-gray-300"
                   >
-                    Case Studies
+                    STATUS
                   </a>
                 </li>
                 <li class="inline-block mx-2">
@@ -138,7 +160,7 @@ const Navbar = () => {
                     href="#"
                     class="no-underline text-white font-bold px-2.5 py-1 rounded-md transition duration-300 hover:bg-gray-300"
                   >
-                    Community
+                    ENTERTAINMENT
                   </a>
                 </li>
                 <li class="inline-block mx-2">
@@ -146,7 +168,7 @@ const Navbar = () => {
                     href="#"
                     class="no-underline text-white font-bold px-2.5 py-1 rounded-md transition duration-300 hover:bg-gray-300"
                   >
-                    Courses
+                    FEEDBACK
                   </a>
                 </li>
                 <li class="inline-block mx-2">
@@ -154,7 +176,7 @@ const Navbar = () => {
                     href="#"
                     class="no-underline text-white font-bold px-2.5 py-1 rounded-md transition duration-300 hover:bg-gray-300"
                   >
-                    Store
+                    PROJECTS
                   </a>
                 </li>
               </ul>

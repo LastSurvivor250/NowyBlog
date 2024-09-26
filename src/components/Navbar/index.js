@@ -9,8 +9,34 @@ const Navbar = () => {
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div className="flex h-20 items-center justify-between">
           <div className="flex flex-1 items-center justify-center md:items-stretch md:justify-start">
-            Od jutra, to jest od poniedziałku, rozpoczynam zintensyfikowane
-            przyswajanie JS
+            <div class="thematic-nav bg-gray-200 py-2 text-center">
+              <ul class="list-none p-0 m-0">
+                <li class="inline-block mx-2">
+                  <a
+                    href="#"
+                    class="no-underline text-gray-800 font-bold px-2.5 py-1 rounded-md transition duration-300 hover:bg-gray-300"
+                  >
+                    ADHD
+                  </a>
+                </li>
+                <li class="inline-block mx-2">
+                  <a
+                    href="#"
+                    class="no-underline text-gray-800 font-bold px-2.5 py-1 rounded-md transition duration-300 hover:bg-gray-300"
+                  >
+                    Merch Business
+                  </a>
+                </li>
+                <li class="inline-block mx-2">
+                  <a
+                    href="#"
+                    class="no-underline text-gray-800 font-bold px-2.5 py-1 rounded-md transition duration-300 hover:bg-gray-300"
+                  >
+                    Self Development
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>

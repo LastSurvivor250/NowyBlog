@@ -132,7 +132,7 @@ const Navbar = () => {
                     IT
                   </a>
                 </li>
-                <li clasNames="inline-block mx-2">
+                <li clansName="inline-block mx-2">
                   <a
                     href="#"
                     className="no-underline text-white font-bold px-2.5 py-1 rounded-md transition duration-300 hover:bg-gray-300"

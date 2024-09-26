@@ -20,13 +20,13 @@ const Navbar = () => {
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div className="flex h-20 items-center justify-between">
           <div className="flex flex-1 items-center justify-center md:items-stretch md:justify-start">
-            <div class="thematic-nav bg-gray-200 py-2 text-center">
-              <ul class="list-none ">
-                <li class="inline-block mx-2">
+            <div className="thematic-nav bg-gray-200 py-2 text-center">
+              <ul className="list-none ">
+                <li className="inline-block mx-2">
                   <a
                     href="#"
                     onClick={() => toggleMenu("menu1")}
-                    class="no-underline text-white font-bold px-5 py-1.5 rounded-md transition duration-300 hover:bg-gray-300"
+                    className="no-underline text-white font-bold px-5 py-1.5 rounded-md transition duration-300 hover:bg-gray-300"
                   >
                     Categories by Niche
                   </a>
@@ -49,11 +49,11 @@ const Navbar = () => {
                     </div>
                   )}
                 </li>
-                <li class="inline-block mx-2">
+                <li className="inline-block mx-2">
                   <a
                     href="#"
                     onClick={() => toggleMenu("menu2")}
-                    class="no-underline text-white font-bold px-7 py-1.5 rounded-md transition duration-300 hover:bg-gray-300"
+                    className="no-underline text-white font-bold px-7 py-1.5 rounded-md transition duration-300 hover:bg-gray-300"
                   >
                     Trending
                   </a>
@@ -76,42 +76,42 @@ const Navbar = () => {
                     </div>
                   )}
                 </li>
-                <li class="inline-block mx-2">
+                <li className="inline-block mx-2">
                   <a
                     href="#"
-                    class="no-underline text-white font-bold px-7 py-1.5 rounded-md transition duration-300 hover:bg-gray-300"
+                    className="no-underline text-white font-bold px-7 py-1.5 rounded-md transition duration-300 hover:bg-gray-300"
                   >
                     Resources
                   </a>
                 </li>
-                <li class="inline-block mx-2">
+                <li className="inline-block mx-2">
                   <a
                     href="about"
-                    class="no-underline text-white font-bold px-7 py-1.5 rounded-md transition duration-300 hover:bg-gray-300"
+                    className="no-underline text-white font-bold px-7 py-1.5 rounded-md transition duration-300 hover:bg-gray-300"
                   >
                     Case Studies
                   </a>
                 </li>
-                <li class="inline-block mx-2">
+                <li className="inline-block mx-2">
                   <a
                     href="#"
-                    class="no-underline text-white font-bold px-7 py-1 rounded-md transition duration-300 hover:bg-gray-300"
+                    className="no-underline text-white font-bold px-7 py-1 rounded-md transition duration-300 hover:bg-gray-300"
                   >
                     Community
                   </a>
                 </li>
-                <li class="inline-block mx-2">
+                <li className="inline-block mx-2">
                   <a
                     href="#"
-                    class="no-underline text-white font-bold px-7 py-1.5 rounded-md transition duration-300 hover:bg-gray-300"
+                    className="no-underline text-white font-bold px-7 py-1.5 rounded-md transition duration-300 hover:bg-gray-300"
                   >
                     Courses
                   </a>
                 </li>
-                <li class="inline-block mx-2">
+                <li className="inline-block mx-2">
                   <a
                     href="#"
-                    class="no-underline text-white font-bold px-7 py-1.5 rounded-md transition duration-300 hover:bg-gray-300"
+                    className="no-underline text-white font-bold px-7 py-1.5 rounded-md transition duration-300 hover:bg-gray-300"
                   >
                     Store
                   </a>
@@ -122,60 +122,60 @@ const Navbar = () => {
         </div>
         <div className="flex h-20 items-center justify-between">
           <div className="flex flex-1 items-center justify-center md:items-stretch md:justify-start">
-            <div class="thematic-nav bg-gray-200 py-2 text-center">
-              <ul class="list-none ">
-                <li class="inline-block mx-2">
+            <div className="thematic-nav bg-gray-200 py-2 text-center">
+              <ul className="list-none ">
+                <li className="inline-block mx-2">
                   <a
                     href="/about"
-                    class="no-underline text-white font-bold px-2.5 py-1 rounded-md transition duration-300 hover:bg-gray-300"
+                    className="no-underline text-white font-bold px-2.5 py-1 rounded-md transition duration-300 hover:bg-gray-300"
                   >
                     IT
                   </a>
                 </li>
-                <li class="inline-block mx-2">
+                <li clasNames="inline-block mx-2">
                   <a
                     href="#"
-                    class="no-underline text-white font-bold px-2.5 py-1 rounded-md transition duration-300 hover:bg-gray-300"
+                    className="no-underline text-white font-bold px-2.5 py-1 rounded-md transition duration-300 hover:bg-gray-300"
                   >
                     VIDEO
                   </a>
                 </li>
-                <li class="inline-block mx-2">
+                <li className="inline-block mx-2">
                   <a
                     href="#"
-                    class="no-underline text-white font-bold px-2.5 py-1 rounded-md transition duration-300 hover:bg-gray-300"
+                    className="no-underline text-white font-bold px-2.5 py-1 rounded-md transition duration-300 hover:bg-gray-300"
                   >
                     LINKS
                   </a>
                 </li>
-                <li class="inline-block mx-2">
+                <li className="inline-block mx-2">
                   <a
                     href="#"
-                    class="no-underline text-white font-bold px-2.5 py-1 rounded-md transition duration-300 hover:bg-gray-300"
+                    className="no-underline text-white font-bold px-2.5 py-1 rounded-md transition duration-300 hover:bg-gray-300"
                   >
                     STATUS
                   </a>
                 </li>
-                <li class="inline-block mx-2">
+                <li className="inline-block mx-2">
                   <a
                     href="#"
-                    class="no-underline text-white font-bold px-2.5 py-1 rounded-md transition duration-300 hover:bg-gray-300"
+                    className="no-underline text-white font-bold px-2.5 py-1 rounded-md transition duration-300 hover:bg-gray-300"
                   >
                     ENTERTAINMENT
                   </a>
                 </li>
-                <li class="inline-block mx-2">
+                <li className="inline-block mx-2">
                   <a
                     href="#"
-                    class="no-underline text-white font-bold px-2.5 py-1 rounded-md transition duration-300 hover:bg-gray-300"
+                    className="no-underline text-white font-bold px-2.5 py-1 rounded-md transition duration-300 hover:bg-gray-300"
                   >
                     FEEDBACK
                   </a>
                 </li>
-                <li class="inline-block mx-2">
+                <li className="inline-block mx-2">
                   <a
                     href="#"
-                    class="no-underline text-white font-bold px-2.5 py-1 rounded-md transition duration-300 hover:bg-gray-300"
+                    className="no-underline text-white font-bold px-2.5 py-1 rounded-md transition duration-300 hover:bg-gray-300"
                   >
                     PROJECTS
                   </a>

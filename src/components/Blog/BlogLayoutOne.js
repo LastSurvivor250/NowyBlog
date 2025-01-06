@@ -6,22 +6,22 @@ import { slug } from "github-slugger";
 
 const BlogLayoutOne = ({ blog }) => {
   return (
-    <div className="group inline-block overflow-hidden ">
-      <div
-        className="absolute top-0 left-0 bottom-0 right-0 w-full
-          bg-gradient-to-b from-transparent from-0% to-dark/90  
-        "
-      />
-      <Image
-        src={blog.image.filePath.replace("../public", "")}
-        placeholder="blur"
-        blurDataURL={blog.image.blurhashDataUrl}
-        alt={blog.title}
-        width={blog.image.width}
-        height={blog.image.height}
-        className="  object-cover  object-fit:fill group-hover:scale-105 transition-all ease duration-300"
-        sizes="(max-width: 1180px) 100vw, 50vw"
-      />
+    <di className="group inline-block overflow-hidden relative">
+  <div
+    className="absolute top-0 left-0 right-0 bottom-0 w-full h-full
+      bg-gradient-to-b from-transparent to-dark/90"
+  />
+  <Image
+    src={blog.image.filePath.replace("../public", "")}
+    placeholder="blur"
+    blurDataURL={blog.image.blurhashDataUrl}
+    alt={blog.title}
+    width={blog.image.width}
+    height={blog.image.height}
+    className="object-cover group-hover:scale-105 transition-all ease duration-300"
+    sizes="(max-width: 1180px) 100vw, 50vw"
+  />
+
 
       <div className="absolute bottom-0 p-4 xs:p-6 sm:p-10  position-absolute top:0">
         <Tag

@@ -19,7 +19,7 @@ const HomeCoverSection = ({ blogs }) => {
         <ConnectedSite />
         <section className="w-full mt-0 sm:mt-24   sm:px-10 md:px-24  sxl:px-32 flex flex-col items-center justify-center">
           <h2 className="text-center w-full inline-block font-bold capitalize text-2xl md:text-4xl text-dark dark:text-light">
-            Doors To Your Digital Wisdom
+            Modern Understanding of ADHD will have an impact on our lives.
           </h2>
           <div className="grid grid-rows-2 gap-6 ">
             <div className="grid grid-cols-2 grid-rows-1 gap-6   sm:mt-16 space-between ">

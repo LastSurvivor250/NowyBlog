@@ -66,40 +66,6 @@ const Header = () => {
         </div>
       </button>
 
-      <nav
-        className=" w-max py-3 px-6 sm:px-8 border border-solid border-light text-light rounded-full font-medium capitalize  items-center flex  sm:hidden
-        fixed top-6 right-1/2 translate-x-1/2 bg-light/80 backdrop-blur-sm z-50
-        transition-all ease duration-300
-        "
-        style={{
-          top: click ? "1rem" : "-5rem",
-        }}
-      >
-        <Link href="/" className="mr-2 text-light2">
-          Home
-        </Link>
-        <Link href="/about" className="mx-2 text-light2">
-          About
-        </Link>
-        <Link href="/contact" className="mx-2 text-light2">
-          Contact
-        </Link>
-        <button
-          onClick={() => setMode(mode === "light" ? "dark" : "light")}
-          className={cx(
-            "w-6 h-6 ease ml-2 flex items-center justify-center rounded-full p-1",
-            mode === "light" ? "bg-dark text-light" : "bg-light text-dark"
-          )}
-          aria-label="theme-switcher"
-        >
-          {mode === "light" ? (
-            <MoonIcon className={"fill-dark"} />
-          ) : (
-            <SunIcon className={"fill-dark"} />
-          )}
-        </button>
-      </nav>
-
       <nav class="fixed top-6 right-1/2 translate-x-1/2 bg-gradient-to-r from-sky-500 to-indigo-500 p-3 px-6 sm:px-8 rounded-full text-white font-medium capitalize items-center hidden sm:flex z-50 transition-all ease duration-300">
         <Link href="/" className="mr-4">
           Home

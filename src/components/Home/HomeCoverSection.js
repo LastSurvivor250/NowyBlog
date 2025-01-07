@@ -15,36 +15,38 @@ const HomeCoverSection = ({ blogs }) => {
 
   return (
     <div className="">
-      <article className="flex flex-row items-start justify-end  sm:mx-10 relative h-[164vh] sm:h-[85vh] ">
+      <article className="flex flex-row items-start justify-end sm:mx-10 relative h-[164vh] sm:h-[85vh]">
         <ConnectedSite />
-        <section className="w-full mt-0 sm:mt-24   sm:px-10 md:px-24  sxl:px-32 flex flex-col items-center justify-center">
+        <section className="w-full mt-0 sm:mt-24 sm:px-10 md:px-24 sxl:px-32 flex flex-col items-center justify-center">
           <h2 className="text-center w-full inline-block font-bold capitalize text-2xl md:text-4xl text-dark dark:text-light">
             Modern Understanding of ADHD will have an impact on our lives.
           </h2>
-          <div className="grid grid-rows-2 gap-6 ">
-            <div className="grid grid-cols-2 grid-rows-1 gap-6   sm:mt-16 space-between ">
-              <article
-                className=" col-span-2  sxl:col-span-1 row-span-2 relative"
-                style={{ width: "125%" }}
-              >
+          <div className="grid gap-6">
+            {/* Top Row: Large Image */}
+            <div className="grid grid-cols-2 gap-6 sm:mt-16">
+              <article className="col-span-2 row-span-2 relative">
                 <BlogLayoutOne blog={sortedBlogs[8]} />
               </article>
-              <article
-                className=" col-span-2 sm:col-span-1 row-span-1 relative width:72px left:130"
-                style={{ width: "70%", left: "175px" }}
-              >
+            </div>
+            {/* Bottom Row: Smaller Images */}
+            <div className="grid grid-cols-2 gap-6">
+              <article className="col-span-1 relative">
+                <BlogLayoutFour blog={sortedBlogs[10]} />
+              </article>
+              <article className="col-span-1 relative">
                 <BlogLayoutFour blog={sortedBlogs[0]} />
               </article>
             </div>
-            <div className="flex justify-between align-items ">
-              <article className=" col-span-1 sm:col-span-1 row-span-1 relative">
-                <BlogLayoutFour blog={sortedBlogs[10]} />
-              </article>
-              <article className="col-span-1 sm:col-span-1 row-span-1 relative">
+            {/* Additional Row if Needed */}
+            <div className="grid grid-cols-3 gap-6">
+              <article className="col-span-1 relative">
                 <BlogLayoutFour blog={sortedBlogs[9]} />
               </article>
-              <article className="col-span-1 sm:col-span-1 row-span-1 relative">
+              <article className="col-span-1 relative">
                 <BlogLayoutFour blog={sortedBlogs[7]} />
+              </article>
+              <article className="col-span-1 relative">
+                <BlogLayoutFour blog={sortedBlogs[6]} />
               </article>
               <br /> <br /> <br /> <br /> <br /> <br /> <br />
             </div>

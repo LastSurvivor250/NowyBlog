@@ -56,7 +56,7 @@ const Header = () => {
       </button>
 
       {/* Navigation Bar */}
-      <div className="flex items-center justify-around w-full py-3 px-6 bg-gray-50 dark:bg-gray-900 rounded-lg shadow-sm">
+      <div className="flex items-center justify-between w-full py-3 px-6 bg-gray-50 dark:bg-gray-900 rounded-lg shadow-sm">
         <nav className="hidden sm:flex items-center space-x-8">
           <Link
             href="/"
@@ -83,35 +83,41 @@ const Header = () => {
             Services
           </Link>
         </nav>
-        {/* Theme Switcher Button */}
-        <button
-          onClick={() => setMode(mode === "light" ? "dark" : "light")}
-          className={`w-6 h-6 flex items-center justify-center rounded-full transition-all duration-300 ease-in-out ${
-            mode === "light"
-              ? "bg-gray-200 text-gray-800 hover:bg-gray-300"
-              : "bg-white text-gray-800 hover:bg-gray-100"
-          }`}
-          aria-label="theme-switcher"
-        >
-          {mode === "light" ? (
-            <MoonIcon className="fill-gray-800" />
-          ) : (
-            <SunIcon className="fill-gray-800" />
+
+        {/* Theme Switcher and Button Group */}
+        <div className="flex items-center space-x-4">
+          <button
+            onClick={() => setMode(mode === "light" ? "dark" : "light")}
+            className={`w-6 h-6 flex items-center justify-center rounded-full transition-all duration-300 ease-in-out ${
+              mode === "light"
+                ? "bg-gray-200 text-gray-800 hover:bg-gray-300"
+                : "bg-white text-gray-800 hover:bg-gray-100"
+            }`}
+            aria-label="theme-switcher"
+          >
+            {mode === "light" ? (
+              <MoonIcon className="fill-gray-800" />
+            ) : (
+              <SunIcon className="fill-gray-800" />
+            )}
+          </button>
+          <button
+            onClick={() => setShowModal(true)}
+            className="bg-indigo-500 hover:bg-indigo-400 px-4 py-2 rounded-lg text-lg text-white font-semibold transition-all ease-in-out"
+          >
+            Get My FREE EBOOK
+          </button>
+          {showModal && (
+            <Model
+              style={{ zIndex: 999 }}
+              onClose={() => setShowModal(false)}
+            />
           )}
-        </button>
+        </div>
       </div>
 
       {/* Social Media Links and Button */}
       <div className="hidden sm:flex items-center space-x-4">
-        <button
-          onClick={() => setShowModal(true)}
-          className="bg-indigo-500 hover:bg-indigo-400 px-4 py-2 rounded-lg text-lg text-white font-semibold transition-all ease-in-out"
-        >
-          Get My FREE EBOOK
-        </button>
-        {showModal && (
-          <Model style={{ zIndex: 999 }} onClose={() => setShowModal(false)} />
-        )}
         <a
           href={siteMetadata.linkedin}
           className="inline-block w-6 h-6 hover:scale-110 transition-transform ease duration-200"

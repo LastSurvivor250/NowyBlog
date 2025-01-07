@@ -24,7 +24,7 @@ const Header = () => {
     setClick(!click);
   };
   return (
-    <header className="w-full border-b border-gray-300 bg-white shadow-sm">
+    <header className="w-full p-4  px-5 sm:px-10 flex items-center justify-between  border-b border-gray-300 bg-white shadow-sm">
       <Logo />
 
       <button

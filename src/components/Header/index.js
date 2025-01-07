@@ -69,8 +69,8 @@ const Header = () => {
       </button>
 
       {/* Navigation Bar */}
-      <nav className="flex-grow hidden sm:flex items-center justify-between max-w-[1200px] mx-auto py-2 px-6 border border-gray-300 bg-white dark:bg-dark shadow-md rounded-md">
-        <div className="flex space-x-4">
+      <nav className="max-w-[800px] w-full mx-auto py-2 px-6 bg-white dark:bg-dark shadow-md font-medium capitalize fixed top-0 left-1/2 -translate-x-1/2 z-50">
+        <div className="flex items-center justify-center space-x-6">
           <Link
             href="/"
             className="text-gray-700 hover:text-black dark:text-gray-300"

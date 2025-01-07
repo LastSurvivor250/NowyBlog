@@ -56,49 +56,51 @@ const Header = () => {
       </button>
 
       {/* Navigation Bar */}
-      <nav className="hidden sm:flex items-center justify-center space-x-8 py-3 px-10 bg-gray-50 dark:bg-gray-900 rounded-lg shadow-sm">
-        <Link
-          href="/"
-          className="text-gray-700 hover:text-indigo-600 dark:text-white"
-        >
-          Home
-        </Link>
-        <Link
-          href="/about"
-          className="text-gray-700 hover:text-indigo-600 dark:text-white"
-        >
-          About
-        </Link>
-        <Link
-          href="/contact"
-          className="text-gray-700 hover:text-indigo-600 dark:text-white"
-        >
-          Contact
-        </Link>
-        <Link
-          href="/services"
-          className="text-gray-700 hover:text-indigo-600 dark:text-white"
-        >
-          Services
-        </Link>
-      </nav>
+      <div className="flex items-center justify-between w-full py-3 px-10 bg-gray-50 dark:bg-gray-900 rounded-lg shadow-sm">
+        <nav className="hidden sm:flex items-center space-x-8">
+          <Link
+            href="/"
+            className="text-gray-700 hover:text-indigo-600 dark:text-white"
+          >
+            Home
+          </Link>
+          <Link
+            href="/about"
+            className="text-gray-700 hover:text-indigo-600 dark:text-white"
+          >
+            About
+          </Link>
+          <Link
+            href="/contact"
+            className="text-gray-700 hover:text-indigo-600 dark:text-white"
+          >
+            Contact
+          </Link>
+          <Link
+            href="/services"
+            className="text-gray-700 hover:text-indigo-600 dark:text-white"
+          >
+            Services
+          </Link>
+        </nav>
 
-      {/* Theme Switcher Button */}
-      <button
-        onClick={() => setMode(mode === "light" ? "dark" : "light")}
-        className={`ml-2 w-6 h-6 flex items-center justify-center rounded-full transition-all duration-300 ease-in-out ${
-          mode === "light"
-            ? "bg-gray-200 text-gray-800 hover:bg-gray-300"
-            : "bg-white text-gray-800 hover:bg-gray-100"
-        }`}
-        aria-label="theme-switcher"
-      >
-        {mode === "light" ? (
-          <MoonIcon className="fill-gray-800" />
-        ) : (
-          <SunIcon className="fill-gray-800" />
-        )}
-      </button>
+        {/* Theme Switcher Button */}
+        <button
+          onClick={() => setMode(mode === "light" ? "dark" : "light")}
+          className={`w-6 h-6 flex items-center justify-center rounded-full transition-all duration-300 ease-in-out ${
+            mode === "light"
+              ? "bg-gray-200 text-gray-800 hover:bg-gray-300"
+              : "bg-white text-gray-800 hover:bg-gray-100"
+          }`}
+          aria-label="theme-switcher"
+        >
+          {mode === "light" ? (
+            <MoonIcon className="fill-gray-800" />
+          ) : (
+            <SunIcon className="fill-gray-800" />
+          )}
+        </button>
+      </div>
 
       {/* Social Media Links and Button */}
       <div className="hidden sm:flex items-center space-x-4">

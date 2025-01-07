@@ -21,31 +21,31 @@ const HomeCoverSection = ({ blogs }) => {
           <h2 className="text-center w-full inline-block font-bold capitalize text-2xl md:text-4xl text-dark dark:text-light">
             Modern Understanding of ADHD will have an impact on our lives.
           </h2>
-          <div className="grid gap-6">
-            {/* Top Row: Large Image */}
-            <div className="grid grid-cols-2 gap-6 sm:mt-16">
-              <article className="col-span-2 row-span-2 relative">
+          <div className="grid gap-6 sm:mt-16">
+            {/* Top Image: Large Image */}
+            <div className="grid grid-cols-2 gap-6">
+              <article className="col-span-2 relative">
                 <BlogLayoutOne blog={sortedBlogs[8]} />
               </article>
             </div>
-            {/* Bottom Row: Smaller Images */}
+            {/* Bottom Images: Two Smaller Images */}
             <div className="grid grid-cols-2 gap-6">
-              <article className="col-span-1 relative">
+              <article className="relative">
                 <BlogLayoutFour blog={sortedBlogs[10]} />
               </article>
-              <article className="col-span-1 relative">
+              <article className="relative">
                 <BlogLayoutFour blog={sortedBlogs[0]} />
               </article>
             </div>
-            {/* Additional Row if Needed */}
+            {/* Additional Images (Optional) */}
             <div className="grid grid-cols-3 gap-6">
-              <article className="col-span-1 relative">
+              <article className="relative">
                 <BlogLayoutFour blog={sortedBlogs[9]} />
               </article>
-              <article className="col-span-1 relative">
+              <article className="relative">
                 <BlogLayoutFour blog={sortedBlogs[7]} />
               </article>
-              <article className="col-span-1 relative">
+              <article className="relative">
                 <BlogLayoutFour blog={sortedBlogs[6]} />
               </article>
               <br /> <br /> <br /> <br /> <br /> <br /> <br />

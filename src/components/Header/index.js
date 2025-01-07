@@ -24,7 +24,7 @@ const Header = () => {
     setClick(!click);
   };
   return (
-    <header className="w-full p-4 px-5 sm:px-10 flex items-center justify-between border-b border-gray-300 bg-white dark:bg-dark shadow-sm">
+    <header className="w-full p-4 px-5 sm:px-10 flex items-center justify-between bg-gradient-to-r from-white via-gray-100 to-white dark:from-dark dark:via-gray-800 dark:to-dark shadow-md">
       {/* Logo Section */}
       <Logo />
 
@@ -37,81 +37,68 @@ const Header = () => {
         <div className="w-6 cursor-pointer transition-all ease duration-300">
           <div className="relative">
             <span
-              className="absolute top-0 inline-block w-full h-0.5 bg-dark dark:bg-light rounded transition-all ease duration-200"
-              style={{
-                transform: click
-                  ? "rotate(-45deg) translateY(0)"
-                  : "rotate(0deg) translateY(6px)",
-              }}
-            >
-              &nbsp;
-            </span>
+              className={`absolute top-0 w-full h-0.5 bg-dark dark:bg-light rounded transition-transform ease duration-200 ${
+                click ? "rotate-[-45deg] translate-y-0" : "translate-y-[6px]"
+              }`}
+            />
             <span
-              className="absolute top-0 inline-block w-full h-0.5 bg-dark dark:bg-light rounded transition-all ease duration-200"
-              style={{
-                opacity: click ? 0 : 1,
-              }}
-            >
-              &nbsp;
-            </span>
+              className={`absolute top-0 w-full h-0.5 bg-dark dark:bg-light rounded transition-opacity ease duration-200 ${
+                click ? "opacity-0" : "opacity-100"
+              }`}
+            />
             <span
-              className="absolute top-0 inline-block w-full h-0.5 bg-dark dark:bg-light rounded transition-all ease duration-200"
-              style={{
-                transform: click
-                  ? "rotate(45deg) translateY(0)"
-                  : "rotate(0deg) translateY(-6px)",
-              }}
-            >
-              &nbsp;
-            </span>
+              className={`absolute top-0 w-full h-0.5 bg-dark dark:bg-light rounded transition-transform ease duration-200 ${
+                click ? "rotate-[45deg] translate-y-0" : "translate-y-[-6px]"
+              }`}
+            />
           </div>
         </div>
       </button>
 
       {/* Navigation Bar */}
-      <nav className="max-w-[800px] w-full mx-auto py-2 px-6 bg-white dark:bg-dark shadow-md font-medium capitalize fixed top-0 left-1/2 -translate-x-1/2 z-50">
-        <div className="flex items-center justify-center space-x-6">
-          <Link
-            href="/"
-            className="text-gray-700 hover:text-black dark:text-gray-300"
-          >
-            Home
-          </Link>
-          <Link
-            href="/about"
-            className="text-gray-700 hover:text-black dark:text-gray-300"
-          >
-            About
-          </Link>
-          <Link
-            href="/contact"
-            className="text-gray-700 hover:text-black dark:text-gray-300"
-          >
-            Contact
-          </Link>
-        </div>
-        <button
-          onClick={() => setMode(mode === "light" ? "dark" : "light")}
-          className={`w-6 h-6 flex items-center justify-center rounded-full p-1 ${
-            mode === "light"
-              ? "bg-gray-200 text-gray-800"
-              : "bg-gray-800 text-gray-200"
-          }`}
-          aria-label="theme-switcher"
+      <nav className="hidden sm:flex items-center justify-center space-x-8 py-3 px-10 bg-gray-50 dark:bg-gray-900 rounded-lg shadow-sm">
+        <Link
+          href="/"
+          className="text-gray-700 hover:text-indigo-600 dark:text-gray-300 dark:hover:text-indigo-400"
         >
-          {mode === "light" ? (
-            <MoonIcon className="fill-gray-800" />
-          ) : (
-            <SunIcon className="fill-gray-200" />
-          )}
-        </button>
+          Home
+        </Link>
+        <Link
+          href="/about"
+          className="text-gray-700 hover:text-indigo-600 dark:text-gray-300 dark:hover:text-indigo-400"
+        >
+          About
+        </Link>
+        <Link
+          href="/contact"
+          className="text-gray-700 hover:text-indigo-600 dark:text-gray-300 dark:hover:text-indigo-400"
+        >
+          Contact
+        </Link>
       </nav>
 
+      {/* Theme Switcher Button */}
+      <button
+        onClick={() => setMode(mode === "light" ? "dark" : "light")}
+        className={`ml-4 w-8 h-8 flex items-center justify-center rounded-full transition-all duration-300 ease-in-out ${
+          mode === "light"
+            ? "bg-gray-200 text-gray-800 hover:bg-gray-300"
+            : "bg-gray-800 text-gray-200 hover:bg-gray-700"
+        }`}
+        aria-label="theme-switcher"
+      >
+        {mode === "light" ? (
+          <MoonIcon className="fill-gray-800" />
+        ) : (
+          <SunIcon className="fill-gray-200" />
+        )}
+      </button>
+
       {/* Social Media Links and Button */}
-      <div className="hidden sm:flex items-center">
+      <div className="hidden sm:flex items-center space-x-4">
         <button
           onClick={() => setShowModal(true)}
-          className="bg-indigo-500 hover:bg-indigo-100 px-4 py-2 rounded-xl text-lg mr-4 text-white font-semibold"
+          className="bg-indigo-500 hover:bg-indigo-400 px-4 py-2 rounded-lg text-lg text-white font-semibold transition-all ease-in-out"
         >
           Get My FREE EBOOK
         </button>
@@ -120,35 +107,35 @@ const Header = () => {
         )}
         <a
           href={siteMetadata.linkedin}
-          className="inline-block w-6 h-6 mr-4"
-          aria-label="Reach out to me via LinkedIn"
+          className="inline-block w-6 h-6 hover:scale-110 transition-transform ease duration-200"
+          aria-label="LinkedIn"
           target="_blank"
         >
-          <LinkedinIcon className="hover:scale-125 transition-all ease duration-200" />
+          <LinkedinIcon className="fill-current dark:fill-light" />
         </a>
         <a
           href={siteMetadata.twitter}
-          className="inline-block w-6 h-6 mr-4"
-          aria-label="Reach out to me via Twitter"
+          className="inline-block w-6 h-6 hover:scale-110 transition-transform ease duration-200"
+          aria-label="Twitter"
           target="_blank"
         >
-          <TwitterIcon className="hover:scale-125 transition-all ease duration-200" />
+          <TwitterIcon className="fill-current dark:fill-light" />
         </a>
         <a
           href={siteMetadata.github}
-          className="inline-block w-6 h-6 mr-4"
-          aria-label="Check my profile on Github"
+          className="inline-block w-6 h-6 hover:scale-110 transition-transform ease duration-200"
+          aria-label="GitHub"
           target="_blank"
         >
-          <GithubIcon className="hover:scale-125 transition-all ease duration-200 dark:fill-light" />
+          <GithubIcon className="fill-current dark:fill-light" />
         </a>
         <a
           href={siteMetadata.dribbble}
-          className="inline-block w-6 h-6 mr-4"
-          aria-label="Check my profile on Dribbble"
+          className="inline-block w-6 h-6 hover:scale-110 transition-transform ease duration-200"
+          aria-label="Dribbble"
           target="_blank"
         >
-          <DribbbleIcon className="hover:scale-125 transition-all ease duration-200" />
+          <DribbbleIcon className="fill-current dark:fill-light" />
         </a>
       </div>
     </header>

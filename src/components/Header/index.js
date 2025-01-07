@@ -56,7 +56,8 @@ const Header = () => {
       </button>
 
       {/* Navigation Bar */}
-      <div className="flex items-center justify-around w-full py-3 px-10 bg-gray-50 dark:bg-gray-900 rounded-lg shadow-sm">
+      <div className="flex items-center justify-around w-full py-3 px-6 bg-gray-50 dark:bg-gray-900 rounded-lg shadow-sm">
+        ">
         <nav className="hidden sm:flex items-center space-x-8">
           <Link
             href="/"
@@ -83,7 +84,6 @@ const Header = () => {
             Services
           </Link>
         </nav>
-
         {/* Theme Switcher Button */}
         <button
           onClick={() => setMode(mode === "light" ? "dark" : "light")}

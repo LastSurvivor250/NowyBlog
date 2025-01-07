@@ -66,33 +66,35 @@ const Header = () => {
         </div>
       </button>
 
-      <nav className="w-full py-4 px-6 sm:px-8 border-b border-gray-300 bg-white shadow-sm text-gray-700 font-medium capitalize flex items-center justify-center">
-        <Link href="/" className="mx-4 hover:text-black transition-colors">
-          Home
-        </Link>
-        <Link href="/about" className="mx-4 hover:text-black transition-colors">
-          About
-        </Link>
-        <Link
-          href="/contact"
-          className="mx-4 hover:text-black transition-colors"
-        >
-          Contact
-        </Link>
-        <button
-          onClick={() => setMode(mode === "light" ? "dark" : "light")}
-          className={cx(
-            "ml-4 p-2 rounded-full border border-gray-300 hover:border-black transition-all",
-            mode === "light" ? "bg-gray-100 text-black" : "bg-black text-white"
-          )}
-          aria-label="theme-switcher"
-        >
-          {mode === "light" ? (
-            <MoonIcon className="fill-black w-5 h-5" />
-          ) : (
-            <SunIcon className="fill-white w-5 h-5" />
-          )}
-        </button>
+      <nav className="max-w-[800px] w-full mx-auto py-2 px-4 border-b border-gray-300 text-gray-700 rounded-md bg-white shadow-sm font-medium capitalize fixed top-0 left-1/2 -translate-x-1/2 z-50">
+        <div className="flex items-center justify-between">
+          <div className="flex space-x-4">
+            <Link href="/" className="hover:text-black">
+              Home
+            </Link>
+            <Link href="/about" className="hover:text-black">
+              About
+            </Link>
+            <Link href="/contact" className="hover:text-black">
+              Contact
+            </Link>
+          </div>
+          <button
+            onClick={() => setMode(mode === "light" ? "dark" : "light")}
+            className={`w-6 h-6 flex items-center justify-center rounded-full p-1 ${
+              mode === "light"
+                ? "bg-gray-200 text-gray-800"
+                : "bg-gray-800 text-gray-200"
+            }`}
+            aria-label="theme-switcher"
+          >
+            {mode === "light" ? (
+              <MoonIcon className="fill-gray-800" />
+            ) : (
+              <SunIcon className="fill-gray-200" />
+            )}
+          </button>
+        </div>
       </nav>
 
       <div className=" hidden sm:flex items-center">

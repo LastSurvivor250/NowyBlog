@@ -24,9 +24,11 @@ const Header = () => {
     setClick(!click);
   };
   return (
-    <header className="w-full p-4  px-5 sm:px-10 flex items-center justify-between  border-b border-gray-300 bg-white dark:bg-dark shadow-sm">
+    <header className="w-full p-4 px-5 sm:px-10 flex items-center justify-between border-b border-gray-300 bg-white dark:bg-dark shadow-sm">
+      {/* Logo Section */}
       <Logo />
 
+      {/* Hamburger Menu for Mobile */}
       <button
         className="inline-block sm:hidden z-50"
         onClick={toggle}
@@ -66,43 +68,51 @@ const Header = () => {
         </div>
       </button>
 
-      <nav className="max-w-[800px] w-full mx-auto py-2 px-4 border-b border-gray-300 text-gray-700 rounded-md bg-white shadow-sm font-medium capitalize fixed top-0 left-1/2 -translate-x-1/2 z-50">
-        <div className="flex items-center justify-between">
-          <div className="flex space-x-4">
-            <Link href="/" className="hover:text-black">
-              Home
-            </Link>
-            <Link href="/about" className="hover:text-black">
-              About
-            </Link>
-            <Link href="/contact" className="hover:text-black">
-              Contact
-            </Link>
-          </div>
-          <button
-            onClick={() => setMode(mode === "light" ? "dark" : "light")}
-            className={`w-6 h-6 flex items-center justify-center rounded-full p-1 ${
-              mode === "light"
-                ? "bg-gray-200 text-gray-800"
-                : "bg-gray-800 text-gray-200"
-            }`}
-            aria-label="theme-switcher"
+      {/* Navigation Bar */}
+      <nav className="flex-grow hidden sm:flex items-center justify-between max-w-[1200px] mx-auto py-2 px-6 border border-gray-300 bg-white dark:bg-dark shadow-md rounded-md">
+        <div className="flex space-x-4">
+          <Link
+            href="/"
+            className="text-gray-700 hover:text-black dark:text-gray-300"
           >
-            {mode === "light" ? (
-              <MoonIcon className="fill-gray-800" />
-            ) : (
-              <SunIcon className="fill-gray-200" />
-            )}
-          </button>
+            Home
+          </Link>
+          <Link
+            href="/about"
+            className="text-gray-700 hover:text-black dark:text-gray-300"
+          >
+            About
+          </Link>
+          <Link
+            href="/contact"
+            className="text-gray-700 hover:text-black dark:text-gray-300"
+          >
+            Contact
+          </Link>
         </div>
+        <button
+          onClick={() => setMode(mode === "light" ? "dark" : "light")}
+          className={`w-6 h-6 flex items-center justify-center rounded-full p-1 ${
+            mode === "light"
+              ? "bg-gray-200 text-gray-800"
+              : "bg-gray-800 text-gray-200"
+          }`}
+          aria-label="theme-switcher"
+        >
+          {mode === "light" ? (
+            <MoonIcon className="fill-gray-800" />
+          ) : (
+            <SunIcon className="fill-gray-200" />
+          )}
+        </button>
       </nav>
 
-      <div className=" hidden sm:flex items-center">
+      {/* Social Media Links and Button */}
+      <div className="hidden sm:flex items-center">
         <button
           onClick={() => setShowModal(true)}
           className="bg-indigo-500 hover:bg-indigo-100 px-4 py-2 rounded-xl text-lg mr-4 text-white font-semibold"
         >
-          {" "}
           Get My FREE EBOOK
         </button>
         {showModal && (
@@ -130,7 +140,7 @@ const Header = () => {
           aria-label="Check my profile on Github"
           target="_blank"
         >
-          <GithubIcon className="  hover:scale-125 transition-all ease duration-200 dark:fill-light" />
+          <GithubIcon className="hover:scale-125 transition-all ease duration-200 dark:fill-light" />
         </a>
         <a
           href={siteMetadata.dribbble}

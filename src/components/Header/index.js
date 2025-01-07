@@ -66,33 +66,32 @@ const Header = () => {
         </div>
       </button>
 
-      <nav class="fixed top-6 right-1/2 translate-x-1/2 bg-gradient-to-r from-sky-500 to-indigo-500 p-3 px-6 sm:px-8 rounded-full text-white font-medium capitalize items-center hidden sm:flex z-50 transition-all ease duration-300">
-        <Link href="/" className="mr-4">
+      <nav className="w-full py-4 px-6 sm:px-8 border-b border-gray-300 bg-white shadow-sm text-gray-700 font-medium capitalize flex items-center justify-center">
+        <Link href="/" className="mx-4 hover:text-black transition-colors">
           Home
         </Link>
-        <Link href="/about" className="mx-4">
+        <Link href="/about" className="mx-4 hover:text-black transition-colors">
           About
         </Link>
-        <Link href="/contact" className="mx-4">
+        <Link
+          href="/contact"
+          className="mx-4 hover:text-black transition-colors"
+        >
           Contact
-        </Link>
-        <Link href="/" className="mx-4">
-          Services
-        </Link>
-        <Link href="/" className="ml-4">
-          More
         </Link>
         <button
           onClick={() => setMode(mode === "light" ? "dark" : "light")}
-          class="w-6 h-6 ml-2 bg-dark rounded-full flex items-center justify-center focus:outline-none"
+          className={cx(
+            "ml-4 p-2 rounded-full border border-gray-300 hover:border-black transition-all",
+            mode === "light" ? "bg-gray-100 text-black" : "bg-black text-white"
+          )}
+          aria-label="theme-switcher"
         >
-          <svg
-            class="fill-current"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-          >
-            <path d="M5.67 4.39l1.76 1.76c1.28-1.56 3.26-2.67 5.23-2.67 2.14 0 4.01 1.11 5.23 2.67l1.76-1.76L19.08 7.11a1 1 0 0 1 0 1.41L14.33 12l4.75 4.75a1 1 0 0 1 0 1.41l-1.41 1.41A11.5 11.5 0 0 1 12 18c-3.87 0-7.17-1.91-9.26-4.74L2.92 11.7a1 1 0 0 1 0-1.41L5.67 4.39z" />
-          </svg>
+          {mode === "light" ? (
+            <MoonIcon className="fill-black w-5 h-5" />
+          ) : (
+            <SunIcon className="fill-white w-5 h-5" />
+          )}
         </button>
       </nav>
 

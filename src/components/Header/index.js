@@ -81,29 +81,12 @@ const Header = () => {
         >
           Services
         </Link>
-
-        {/* Theme Switcher Button */}
-        <button
-          onClick={() => setMode(mode === "light" ? "dark" : "light")}
-          className={`ml-4 w-6 h-6 flex items-center justify-center rounded-full transition-all duration-300 ease-in-out ${
-            mode === "light"
-              ? "bg-gray-200 text-gray-800 hover:bg-gray-300"
-              : "bg-gray-800 text-gray-200 hover:bg-gray-700"
-          }`}
-          aria-label="theme-switcher"
-        >
-          {mode === "light" ? (
-            <MoonIcon className="fill-gray-800" />
-          ) : (
-            <SunIcon className="fill-gray-200" />
-          )}
-        </button>
       </nav>
 
       {/* Theme Switcher Button */}
       <button
         onClick={() => setMode(mode === "light" ? "dark" : "light")}
-        className={`ml-4 w-8 h-8 flex items-center justify-center rounded-full transition-all duration-300 ease-in-out ${
+        className={`ml-4 w-6 h-6 flex items-center justify-center rounded-full transition-all duration-300 ease-in-out ${
           mode === "light"
             ? "bg-gray-200 text-gray-800 hover:bg-gray-300"
             : "bg-gray-800 text-gray-200 hover:bg-gray-700"

@@ -84,23 +84,8 @@ const Header = () => {
           </Link>
         </nav>
 
-        {/* Theme Switcher and Button Group */}
+        {/* Button Group */}
         <div className="flex items-center space-x-4">
-          <button
-            onClick={() => setMode(mode === "light" ? "dark" : "light")}
-            className={`w-6 h-6 flex items-center justify-center rounded-full transition-all duration-300 ease-in-out ${
-              mode === "light"
-                ? "bg-gray-200 text-gray-800 hover:bg-gray-300"
-                : "bg-white text-gray-800 hover:bg-gray-100"
-            }`}
-            aria-label="theme-switcher"
-          >
-            {mode === "light" ? (
-              <MoonIcon className="fill-gray-800" />
-            ) : (
-              <SunIcon className="fill-gray-800" />
-            )}
-          </button>
           <button
             onClick={() => setShowModal(true)}
             className="bg-indigo-500 hover:bg-indigo-400 px-4 py-2 rounded-lg text-lg text-white font-semibold transition-all ease-in-out"
@@ -116,7 +101,7 @@ const Header = () => {
         </div>
       </div>
 
-      {/* Social Media Links and Button */}
+      {/* Social Media and Theme Switcher */}
       <div className="hidden sm:flex items-center space-x-4">
         <a
           href={siteMetadata.linkedin}
@@ -150,6 +135,22 @@ const Header = () => {
         >
           <DribbbleIcon className="fill-current dark:fill-light" />
         </a>
+        {/* Theme Switcher */}
+        <button
+          onClick={() => setMode(mode === "light" ? "dark" : "light")}
+          className={`w-6 h-6 flex items-center justify-center rounded-full transition-all duration-300 ease-in-out ${
+            mode === "light"
+              ? "bg-gray-200 text-gray-800 hover:bg-gray-300"
+              : "bg-white text-gray-800 hover:bg-gray-100"
+          }`}
+          aria-label="theme-switcher"
+        >
+          {mode === "light" ? (
+            <MoonIcon className="fill-gray-800" />
+          ) : (
+            <SunIcon className="fill-gray-800" />
+          )}
+        </button>
       </div>
     </header>
   );

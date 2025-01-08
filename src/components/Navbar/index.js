@@ -21,14 +21,14 @@ const Navbar = () => {
     <nav className="bg-gradient-to-r from-indigo-500 to-indigo-800 border-b border-indigo-500">
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div className="flex h-10 items-center justify-between">
-          <div className="flex flex-1 items-center justify-between md:items-stretch md:justify-start">
-            <div className="flex items-center justify-between w-full py-3 px-6 bg-gray-50 dark:bg-gray-900 rounded-lg ml-4 pl-4 shadow-sm ">
-              <ul className="list-none ">
-                <li className="inline-block mx-2">
+          <div className="flex flex-1 items-center md:items-stretch md:justify-start">
+            <div className="flex items-center justify-between w-full py-3 px-6 bg-gray-50 dark:bg-gray-900 rounded-lg ml-4 pl-4 shadow-sm">
+              <ul className="flex list-none space-x-4">
+                <li>
                   <a
                     href="#"
                     onClick={() => toggleMenu("menu1")}
-                    className="no-underline text-white font-bold px-5 py-1.5 rounded-md transition duration-300 hover:bg-gray-300"
+                    className="no-underline text-white font-bold px-3 py-1.5 rounded-md transition duration-300 hover:bg-gray-300"
                   >
                     Categories by Niche
                   </a>
@@ -51,11 +51,11 @@ const Navbar = () => {
                     </div>
                   )}
                 </li>
-                <li className="inline-block mx-2">
+                <li>
                   <a
                     href="#"
                     onClick={() => toggleMenu("menu2")}
-                    className="no-underline text-white font-bold px-7 py-1.5 rounded-md transition duration-300 hover:bg-gray-300"
+                    className="no-underline text-white font-bold px-3 py-1.5 rounded-md transition duration-300 hover:bg-gray-300"
                   >
                     Trending
                   </a>
@@ -78,42 +78,42 @@ const Navbar = () => {
                     </div>
                   )}
                 </li>
-                <li className="inline-block mx-2">
+                <li>
                   <a
                     href="#"
-                    className="no-underline text-white font-bold px-7 py-1.5 rounded-md transition duration-300 hover:bg-gray-300"
+                    className="no-underline text-white font-bold px-3 py-1.5 rounded-md transition duration-300 hover:bg-gray-300"
                   >
                     Resources
                   </a>
                 </li>
-                <li className="inline-block mx-2">
+                <li>
                   <a
                     href="about"
-                    className="no-underline text-white font-bold px-7 py-1.5 rounded-md transition duration-300 hover:bg-gray-300"
+                    className="no-underline text-white font-bold px-3 py-1.5 rounded-md transition duration-300 hover:bg-gray-300"
                   >
                     Case Studies
                   </a>
                 </li>
-                <li className="inline-block mx-2">
+                <li>
                   <a
                     href="#"
-                    className="no-underline text-white font-bold px-7 py-1 rounded-md transition duration-300 hover:bg-gray-300"
+                    className="no-underline text-white font-bold px-3 py-1.5 rounded-md transition duration-300 hover:bg-gray-300"
                   >
                     Community
                   </a>
                 </li>
-                <li className="inline-block mx-2">
+                <li>
                   <a
                     href="#"
-                    className="no-underline text-white font-bold px-7 py-1.5 rounded-md transition duration-300 hover:bg-gray-300"
+                    className="no-underline text-white font-bold px-3 py-1.5 rounded-md transition duration-300 hover:bg-gray-300"
                   >
                     Courses
                   </a>
                 </li>
-                <li className="inline-block mx-2">
+                <li>
                   <a
                     href="#"
-                    className="no-underline text-white font-bold px-7 py-1.5 rounded-md transition duration-300 hover:bg-gray-300"
+                    className="no-underline text-white font-bold px-3 py-1.5 rounded-md transition duration-300 hover:bg-gray-300"
                   >
                     Store
                   </a>

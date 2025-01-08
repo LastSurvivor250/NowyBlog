@@ -22,7 +22,7 @@ const Navbar = () => {
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div className="flex h-10 items-center justify-between">
           <div className="flex flex-1 items-center md:items-stretch md:justify-start">
-            <div className="flex items-center justify-between w-full py-4  bg-gray-50 dark:bg-gray-900 rounded-lg ml-[-10] pl-4  shadow-sm">
+            <div className="flex items-center justify-between w-full py-4  bg-gray-50 dark:bg-gray-900 rounded-lg ml-10 pl-4  shadow-sm">
               <ul className="flex list-none space-x-4 text-lg hover:underline">
                 <li>
                   <a

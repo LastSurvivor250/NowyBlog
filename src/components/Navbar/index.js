@@ -18,7 +18,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-gradient-to-r from-indigo-400 to-indigo-600 border-b border-indigo-500">
+    <nav className="bg-gradient-to-r from-indigo-400 to-indigo-700 border-b border-indigo-500">
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div className="flex h-10 items-center justify-between">
           <div className="flex flex-1 items-center md:items-stretch md:justify-start">
@@ -122,7 +122,7 @@ const Navbar = () => {
               <div className="flex list-none space-x-6">
                 <button
                   onClick={() => setShowModal(true)}
-                  className="bg-indigo-400 hover:bg-indigo-300 px-4 py-2 rounded-full shadow-lg text-lg text-white font-semibold transition-all ease-in-out"
+                  className="bg-indigo-950 hover:bg-indigo-300 px-4 py-1 rounded-lg shadow-lg text-lg text-white font-semibold transition-all ease-in-out"
                 >
                   Get My FREE EBOOK
                 </button>

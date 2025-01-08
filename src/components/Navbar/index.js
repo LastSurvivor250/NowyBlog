@@ -118,20 +118,20 @@ const Navbar = () => {
                   </a>
                 </li>
               </ul>
-            </div>
-            <div className="flex items-center space-x-4">
-              <button
-                onClick={() => setShowModal(true)}
-                className="bg-indigo-500 hover:bg-indigo-400 px-4 py-2 rounded-lg text-lg text-white font-semibold transition-all ease-in-out"
-              >
-                Get My FREE EBOOK
-              </button>
-              {showModal && (
-                <Model
-                  style={{ zIndex: 999 }}
-                  onClose={() => setShowModal(false)}
-                />
-              )}
+              <div className="flex items-center space-x-4">
+                <button
+                  onClick={() => setShowModal(true)}
+                  className="bg-indigo-500 hover:bg-indigo-400 px-4 py-2 rounded-lg text-lg text-white font-semibold transition-all ease-in-out"
+                >
+                  Get My FREE EBOOK
+                </button>
+                {showModal && (
+                  <Model
+                    style={{ zIndex: 999 }}
+                    onClose={() => setShowModal(false)}
+                  />
+                )}
+              </div>
             </div>
           </div>
         </div>

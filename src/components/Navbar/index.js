@@ -10,6 +10,7 @@ const Navbar = () => {
       : "text-white hover:bg-gray-900 hover:text-white rounded-md px-3 py-2";
 
   const [openMenu, setOpenMenu] = useState(null);
+  const [showModal, setShowModal] = useState(false);
 
   const toggleMenu = (menu) => {
     // If the same menu is clicked, close it; otherwise, open the clicked menu

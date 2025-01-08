@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Model from "../Newsletter";
 
 const Navbar = () => {
   const linkClass = ({ isActive }) =>
@@ -16,11 +17,11 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-gradient-to-r from-indigo-500 to-dark border-b border-indigo-500">
+    <nav className="bg-gradient-to-r from-indigo-500 to-indigo-800 border-b border-indigo-500">
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div className="flex h-10 items-center justify-between">
-          <div className="flex flex-1 items-center justify-center md:items-stretch md:justify-start">
-            <div className="thematic-nav bg-gray-200 py-2 text-center">
+          <div className="flex flex-1 items-center justify-between md:items-stretch md:justify-start">
+            <div className="thematic-nav bg-gray-200 py-2 text-center hidden md:block">
               <ul className="list-none ">
                 <li className="inline-block mx-2">
                   <a
@@ -117,6 +118,20 @@ const Navbar = () => {
                   </a>
                 </li>
               </ul>
+            </div>
+            <div className="flex items-center space-x-4">
+              <button
+                onClick={() => setShowModal(true)}
+                className="bg-indigo-500 hover:bg-indigo-400 px-4 py-2 rounded-lg text-lg text-white font-semibold transition-all ease-in-out"
+              >
+                Get My FREE EBOOK
+              </button>
+              {showModal && (
+                <Model
+                  style={{ zIndex: 999 }}
+                  onClose={() => setShowModal(false)}
+                />
+              )}
             </div>
           </div>
         </div>

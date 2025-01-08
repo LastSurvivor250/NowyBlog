@@ -21,8 +21,8 @@ const Navbar = () => {
     <nav className="bg-gradient-to-r from-indigo-500 to-indigo-800 border-b border-indigo-500">
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div className="flex h-10 items-center justify-between">
-          <div className="flex items-center justify-between w-full py-3 px-6 bg-gray-50 dark:bg-gray-900 rounded-lg ml-4 pl-4 shadow-sm">
-            <div className="thematic-nav bg-gray-200 py-2 text-center hidden md:block ">
+          <div className="flex flex-1 items-center justify-between md:items-stretch md:justify-start">
+            <div className="flex items-center justify-between w-full py-3 px-6 bg-gray-50 dark:bg-gray-900 rounded-lg ml-4 pl-4 shadow-sm ">
               <ul className="list-none ">
                 <li className="inline-block mx-2">
                   <a

@@ -13,12 +13,10 @@ import siteMetadata from "@/src/utils/siteMetaData";
 import { useThemeSwitch } from "../Hooks/useThemeSwitch";
 import { useState } from "react";
 import { cx } from "@/src/utils";
-import Model from "../Newsletter";
 
 const Header = () => {
   const [mode, setMode] = useThemeSwitch();
   const [click, setClick] = useState(false);
-  const [showModal, setShowModal] = useState(false);
 
   const toggle = () => {
     setClick(!click);
@@ -85,20 +83,6 @@ const Header = () => {
         </nav>
 
         {/* Button Group */}
-        <div className="flex items-center space-x-4">
-          <button
-            onClick={() => setShowModal(true)}
-            className="bg-indigo-500 hover:bg-indigo-400 px-4 py-2 rounded-lg text-lg text-white font-semibold transition-all ease-in-out"
-          >
-            Get My FREE EBOOK
-          </button>
-          {showModal && (
-            <Model
-              style={{ zIndex: 999 }}
-              onClose={() => setShowModal(false)}
-            />
-          )}
-        </div>
       </div>
 
       {/* Social Media and Theme Switcher */}

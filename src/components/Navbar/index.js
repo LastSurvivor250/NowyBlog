@@ -18,17 +18,17 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-gradient-to-r from-indigo-500 to-indigo-800 border-b border-indigo-500">
+    <nav className="bg-gradient-to-r from-indigo-400 to-indigo-600 border-b border-indigo-500">
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div className="flex h-10 items-center justify-between">
           <div className="flex flex-1 items-center md:items-stretch md:justify-start">
-            <div className="flex items-center justify-between w-full py-3 px-6 bg-gray-50 dark:bg-gray-900 rounded-lg ml-4 pl-4 shadow-sm">
+            <div className="flex items-center justify-between w-full py-4 px-8 bg-gray-50 dark:bg-gray-900 rounded-lg ml-4 pl-4 shadow-sm">
               <ul className="flex list-none space-x-4">
                 <li>
                   <a
                     href="#"
                     onClick={() => toggleMenu("menu1")}
-                    className="no-underline text-white font-bold px-3 py-1.5 rounded-md transition duration-300 hover:bg-gray-300"
+                    className="no-underline text-white font-medium text-sm px-3 py-1.5 rounded-md transition duration-300 hover:bg-gray-300"
                   >
                     Categories by Niche
                   </a>
@@ -55,7 +55,7 @@ const Navbar = () => {
                   <a
                     href="#"
                     onClick={() => toggleMenu("menu2")}
-                    className="no-underline text-white font-bold px-3 py-1.5 rounded-md transition duration-300 hover:bg-gray-300"
+                    className="no-underline text-white font-medium text-sm px-3 py-1.5 rounded-md transition duration-300 hover:bg-gray-300"
                   >
                     Trending
                   </a>
@@ -81,7 +81,7 @@ const Navbar = () => {
                 <li>
                   <a
                     href="#"
-                    className="no-underline text-white font-bold px-3 py-1.5 rounded-md transition duration-300 hover:bg-gray-300"
+                    className="no-underline text-white font-medium text-sm px-3 py-1.5 rounded-md transition duration-300 hover:bg-gray-300"
                   >
                     Resources
                   </a>
@@ -89,7 +89,7 @@ const Navbar = () => {
                 <li>
                   <a
                     href="about"
-                    className="no-underline text-white font-bold px-3 py-1.5 rounded-md transition duration-300 hover:bg-gray-300"
+                    className="no-underline text-white font-medium text-sm px-3 py-1.5 rounded-md transition duration-300 hover:bg-gray-300"
                   >
                     Case Studies
                   </a>
@@ -97,7 +97,7 @@ const Navbar = () => {
                 <li>
                   <a
                     href="#"
-                    className="no-underline text-white font-bold px-3 py-1.5 rounded-md transition duration-300 hover:bg-gray-300"
+                    className="no-underline text-white font-medium text-sm px-3 py-1.5 rounded-md transition duration-300 hover:bg-gray-300"
                   >
                     Community
                   </a>
@@ -105,7 +105,7 @@ const Navbar = () => {
                 <li>
                   <a
                     href="#"
-                    className="no-underline text-white font-bold px-3 py-1.5 rounded-md transition duration-300 hover:bg-gray-300"
+                    className="no-underline text-white font-medium text-sm px-3 py-1.5 rounded-md transition duration-300 hover:bg-gray-300"
                   >
                     Courses
                   </a>
@@ -113,16 +113,16 @@ const Navbar = () => {
                 <li>
                   <a
                     href="#"
-                    className="no-underline text-white font-bold px-3 py-1.5 rounded-md transition duration-300 hover:bg-gray-300"
+                    className="no-underline text-white font-medium text-sm px-3 py-1.5 rounded-md transition duration-300 hover:bg-gray-300"
                   >
                     Store
                   </a>
                 </li>
               </ul>
-              <div className="flex items-center space-x-4">
+              <div className="flex list-none space-x-6">
                 <button
                   onClick={() => setShowModal(true)}
-                  className="bg-indigo-500 hover:bg-indigo-400 px-4 py-2 rounded-lg text-lg text-white font-semibold transition-all ease-in-out"
+                  className="bg-indigo-400 hover:bg-indigo-300 px-4 py-1 rounded-lg text-lg text-white font-semibold transition-all ease-in-out"
                 >
                   Get My FREE EBOOK
                 </button>

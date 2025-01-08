@@ -19,9 +19,9 @@ const HomeCoverSection = ({ blogs }) => {
         <article className="flex flex-row items-start justify-end sm:mx-10 relative h-[164vh] sm:h-[85vh]">
           <ConnectedSite />
           <section className="w-full mt-0 sm:mt-24 sm:px-10 md:px-24 sxl:px-32 flex flex-col items-center justify-center">
-            <h2 className="text-center w-full inline-block font-bold capitalize text-2xl md:text-4xl text-dark dark:text-light">
+            <h3 className="text-center w-full inline-block font-bold capitalize text-2xl md:text-4xl text-dark dark:text-light">
               Modern Understanding of ADHD will have an impact on our lives.
-            </h2>
+            </h3>
             <div className="grid grid-cols-3 gap-6 sm:mt-16">
               {/* Top Row */}
               <article className="col-span-2 row-span-1 relative">

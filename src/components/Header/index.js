@@ -57,7 +57,7 @@ const Header = () => {
 
       {/* Navigation Bar */}
       <div className="flex items-center justify-between w-full py-3 px-6 bg-gray-50 dark:bg-gray-900 rounded-lg shadow-sm">
-        <nav className="hidden sm:flex items-center space-x-8">
+        <nav className="hidden sm:flex items-center space-x-8 ml-4">
           <Link
             href="/"
             className="text-gray-700 hover:text-indigo-600 dark:text-white"

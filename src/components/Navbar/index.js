@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Model from "../Newsletter";
 import SearchBar from "../SearchBar";
+import Logo from "./Logo";
 // Import SearchBar
 
 const Navbar = () => {
@@ -35,16 +36,8 @@ const Navbar = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between py-2">
           {/* Navigation Links */}
+          <Logo />
           <ul className="flex list-none space-x-4">
-            <li>
-              <a
-                href="#"
-                onClick={() => toggleMenu("menu1")}
-                className="no-underline text-white font-medium text-sm px-3 py-1.5 rounded-md transition duration-300 hover:bg-indigo-600"
-              >
-                Categories by Niche
-              </a>
-            </li>
             <li>
               <a
                 href="#"

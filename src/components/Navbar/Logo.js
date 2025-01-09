@@ -10,7 +10,7 @@ const Logo = () => {
           src={profileImg}
           alt="Moderation for Sustainable Living logo"
           className="w-full h-auto rounded-full"
-          sizes="20vw"
+          sizes="15vw"
           priority
         />
       </div>

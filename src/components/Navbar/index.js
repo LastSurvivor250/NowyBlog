@@ -21,18 +21,13 @@ const Navbar = () => {
 
   const handleSearch = (e) => {
     e.preventDefault();
-    console.log("Wyszukano:", searchQuery);
 
-    // Logika wyszukiwania (np. przeszukanie DOM lub filtrowanie danych)
-    // Poniżej przykład wyszukiwania w elementach HTML
-    const elements = document.querySelectorAll("*");
-    elements.forEach((el) => {
-      if (el.textContent.toLowerCase().includes(searchQuery.toLowerCase())) {
-        el.style.backgroundColor = "yellow"; // Podświetlenie znalezionego tekstu
-      } else {
-        el.style.backgroundColor = ""; // Resetowanie stylu
-      }
-    });
+    if (searchQuery.trim()) {
+      // Przekierowanie do podstrony z wyszukiwaniem
+      window.location.href = `/search?query=${encodeURIComponent(searchQuery)}`;
+    } else {
+      console.log("Wpisz coś, aby wyszukać.");
+    }
   };
 
   return (

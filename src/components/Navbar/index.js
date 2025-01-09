@@ -35,7 +35,7 @@ const Navbar = () => {
   return (
     <nav className="bg-gradient-to-r from-indigo-400 via-indigo-500 to-indigo-700 border-b border-indigo-500">
       <div className="container ">
-        <div className="flex items-center justify-around mx-4 ">
+        <div className="flex items-center justify-evenly mx-4 ">
           {/* Navigation Links */}
           <div className="ml-4">
             <Logo />

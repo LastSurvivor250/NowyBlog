@@ -11,7 +11,7 @@ import {
 } from "../Icons";
 
 import { useState } from "react";
-import Model from "../Newsletter";
+
 import SearchBar from "../SearchBar";
 import Logo from "./Logo";
 // Import SearchBar

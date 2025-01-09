@@ -105,7 +105,7 @@ const Navbar = () => {
           <div className="ml-4">
             <button
               onClick={() => setShowModal(true)}
-              className="bg-[#F4C430] hover:bg-[#FFC107] px-5 py-2 border-2 border-indigo-400 shadow-lg text-sm text-gray-800 font-semibold rounded-lg transition-transform transform hover:scale-105 ease-in-out"
+              className="bg-[#F59E0B] hover:bg-[#FFC107] px-5 py-2 border-2 border-indigo-400 shadow-lg text-sm text-gray-800 font-semibold rounded-lg transition-transform transform hover:scale-105 ease-in-out"
             >
               Claim Your FREE Guide!
             </button>

@@ -28,7 +28,7 @@ const Navbar = () => {
                   <a
                     href="#"
                     onClick={() => toggleMenu("menu1")}
-                    className="no-underline text-white font-medium text-lg px-3 py-1.5 rounded-md transition duration-300 hover:bg-gray-300"
+                    className="no-underline text-white font-medium text-sm px-3 py-1.5 rounded-md transition duration-300 hover:bg-gray-300"
                   >
                     Categories by Niche
                   </a>
@@ -55,7 +55,7 @@ const Navbar = () => {
                   <a
                     href="#"
                     onClick={() => toggleMenu("menu2")}
-                    className="no-underline text-white font-medium text-lg px-3 py-1.5 rounded-md transition duration-300 hover:bg-indigo-600"
+                    className="no-underline text-white font-medium text-sm px-3 py-1.5 rounded-md transition duration-300 hover:bg-indigo-600"
                   >
                     Trending
                   </a>
@@ -81,7 +81,7 @@ const Navbar = () => {
                 <li>
                   <a
                     href="#"
-                    className="no-underline text-white font-medium text-lg px-3 py-1.5 rounded-md transition duration-300 hover:bg-indigo-600"
+                    className="no-underline text-white font-medium text-sm px-3 py-1.5 rounded-md transition duration-300 hover:bg-indigo-600"
                   >
                     Resources
                   </a>
@@ -89,7 +89,7 @@ const Navbar = () => {
                 <li>
                   <a
                     href="about"
-                    className="no-underline text-white font-medium text-lg px-3 py-1.5 rounded-md transition duration-300 hover:bg-indigo-600"
+                    className="no-underline text-white font-medium text-sm px-3 py-1.5 rounded-md transition duration-300 hover:bg-indigo-600"
                   >
                     Case Studies
                   </a>
@@ -97,7 +97,7 @@ const Navbar = () => {
                 <li>
                   <a
                     href="#"
-                    className="no-underline text-white font-medium text-lg px-3 py-1.5 rounded-md transition duration-300 hover:bg-indigo-600"
+                    className="no-underline text-white font-medium text-sm px-3 py-1.5 rounded-md transition duration-300 hover:bg-indigo-600"
                   >
                     Community
                   </a>
@@ -105,7 +105,7 @@ const Navbar = () => {
                 <li>
                   <a
                     href="#"
-                    className="no-underline text-white font-medium text-lg px-3 py-1.5 rounded-md transition duration-300 hover:bg-indigo-600"
+                    className="no-underline text-white font-medium text-sm px-3 py-1.5 rounded-md transition duration-300 hover:bg-indigo-600"
                   >
                     Courses
                   </a>
@@ -113,7 +113,7 @@ const Navbar = () => {
                 <li>
                   <a
                     href="#"
-                    className="no-underline text-white font-medium text-lg px-3 py-1.5 rounded-md transition duration-300 hover:bg-indigo-600"
+                    className="no-underline text-white font-medium text-sm px-3 py-1.5 rounded-md transition duration-300 hover:bg-indigo-600"
                   >
                     Store
                   </a>

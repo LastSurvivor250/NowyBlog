@@ -68,7 +68,7 @@ const Navbar = () => {
         </div>
 
         {/* Social Media and Theme Switcher */}
-        <div className="hidden sm:flex items-center space-x-4">
+        <div className="hidden sm:flex items-center space-x-4 justify-end">
           <a
             href={siteMetadata.linkedin}
             className="inline-block w-6 h-6 hover:scale-110 transition-transform ease duration-200"

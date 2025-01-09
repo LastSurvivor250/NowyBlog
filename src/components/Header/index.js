@@ -22,7 +22,7 @@ const Header = () => {
     setClick(!click);
   };
   return (
-    <header className="w-full p-4 px-5 sm:px-10 flex items-center justify-between bg-gradient-to-r from-white via-gray-100 to-white dark:from-dark dark:via-gray-800 dark:to-dark shadow-md">
+    <header className="w-full p-4 px-5 sm:pl-168px sm:pr-184px flex items-center justify-between bg-gradient-to-r from-white via-gray-100 to-white dark:from-dark dark:via-gray-800 dark:to-dark shadow-md">
       {/* Logo Section */}
       <Logo />
 

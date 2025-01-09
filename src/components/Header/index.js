@@ -13,7 +13,7 @@ const Header = () => {
     setClick(!click);
   };
   return (
-    <header className="w-full  sm:px-10 flex items-center justify-between bg-gradient-to-r from-white via-gray-100 to-white dark:from-dark dark:via-gray-800 dark:to-dark shadow-md">
+    <header className="w-full   flex items-center justify-between bg-gradient-to-r from-white via-gray-100 to-white dark:from-dark dark:via-gray-800 dark:to-dark shadow-md">
       {/* Logo Section */}
 
       {/* Hamburger Menu for Mobile */}

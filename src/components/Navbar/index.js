@@ -34,8 +34,8 @@ const Navbar = () => {
 
   return (
     <nav className="bg-gradient-to-r from-indigo-400 via-indigo-500 to-indigo-700 border-b border-indigo-500">
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-around py-2 ">
+      <div className="container ">
+        <div className="flex items-center justify-around mx-4 ">
           {/* Navigation Links */}
           <div className="ml-4">
             <Logo />
@@ -60,7 +60,7 @@ const Navbar = () => {
           </ul> */}
 
           {/* SearchBar */}
-          <div className="flex-grow flex justify-center">
+          <div className="mx-12 flex justify-center">
             <SearchBar
               query={searchQuery}
               onChange={setSearchQuery} // Aktualizacja stanu `searchQuery`

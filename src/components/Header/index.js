@@ -1,7 +1,6 @@
 "use client";
 import Link from "next/link";
 
-import siteMetadata from "@/src/utils/siteMetaData";
 import { useThemeSwitch } from "../Hooks/useThemeSwitch";
 import { useState } from "react";
 import { cx } from "@/src/utils";

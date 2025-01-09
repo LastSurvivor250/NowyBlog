@@ -1,4 +1,6 @@
 "use client";
+
+import siteMetadata from "@/src/utils/siteMetaData";
 import {
   DribbbleIcon,
   GithubIcon,

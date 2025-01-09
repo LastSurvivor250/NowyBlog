@@ -17,7 +17,10 @@ import Logo from "./Logo";
 // Import SearchBar
 
 const Navbar = () => {
-  const [mode, setMode] = useState(null);
+  const [mode, setMode] = useState(() => {
+    // Check localStorage for saved theme, default to "light"
+    return localStorage.getItem("theme") || "dark";
+  });
 
   const [searchQuery, setSearchQuery] = useState(""); // Stan zapytania wyszukiwania
 

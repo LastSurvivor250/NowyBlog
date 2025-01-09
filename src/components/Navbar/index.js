@@ -11,7 +11,7 @@ import {
 } from "../Icons";
 
 import { useState } from "react";
-
+import { useThemeSwitch } from "../Hooks/useThemeSwitch";
 import SearchBar from "../SearchBar";
 import Logo from "./Logo";
 // Import SearchBar

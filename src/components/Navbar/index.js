@@ -122,10 +122,11 @@ const Navbar = () => {
               <div className=" ml-auto">
                 <button
                   onClick={() => setShowModal(true)}
-                  className="bg-[#FFD700] hover:bg-indigo-400 px-3 py-1 border-2 border-indigo-400 shadow-lg text-sm text-black font-semibold transition-all ease-in-out"
+                  className="bg-[#FFD700] hover:bg-[#FFC107] px-5 py-2 border-2 border-indigo-400 shadow-lg text-sm text-gray-800 font-semibold rounded-lg transition-transform transform hover:scale-105 ease-in-out mr-4"
                 >
-                  Get My FREE EBOOK
+                  Claim Your FREE Guide!
                 </button>
+
                 {showModal && (
                   <Model
                     style={{ zIndex: 999 }}

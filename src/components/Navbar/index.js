@@ -11,28 +11,15 @@ import {
 } from "../Icons";
 
 import { useState } from "react";
-import { useThemeSwitch } from "../Hooks/useThemeSwitch";
+
 import SearchBar from "../SearchBar";
 import Logo from "./Logo";
 // Import SearchBar
 
 const Navbar = () => {
-  const linkClass = ({ isActive }) =>
-    isActive
-      ? "bg-black text-white hover:bg-gray-900 hover:text-white rounded-md px-3 py-2"
-      : "text-white hover:bg-gray-900 hover:text-white rounded-md px-3 py-2";
-
-  const [openMenu, setOpenMenu] = useState(null);
   const [mode, setMode] = useState(null);
 
   const [searchQuery, setSearchQuery] = useState(""); // Stan zapytania wyszukiwania
-
-  const toggleMenu = (menu) => {
-    setOpenMenu(openMenu === menu ? null : menu);
-  };
-  const toggle = () => {
-    setClick(!click);
-  };
 
   const handleSearch = (e) => {
     e.preventDefault();
@@ -78,8 +65,7 @@ const Navbar = () => {
               onSubmit={handleSearch} // Logika wyszukiwania
             />
           </div>
-
-          
+        </div>
 
         {/* Social Media and Theme Switcher */}
         <div className="hidden sm:flex items-center space-x-4">

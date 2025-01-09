@@ -1,22 +1,16 @@
 "use client";
 import Link from "next/link";
 
-import {
-  DribbbleIcon,
-  GithubIcon,
-  LinkedinIcon,
-  MoonIcon,
-  SunIcon,
-  TwitterIcon,
-} from "../Icons";
 import siteMetadata from "@/src/utils/siteMetaData";
 import { useThemeSwitch } from "../Hooks/useThemeSwitch";
 import { useState } from "react";
 import { cx } from "@/src/utils";
+import Model from "../Newsletter";
 
 const Header = () => {
   const [mode, setMode] = useThemeSwitch();
   const [click, setClick] = useState(false);
+  const [showModal, setShowModal] = useState(false);
 
   const toggle = () => {
     setClick(!click);
@@ -88,58 +82,10 @@ const Header = () => {
         </nav>
 
         {/* Button Group */}
-      </div>
-
-      {/* Social Media and Theme Switcher */}
-      <div className="hidden sm:flex items-center space-x-4">
-        <a
-          href={siteMetadata.linkedin}
-          className="inline-block w-6 h-6 hover:scale-110 transition-transform ease duration-200"
-          aria-label="LinkedIn"
-          target="_blank"
-        >
-          <LinkedinIcon className="fill-current dark:fill-light" />
-        </a>
-        <a
-          href={siteMetadata.twitter}
-          className="inline-block w-6 h-6 hover:scale-110 transition-transform ease duration-200"
-          aria-label="Twitter"
-          target="_blank"
-        >
-          <TwitterIcon className="fill-current dark:fill-light" />
-        </a>
-        <a
-          href={siteMetadata.github}
-          className="inline-block w-6 h-6 hover:scale-110 transition-transform ease duration-200"
-          aria-label="GitHub"
-          target="_blank"
-        >
-          <GithubIcon className="fill-current dark:fill-light" />
-        </a>
-        <a
-          href={siteMetadata.dribbble}
-          className="inline-block w-6 h-6 hover:scale-110 transition-transform ease duration-200"
-          aria-label="Dribbble"
-          target="_blank"
-        >
-          <DribbbleIcon className="fill-current dark:fill-light" />
-        </a>
-        {/* Theme Switcher */}
-        <button
-          onClick={() => setMode(mode === "light" ? "dark" : "light")}
-          className={`w-6 h-6 flex items-center justify-center rounded-full transition-all duration-300 ease-in-out ${
-            mode === "light"
-              ? "bg-gray-200 text-gray-800 hover:bg-gray-300"
-              : "bg-white text-gray-800 hover:bg-gray-100"
-          }`}
-          aria-label="theme-switcher"
-        >
-          {mode === "light" ? (
-            <MoonIcon className="fill-gray-800" />
-          ) : (
-            <SunIcon className="fill-gray-800" />
-          )}
-        </button>
+        {/* Modal */}
+        {showModal && (
+          <Model style={{ zIndex: 999 }} onClose={() => setShowModal(false)} />
+        )}
       </div>
     </header>
   );

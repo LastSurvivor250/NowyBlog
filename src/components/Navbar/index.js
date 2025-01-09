@@ -1,4 +1,12 @@
 "use client";
+import {
+  DribbbleIcon,
+  GithubIcon,
+  LinkedinIcon,
+  MoonIcon,
+  SunIcon,
+  TwitterIcon,
+} from "../Icons";
 
 import { useState } from "react";
 import Model from "../Newsletter";
@@ -13,7 +21,7 @@ const Navbar = () => {
       : "text-white hover:bg-gray-900 hover:text-white rounded-md px-3 py-2";
 
   const [openMenu, setOpenMenu] = useState(null);
-  const [showModal, setShowModal] = useState(false);
+
   const [searchQuery, setSearchQuery] = useState(""); // Stan zapytania wyszukiwania
 
   const toggleMenu = (menu) => {
@@ -37,7 +45,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between py-2">
           {/* Navigation Links */}
           <Logo />
-          <ul className="flex list-none space-x-4">
+          {/* <ul className="flex list-none space-x-4">
             <li>
               <a
                 href="#"
@@ -54,7 +62,7 @@ const Navbar = () => {
                 Resources
               </a>
             </li>
-          </ul>
+          </ul> */}
 
           {/* SearchBar */}
           <div className="flex-grow flex justify-center">
@@ -76,10 +84,57 @@ const Navbar = () => {
           </div>
         </div>
 
-        {/* Modal */}
-        {showModal && (
-          <Model style={{ zIndex: 999 }} onClose={() => setShowModal(false)} />
-        )}
+        {/* Social Media and Theme Switcher */}
+        <div className="hidden sm:flex items-center space-x-4">
+          <a
+            href={siteMetadata.linkedin}
+            className="inline-block w-6 h-6 hover:scale-110 transition-transform ease duration-200"
+            aria-label="LinkedIn"
+            target="_blank"
+          >
+            <LinkedinIcon className="fill-current dark:fill-light" />
+          </a>
+          <a
+            href={siteMetadata.twitter}
+            className="inline-block w-6 h-6 hover:scale-110 transition-transform ease duration-200"
+            aria-label="Twitter"
+            target="_blank"
+          >
+            <TwitterIcon className="fill-current dark:fill-light" />
+          </a>
+          <a
+            href={siteMetadata.github}
+            className="inline-block w-6 h-6 hover:scale-110 transition-transform ease duration-200"
+            aria-label="GitHub"
+            target="_blank"
+          >
+            <GithubIcon className="fill-current dark:fill-light" />
+          </a>
+          <a
+            href={siteMetadata.dribbble}
+            className="inline-block w-6 h-6 hover:scale-110 transition-transform ease duration-200"
+            aria-label="Dribbble"
+            target="_blank"
+          >
+            <DribbbleIcon className="fill-current dark:fill-light" />
+          </a>
+          {/* Theme Switcher */}
+          <button
+            onClick={() => setMode(mode === "light" ? "dark" : "light")}
+            className={`w-6 h-6 flex items-center justify-center rounded-full transition-all duration-300 ease-in-out ${
+              mode === "light"
+                ? "bg-gray-200 text-gray-800 hover:bg-gray-300"
+                : "bg-white text-gray-800 hover:bg-gray-100"
+            }`}
+            aria-label="theme-switcher"
+          >
+            {mode === "light" ? (
+              <MoonIcon className="fill-gray-800" />
+            ) : (
+              <SunIcon className="fill-gray-800" />
+            )}
+          </button>
+        </div>
       </div>
     </nav>
   );

@@ -18,17 +18,17 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-gradient-to-r from-indigo-400 to-indigo-700 border-b border-indigo-500">
+    <nav className="bg-gradient-to-r from-indigo-400 via-indigo-500 to-indigo-700 border-b border-indigo-500">
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div className="flex h-10 items-center justify-between">
           <div className="flex flex-1 items-center md:items-stretch md:justify-start">
             <div className="flex items-center justify-between w-full py-4  bg-gray-50 dark:bg-gray-900 rounded-lg ml-10 pl-4  shadow-sm">
-              <ul className="flex list-none space-x-4 text-lg hover:underline">
+              <ul className="flex list-none space-x-6 text-lg hover:underline">
                 <li>
                   <a
                     href="#"
                     onClick={() => toggleMenu("menu1")}
-                    className="no-underline text-white font-medium text-sm px-3 py-1.5 rounded-md transition duration-300 hover:bg-gray-300"
+                    className="no-underline text-white font-medium text-lg px-3 py-1.5 rounded-md transition duration-300 hover:bg-gray-300"
                   >
                     Categories by Niche
                   </a>
@@ -55,7 +55,7 @@ const Navbar = () => {
                   <a
                     href="#"
                     onClick={() => toggleMenu("menu2")}
-                    className="no-underline text-white font-medium text-sm px-3 py-1.5 rounded-md transition duration-300 hover:bg-gray-300"
+                    className="no-underline text-white font-medium text-lg px-3 py-1.5 rounded-md transition duration-300 hover:bg-indigo-600"
                   >
                     Trending
                   </a>
@@ -81,7 +81,7 @@ const Navbar = () => {
                 <li>
                   <a
                     href="#"
-                    className="no-underline text-white font-medium text-sm px-3 py-1.5 rounded-md transition duration-300 hover:bg-gray-300"
+                    className="no-underline text-white font-medium text-lg px-3 py-1.5 rounded-md transition duration-300 hover:bg-indigo-600"
                   >
                     Resources
                   </a>
@@ -89,7 +89,7 @@ const Navbar = () => {
                 <li>
                   <a
                     href="about"
-                    className="no-underline text-white font-medium text-sm px-3 py-1.5 rounded-md transition duration-300 hover:bg-gray-300"
+                    className="no-underline text-white font-medium text-lg px-3 py-1.5 rounded-md transition duration-300 hover:bg-indigo-600"
                   >
                     Case Studies
                   </a>
@@ -97,7 +97,7 @@ const Navbar = () => {
                 <li>
                   <a
                     href="#"
-                    className="no-underline text-white font-medium text-sm px-3 py-1.5 rounded-md transition duration-300 hover:bg-gray-300"
+                    className="no-underline text-white font-medium text-lg px-3 py-1.5 rounded-md transition duration-300 hover:bg-indigo-600"
                   >
                     Community
                   </a>
@@ -105,7 +105,7 @@ const Navbar = () => {
                 <li>
                   <a
                     href="#"
-                    className="no-underline text-white font-medium text-sm px-3 py-1.5 rounded-md transition duration-300 hover:bg-gray-300"
+                    className="no-underline text-white font-medium text-lg px-3 py-1.5 rounded-md transition duration-300 hover:bg-indigo-600"
                   >
                     Courses
                   </a>
@@ -113,7 +113,7 @@ const Navbar = () => {
                 <li>
                   <a
                     href="#"
-                    className="no-underline text-white font-medium text-sm px-3 py-1.5 rounded-md transition duration-300 hover:bg-gray-300"
+                    className="no-underline text-white font-medium text-lg px-3 py-1.5 rounded-md transition duration-300 hover:bg-indigo-600"
                   >
                     Store
                   </a>
@@ -122,7 +122,7 @@ const Navbar = () => {
               <div className="flex list-none space-x-6">
                 <button
                   onClick={() => setShowModal(true)}
-                  className="bg-indigo-800 hover:bg-indigo-300 px-4 py-1  shadow-lg text-lg text-white font-semibold transition-all ease-in-out"
+                  className="bg-indigo-600 hover:bg-indigo-400 px-4 py-1 shadow-lg text-lg text-white font-semibold transition-all ease-in-out"
                 >
                   Get My FREE EBOOK
                 </button>

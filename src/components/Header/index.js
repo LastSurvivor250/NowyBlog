@@ -13,7 +13,7 @@ const Header = () => {
     setClick(!click);
   };
   return (
-    <header className="w-full p-4 px-5 sm:px-10 flex items-center justify-between bg-gradient-to-r from-white via-gray-100 to-white dark:from-dark dark:via-gray-800 dark:to-dark shadow-md">
+    <header className="w-full  sm:px-10 flex items-center justify-between bg-gradient-to-r from-white via-gray-100 to-white dark:from-dark dark:via-gray-800 dark:to-dark shadow-md">
       {/* Logo Section */}
 
       {/* Hamburger Menu for Mobile */}
@@ -44,7 +44,7 @@ const Header = () => {
       </button>
 
       {/* Navigation Bar */}
-      <div className="flex items-center justify-between w-full py-3 px-6 bg-gray-50 dark:bg-gray-900 rounded-lg ml-4 pl-4 shadow-sm">
+      <div className="flex items-center justify-around w-full py-2  bg-gray-50 dark:bg-gray-900 rounded-lg  shadow-sm">
         <nav className="hidden sm:flex items-center space-x-8 ">
           <Link
             href="/"

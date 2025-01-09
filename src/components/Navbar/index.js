@@ -19,10 +19,10 @@ const Navbar = () => {
 
   return (
     <nav className="bg-gradient-to-r from-indigo-400 via-indigo-500 to-indigo-700 border-b border-indigo-500">
-      <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+      <div className="ml-auto max-w-7xl px-2 sm:pl-6 lg:pl-8">
         <div className="flex h-10 items-center justify-between">
           <div className="flex flex-1 items-center md:items-stretch md:justify-start">
-            <div className="flex items-center justify-between w-full py-4 bg-gray-50 dark:bg-gray-900 rounded-lg ml-20 pl-4 shadow-sm">
+            <div className="flex items-center justify-between w-full py-4 bg-gray-50 dark:bg-gray-900 rounded-lg ml-20  shadow-sm">
               <ul className="flex list-none space-x-4 mr-4 ">
                 <li>
                   <a

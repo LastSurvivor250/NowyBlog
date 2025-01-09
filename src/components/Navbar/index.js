@@ -23,7 +23,7 @@ const Navbar = () => {
         <div className="flex h-10 items-center justify-between">
           <div className="flex flex-1 items-center md:items-stretch md:justify-start">
             <div className="flex items-center justify-between w-full py-4 bg-gray-50 dark:bg-gray-900 rounded-lg ml-20 pl-4 shadow-sm">
-              <ul className="flex list-none space-x-4 text-lg ">
+              <ul className="flex list-none space-x-4 ">
                 <li>
                   <a
                     href="#"
@@ -119,10 +119,10 @@ const Navbar = () => {
                   </a>
                 </li>
               </ul>
-              <div className="flex list-none ml-auto">
+              <div className=" ml-auto">
                 <button
                   onClick={() => setShowModal(true)}
-                  className="bg-indigo-600 hover:bg-indigo-400 px-4 py-1 shadow-lg text-lg text-white font-semibold transition-all ease-in-out"
+                  className="bg-[#38B2AC] hover:bg-indigo-400 px-3 py-1 border-2 border-indigo-400 shadow-lg text-sm text-black font-semibold transition-all ease-in-out"
                 >
                   Get My FREE EBOOK
                 </button>

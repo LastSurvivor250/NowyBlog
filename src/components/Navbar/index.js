@@ -29,6 +29,9 @@ const Navbar = () => {
   const toggleMenu = (menu) => {
     setOpenMenu(openMenu === menu ? null : menu);
   };
+  const toggle = () => {
+    setClick(!click);
+  };
 
   const handleSearch = (e) => {
     e.preventDefault();

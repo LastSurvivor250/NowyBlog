@@ -13,9 +13,7 @@ const Header = () => {
     setClick(!click);
   };
   return (
-    <header className="w-full   flex items-center justify-between bg-gradient-to-r from-white via-gray-100 to-white dark:from-dark dark:via-gray-800 dark:to-dark shadow-md">
-      {/* Logo Section */}
-
+    <header className="w-full flex items-center justify-between bg-gradient-to-r from-white via-gray-100 to-white dark:from-dark dark:via-gray-800 dark:to-dark shadow-md">
       {/* Hamburger Menu for Mobile */}
       <button
         className="inline-block sm:hidden z-50"
@@ -44,8 +42,9 @@ const Header = () => {
       </button>
 
       {/* Navigation Bar */}
-      <div className="flex items-center justify-around w-full py-2 mr-4 space-x-8 bg-gray-50 dark:bg-gray-900 rounded-lg  shadow-sm">
-        <nav className="hidden sm:flex items-center mr-4 space-x-8 ">
+      <div className="flex items-center w-full">
+        {/* Links Section */}
+        <nav className="hidden sm:flex items-center space-x-8 ml-10 flex-grow">
           <Link
             href="/"
             className="text-gray-700 hover:text-indigo-600 dark:text-white"
@@ -78,10 +77,7 @@ const Header = () => {
           </Link>
         </nav>
 
-        {/* Button Group */}
-        {/* Modal */}
-
-        {/* CTA Button */}
+        {/* Button Section */}
         <div className="ml-4">
           <button
             onClick={() => setShowModal(true)}

@@ -13,7 +13,9 @@ const Header = () => {
     setClick(!click);
   };
   return (
-    <header className="w-full flex items-center bg-gradient-to-r from-white via-gray-100 to-white dark:from-dark dark:via-gray-800 dark:to-dark shadow-md px-4">
+    <header className="w-full   flex items-center justify-between bg-gradient-to-r from-white via-gray-100 to-white dark:from-dark dark:via-gray-800 dark:to-dark shadow-md">
+      {/* Logo Section */}
+
       {/* Hamburger Menu for Mobile */}
       <button
         className="inline-block sm:hidden z-50"
@@ -41,10 +43,9 @@ const Header = () => {
         </div>
       </button>
 
-      {/* Container for nav and button with specific width */}
-      <div className="flex-1 flex justify-between items-center px-8">
-        {/* Navigation */}
-        <nav className="hidden sm:flex items-center space-x-6">
+      {/* Navigation Bar */}
+      <div className="flex items-center justify-around w-full py-2 mr-4 space-x-8 bg-gray-50 dark:bg-gray-900 rounded-lg  shadow-sm">
+        <nav className="hidden sm:flex items-center mr-4 space-x-8 ">
           <Link
             href="/"
             className="text-gray-700 hover:text-indigo-600 dark:text-white"
@@ -77,8 +78,11 @@ const Header = () => {
           </Link>
         </nav>
 
+        {/* Button Group */}
+        {/* Modal */}
+
         {/* CTA Button */}
-        <div>
+        <div className="ml-4">
           <button
             onClick={() => setShowModal(true)}
             className="bg-[#ffc107ca] hover:bg-[#FFC107] px-5 py-2 border-2 border-indigo-400 shadow-lg text-sm text-black font-semibold rounded-lg transition-transform transform hover:scale-105 ease-in-out"
@@ -86,11 +90,10 @@ const Header = () => {
             Claim Your FREE Guide!
           </button>
         </div>
+        {showModal && (
+          <Model style={{ zIndex: 999 }} onClose={() => setShowModal(false)} />
+        )}
       </div>
-
-      {showModal && (
-        <Model style={{ zIndex: 999 }} onClose={() => setShowModal(false)} />
-      )}
     </header>
   );
 };

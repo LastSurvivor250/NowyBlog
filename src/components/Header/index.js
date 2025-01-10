@@ -44,8 +44,9 @@ const Header = () => {
       </button>
 
       {/* Navigation Bar */}
-      <div className="flex items-center justify-around w-full py-2 mr-4 space-x-8 bg-gray-50 dark:bg-gray-900 rounded-lg  shadow-sm">
-        <nav className="hidden sm:flex items-center mr-4 space-x-8 ">
+      <div className="flex items-center w-full py-2 bg-gray-50 dark:bg-gray-900 rounded-lg shadow-sm">
+        {/* Navigation Links */}
+        <nav className="flex items-center space-x-8 pl-4 flex-grow">
           <Link
             href="/"
             className="text-gray-700 hover:text-indigo-600 dark:text-white"
@@ -78,11 +79,8 @@ const Header = () => {
           </Link>
         </nav>
 
-        {/* Button Group */}
-        {/* Modal */}
-
-        {/* CTA Button */}
-        <div className="ml-4">
+        {/* Button */}
+        <div className="flex-shrink-0 pr-4">
           <button
             onClick={() => setShowModal(true)}
             className="bg-[#ffc107ca] hover:bg-[#FFC107] px-5 py-2 border-2 border-indigo-400 shadow-lg text-sm text-black font-semibold rounded-lg transition-transform transform hover:scale-105 ease-in-out"

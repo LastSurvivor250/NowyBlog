@@ -42,7 +42,7 @@ const Header = () => {
       </button>
 
       {/* Navigation - absolute positioning */}
-      <nav className="hidden sm:flex items-center absolute left-32 space-x-6">
+      <nav className="hidden sm:flex items-center absolute left-[280px] space-x-6">
         <Link
           href="/"
           className="text-gray-700 hover:text-indigo-600 dark:text-white"

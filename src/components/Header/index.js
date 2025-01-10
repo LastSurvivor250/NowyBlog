@@ -44,8 +44,8 @@ const Header = () => {
       </button>
 
       {/* Navigation Bar */}
-      <div className="flex items-center justify-around w-full py-2  bg-gray-50 dark:bg-gray-900 rounded-lg  shadow-sm">
-        <nav className="hidden sm:flex items-center space-x-8 ">
+      <div className="flex items-center justify-around w-full py-2 mr-4 bg-gray-50 dark:bg-gray-900 rounded-lg  shadow-sm">
+        <nav className="hidden sm:flex items-center mr-4 space-x-8 ">
           <Link
             href="/"
             className="text-gray-700 hover:text-indigo-600 dark:text-white"

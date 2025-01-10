@@ -13,9 +13,7 @@ const Header = () => {
     setClick(!click);
   };
   return (
-    <header className="w-full   flex items-center justify-between bg-gradient-to-r from-white via-gray-100 to-white dark:from-dark dark:via-gray-800 dark:to-dark shadow-md">
-      {/* Logo Section */}
-
+    <header className="w-full flex items-center justify-between bg-gradient-to-r from-white via-gray-100 to-white dark:from-dark dark:via-gray-800 dark:to-dark shadow-md px-4">
       {/* Hamburger Menu for Mobile */}
       <button
         className="inline-block sm:hidden z-50"
@@ -43,39 +41,50 @@ const Header = () => {
         </div>
       </button>
 
-      {/* Navigation Bar */}
-      <div className="relative w-full">
-        {/* Nawigacja jako niezależny element */}
-        <nav className="absolute left-8 top-1/2 -translate-y-1/2 hidden sm:flex items-center space-x-4">
-          <Link
-            href="/"
-            className="text-gray-700 hover:text-indigo-600 dark:text-white"
-          >
-            Menu
-          </Link>
-          <Link
-            href="/"
-            className="text-gray-700 hover:text-indigo-600 dark:text-white"
-          >
-            Home
-          </Link>
-          {/* pozostałe linki */}
-        </nav>
+      {/* Navigation */}
+      <nav className="hidden sm:flex items-center space-x-6 ml-8">
+        <Link
+          href="/"
+          className="text-gray-700 hover:text-indigo-600 dark:text-white"
+        >
+          Menu
+        </Link>
+        <Link
+          href="/"
+          className="text-gray-700 hover:text-indigo-600 dark:text-white"
+        >
+          Home
+        </Link>
+        <Link
+          href="/about"
+          className="text-gray-700 hover:text-indigo-600 dark:text-white"
+        >
+          About
+        </Link>
+        <Link
+          href="/contact"
+          className="text-gray-700 hover:text-indigo-600 dark:text-white"
+        >
+          Contact
+        </Link>
+        <Link
+          href="/services"
+          className="text-gray-700 hover:text-indigo-600 dark:text-white"
+        >
+          Services
+        </Link>
+      </nav>
 
-        {/* Przycisk jako niezależny element */}
-        <div className="absolute right-8 top-1/2 -translate-y-1/2">
-          <button
-            onClick={() => setShowModal(true)}
-            className="bg-[#ffc107ca] hover:bg-[#FFC107] px-5 py-2 border-2 border-indigo-400 shadow-lg text-sm text-black font-semibold rounded-lg transition-transform transform hover:scale-105 ease-in-out"
-          >
-            Claim Your FREE Guide!
-          </button>
-        </div>
-
-        {showModal && (
-          <Model style={{ zIndex: 999 }} onClose={() => setShowModal(false)} />
-        )}
+      {/* CTA Button */}
+      <div className="pr-8">
+        <button
+          onClick={() => setShowModal(true)}
+          className="bg-[#ffc107ca] hover:bg-[#FFC107] px-5 py-2 border-2 border-indigo-400 shadow-lg text-sm text-black font-semibold rounded-lg transition-transform transform hover:scale-105 ease-in-out"
+        >
+          Claim Your FREE Guide!
+        </button>
       </div>
+
       {showModal && (
         <Model style={{ zIndex: 999 }} onClose={() => setShowModal(false)} />
       )}

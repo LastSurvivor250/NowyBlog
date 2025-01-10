@@ -13,12 +13,10 @@ const Header = () => {
     setClick(!click);
   };
   return (
-    <header className="w-full   flex items-center justify-between bg-gradient-to-r from-white via-gray-100 to-white dark:from-dark dark:via-gray-800 dark:to-dark shadow-md">
-      {/* Logo Section */}
-
+    <header className="w-full h-16 relative flex items-center bg-gradient-to-r from-white via-gray-100 to-white dark:from-dark dark:via-gray-800 dark:to-dark shadow-md">
       {/* Hamburger Menu for Mobile */}
       <button
-        className="inline-block sm:hidden z-50"
+        className="inline-block sm:hidden z-50 ml-4"
         onClick={toggle}
         aria-label="Hamburger Menu"
       >
@@ -43,57 +41,53 @@ const Header = () => {
         </div>
       </button>
 
-      {/* Navigation Bar */}
-      <div className="flex items-center justify-around w-full py-2 mr-4 space-x-8 bg-gray-50 dark:bg-gray-900 rounded-lg  shadow-sm">
-        <nav className="hidden sm:flex items-center mr-4 space-x-8 ">
-          <Link
-            href="/"
-            className="text-gray-700 hover:text-indigo-600 dark:text-white"
-          >
-            Menu
-          </Link>
-          <Link
-            href="/"
-            className="text-gray-700 hover:text-indigo-600 dark:text-white"
-          >
-            Home
-          </Link>
-          <Link
-            href="/about"
-            className="text-gray-700 hover:text-indigo-600 dark:text-white"
-          >
-            About
-          </Link>
-          <Link
-            href="/contact"
-            className="text-gray-700 hover:text-indigo-600 dark:text-white"
-          >
-            Contact
-          </Link>
-          <Link
-            href="/services"
-            className="text-gray-700 hover:text-indigo-600 dark:text-white"
-          >
-            Services
-          </Link>
-        </nav>
+      {/* Navigation - absolute positioning */}
+      <nav className="hidden sm:flex items-center absolute left-32 space-x-6">
+        <Link
+          href="/"
+          className="text-gray-700 hover:text-indigo-600 dark:text-white"
+        >
+          Menu
+        </Link>
+        <Link
+          href="/"
+          className="text-gray-700 hover:text-indigo-600 dark:text-white"
+        >
+          Home
+        </Link>
+        <Link
+          href="/about"
+          className="text-gray-700 hover:text-indigo-600 dark:text-white"
+        >
+          About
+        </Link>
+        <Link
+          href="/contact"
+          className="text-gray-700 hover:text-indigo-600 dark:text-white"
+        >
+          Contact
+        </Link>
+        <Link
+          href="/services"
+          className="text-gray-700 hover:text-indigo-600 dark:text-white"
+        >
+          Services
+        </Link>
+      </nav>
 
-        {/* Button Group */}
-        {/* Modal */}
-
-        {/* CTA Button */}
-        <div className="ml-4">
-          <button
-            onClick={() => setShowModal(true)}
-            className="bg-[#ffc107ca] hover:bg-[#FFC107] px-5 py-2 border-2 border-indigo-400 shadow-lg text-sm text-black font-semibold rounded-lg transition-transform transform hover:scale-105 ease-in-out"
-          >
-            Claim Your FREE Guide!
-          </button>
-        </div>
-        {showModal && (
-          <Model style={{ zIndex: 999 }} onClose={() => setShowModal(false)} />
-        )}
+      {/* CTA Button - absolute positioning */}
+      <div className="absolute right-8">
+        <button
+          onClick={() => setShowModal(true)}
+          className="bg-[#ffc107ca] hover:bg-[#FFC107] px-5 py-2 border-2 border-indigo-400 shadow-lg text-sm text-black font-semibold rounded-lg transition-transform transform hover:scale-105 ease-in-out"
+        >
+          Claim Your FREE Guide!
+        </button>
       </div>
+
+      {showModal && (
+        <Model style={{ zIndex: 999 }} onClose={() => setShowModal(false)} />
+      )}
     </header>
   );
 };

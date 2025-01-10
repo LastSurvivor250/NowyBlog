@@ -42,7 +42,7 @@ const Header = () => {
       </button>
 
       {/* Navigation - absolute positioning */}
-      <nav className="hidden sm:flex items-center absolute left-[193px] space-x-6">
+      <nav className="hidden sm:flex items-center absolute left-[175px] space-x-6">
         <Link
           href="/"
           className="text-gray-700 hover:text-indigo-600 dark:text-white"
@@ -76,7 +76,7 @@ const Header = () => {
       </nav>
 
       {/* CTA Button - absolute positioning */}
-      <div className="absolute right-[35px]">
+      <div className="absolute right-[229px]">
         <button
           onClick={() => setShowModal(true)}
           className="bg-[#ffc107ca] hover:bg-[#FFC107] px-5 py-2 border-2 border-indigo-400 shadow-lg text-sm text-black font-semibold rounded-lg transition-transform transform hover:scale-105 ease-in-out"

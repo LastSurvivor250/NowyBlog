@@ -34,10 +34,10 @@ const Navbar = () => {
 
   return (
     <nav className="bg-gradient-to-r from-indigo-400 via-indigo-500 to-indigo-700 border-b border-indigo-500">
-      <div className="container py-2">
-        <div className="flex items-center justify-evenly relative mr-4 ">
+      <div className="container py-32px">
+        <div className="flex items-center justify-evenly relative  ">
           {/* Navigation Links */}
-          <div className="absolute ml-[-920px]">
+          <div className="absolute ml-[-925px]">
             <Logo />
           </div>
           {/* <ul className="flex list-none space-x-4">
@@ -69,7 +69,7 @@ const Navbar = () => {
           </div>
 
           {/* Social Media and Theme Switcher */}
-          <div className="hidden sm:flex items-center space-x-2 mr-4 ">
+          <div className="hidden sm:flex items-center space-x-2 absolute mr-[-935px] ">
             <a
               href={siteMetadata.linkedin}
               className="inline-block w-6 h-6 hover:scale-110 transition-transform ease duration-200"

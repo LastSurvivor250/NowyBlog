@@ -37,7 +37,7 @@ const Navbar = () => {
       <div className="container ">
         <div className="flex items-center justify-evenly mr-4 ">
           {/* Navigation Links */}
-          <div className="">
+          <div className="ml-[-10px]">
             <Logo />
           </div>
           {/* <ul className="flex list-none space-x-4">

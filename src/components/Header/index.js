@@ -79,7 +79,7 @@ const Header = () => {
       <div className="absolute right-[229px]">
         <button
           onClick={() => setShowModal(true)}
-          className="bg-[#ffc107ca] hover:bg-[#FFC107] px-5 py-2 border-2 border-indigo-400 shadow-lg text-sm text-black font-semibold rounded-lg transition-transform transform hover:scale-105 ease-in-out"
+          className="bg-[#F59E0B] hover:bg-[#FFC107] px-5 py-2 border-2 border-indigo-400 shadow-lg text-sm text-black font-semibold rounded-lg transition-transform transform hover:scale-105 ease-in-out"
         >
           Claim Your FREE Guide!
         </button>

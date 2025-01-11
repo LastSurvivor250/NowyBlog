@@ -19,22 +19,21 @@ import Logo from "./Logo";
 const Navbar = () => {
   const [mode, setMode] = useThemeSwitch();
   const [openMenu, setOpenMenu] = useState(null);
+  const [searchQuery, setSearchQuery] = useState(""); // State for search query
 
   const toggleMenu = (menu) => {
     // If the same menu is clicked, close it; otherwise, open the clicked menu
     setOpenMenu(openMenu === menu ? null : menu);
   };
 
-  const [searchQuery, setSearchQuery] = useState(""); // Stan zapytania wyszukiwania
-
   const handleSearch = (e) => {
     e.preventDefault();
 
     if (searchQuery.trim()) {
-      // Przekierowanie do podstrony z wyszukiwaniem
+      // Redirect to the search page
       window.location.href = `/search?query=${encodeURIComponent(searchQuery)}`;
     } else {
-      console.log("Wpisz coś, aby wyszukać.");
+      console.log("Please enter something to search.");
     }
   };
 
@@ -52,19 +51,19 @@ const Navbar = () => {
               <div className="relative">
                 <span
                   className={`absolute top-0 w-full h-0.5 bg-dark dark:bg-light rounded transition-transform ease duration-200 ${
-                    click
+                    openMenu === "menu1"
                       ? "rotate-[-45deg] translate-y-0"
                       : "translate-y-[6px]"
                   }`}
                 />
                 <span
                   className={`absolute top-0 w-full h-0.5 bg-dark dark:bg-light rounded transition-opacity ease duration-200 ${
-                    click ? "opacity-0" : "opacity-100"
+                    openMenu === "menu1" ? "opacity-0" : "opacity-100"
                   }`}
                 />
                 <span
                   className={`absolute top-0 w-full h-0.5 bg-dark dark:bg-light rounded transition-transform ease duration-200 ${
-                    click
+                    openMenu === "menu1"
                       ? "rotate-[45deg] translate-y-0"
                       : "translate-y-[-6px]"
                   }`}
@@ -81,7 +80,7 @@ const Navbar = () => {
           {/* SearchBar */}
           <div
             className={`${
-              click ? "block" : "hidden"
+              openMenu === "menu1" ? "block" : "hidden"
             } sm:flex absolute inset-x-1/2 transform -translate-x-1/2 justify-center`}
           >
             <SearchBar
@@ -93,6 +92,7 @@ const Navbar = () => {
 
           {/* Social Media and Theme Switcher */}
           <div className="absolute right-4 sm:right-[229px] flex items-center space-x-2">
+            {/* Social Media Icons */}
             <a
               href={siteMetadata.linkedin}
               className="inline-block w-6 h-6 hover:scale-110 transition-transform ease duration-200"
@@ -125,6 +125,7 @@ const Navbar = () => {
             >
               <DribbbleIcon className="fill-current dark:fill-light" />
             </a>
+
             {/* Theme Switcher */}
             <button
               onClick={() => setMode(mode === "light" ? "dark" : "light")}

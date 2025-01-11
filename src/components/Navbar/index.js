@@ -18,6 +18,7 @@ import Logo from "./Logo";
 
 const Navbar = () => {
   const [mode, setMode] = useThemeSwitch();
+  const [openMenu, setOpenMenu] = useState(null);
 
   const toggleMenu = (menu) => {
     // If the same menu is clicked, close it; otherwise, open the clicked menu
@@ -44,7 +45,7 @@ const Navbar = () => {
           {/* Hamburger Menu for Mobile */}
           <button
             className="inline-block sm:hidden z-50 ml-4"
-            onClick={toggleMenu}
+            onClick={() => toggleMenu("menu1")}
             aria-label="Hamburger Menu"
           >
             <div className="w-6 cursor-pointer transition-all ease duration-300">

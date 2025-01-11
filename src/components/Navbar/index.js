@@ -34,42 +34,27 @@ const Navbar = () => {
 
   return (
     <nav className="bg-gradient-to-r from-indigo-400 via-indigo-500 to-indigo-700 border-b border-indigo-500">
-      <div className="container py-32px">
-        <div className="flex items-center justify-evenly relative  ">
+      <div className="container py-8">
+        <div className="flex items-center justify-evenly relative">
           {/* Navigation Links */}
-          <div className="absolute ml-[-925px]">
+          <div className="absolute left-0">
             <Logo />
           </div>
-          {/* <ul className="flex list-none space-x-4">
-            <li>
-              <a
-                href="#"
-                className="no-underline text-white font-medium text-sm px-3 py-1.5 rounded-md transition duration-300 hover:bg-indigo-600"
-              >
-                Trending
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                className="no-underline text-white font-medium text-sm px-3 py-1.5 rounded-md transition duration-300 hover:bg-indigo-600"
-              >
-                Resources
-              </a>
-            </li>
-          </ul> */}
+
+          {/* Placeholder for maintaining height */}
+          <div className="h-8"></div>
 
           {/* SearchBar */}
-          <div className="mr-[-144px] absolute  flex justify-center">
+          <div className="absolute inset-x-1/2 transform -translate-x-1/2 flex justify-center">
             <SearchBar
               query={searchQuery}
-              onChange={setSearchQuery} // Aktualizacja stanu `searchQuery`
-              onSubmit={handleSearch} // Logika wyszukiwania
+              onChange={setSearchQuery}
+              onSubmit={handleSearch}
             />
           </div>
 
           {/* Social Media and Theme Switcher */}
-          <div className="hidden sm:flex items-center space-x-2 absolute mr-[-935px] ">
+          <div className="absolute right-0 flex items-center space-x-2">
             <a
               href={siteMetadata.linkedin}
               className="inline-block w-6 h-6 hover:scale-110 transition-transform ease duration-200"

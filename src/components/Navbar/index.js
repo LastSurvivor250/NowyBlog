@@ -19,6 +19,11 @@ import Logo from "./Logo";
 const Navbar = () => {
   const [mode, setMode] = useThemeSwitch();
 
+  const toggleMenu = (menu) => {
+    // If the same menu is clicked, close it; otherwise, open the clicked menu
+    setOpenMenu(openMenu === menu ? null : menu);
+  };
+
   const [searchQuery, setSearchQuery] = useState(""); // Stan zapytania wyszukiwania
 
   const handleSearch = (e) => {
@@ -39,7 +44,7 @@ const Navbar = () => {
           {/* Hamburger Menu for Mobile */}
           <button
             className="inline-block sm:hidden z-50 ml-4"
-            onClick={toggle}
+            onClick={toggleMenu}
             aria-label="Hamburger Menu"
           >
             <div className="w-6 cursor-pointer transition-all ease duration-300">

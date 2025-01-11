@@ -35,17 +35,49 @@ const Navbar = () => {
   return (
     <nav className="bg-gradient-to-r from-indigo-400 via-indigo-500 to-indigo-700 border-b border-indigo-500">
       <div className="container py-4">
-        <div className="flex items-center justify-evenly relative">
-          {/* Navigation Links */}
-          <div className="absolute left-[164px]">
+        <div className="flex items-center justify-between relative">
+          {/* Hamburger Menu for Mobile */}
+          <button
+            className="inline-block sm:hidden z-50 ml-4"
+            onClick={toggle}
+            aria-label="Hamburger Menu"
+          >
+            <div className="w-6 cursor-pointer transition-all ease duration-300">
+              <div className="relative">
+                <span
+                  className={`absolute top-0 w-full h-0.5 bg-dark dark:bg-light rounded transition-transform ease duration-200 ${
+                    click
+                      ? "rotate-[-45deg] translate-y-0"
+                      : "translate-y-[6px]"
+                  }`}
+                />
+                <span
+                  className={`absolute top-0 w-full h-0.5 bg-dark dark:bg-light rounded transition-opacity ease duration-200 ${
+                    click ? "opacity-0" : "opacity-100"
+                  }`}
+                />
+                <span
+                  className={`absolute top-0 w-full h-0.5 bg-dark dark:bg-light rounded transition-transform ease duration-200 ${
+                    click
+                      ? "rotate-[45deg] translate-y-0"
+                      : "translate-y-[-6px]"
+                  }`}
+                />
+              </div>
+            </div>
+          </button>
+
+          {/* Logo */}
+          <div className="absolute left-4 sm:left-[164px]">
             <Logo />
           </div>
 
-          {/* Placeholder for maintaining height */}
-          <div className="h-8"></div>
-
           {/* SearchBar */}
-          <div className="absolute inset-x-1/2 transform -translate-x-1/2 flex justify-center">
+          <div
+            className={`${
+              click ? "block" : "hidden"
+            } sm:flex absolute inset-x-1/2 transform -translate-x-1/2 justify-center`}
+          >
             <SearchBar
               query={searchQuery}
               onChange={setSearchQuery}
@@ -54,7 +86,7 @@ const Navbar = () => {
           </div>
 
           {/* Social Media and Theme Switcher */}
-          <div className="absolute right-[229px] flex items-center space-x-2">
+          <div className="absolute right-4 sm:right-[229px] flex items-center space-x-2">
             <a
               href={siteMetadata.linkedin}
               className="inline-block w-6 h-6 hover:scale-110 transition-transform ease duration-200"

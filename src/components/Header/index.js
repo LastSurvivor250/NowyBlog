@@ -41,42 +41,46 @@ const Header = () => {
         </div>
       </button>
 
-      {/* Navigation - absolute positioning */}
-      <nav className="hidden sm:flex items-center absolute left-[175px] space-x-6">
+      {/* Navigation */}
+      <nav
+        className={`${
+          click ? "block" : "hidden"
+        } sm:flex items-center absolute left-0 sm:left-[175px] top-16 sm:top-auto bg-white dark:bg-dark w-full sm:w-auto space-y-4 sm:space-y-0 space-x-0 sm:space-x-6 p-4 sm:p-0 shadow-md sm:shadow-none`}
+      >
         <Link
           href="/"
-          className="text-gray-700 hover:text-indigo-600 dark:text-white"
+          className="block sm:inline text-gray-700 hover:text-indigo-600 dark:text-white"
         >
           Menu
         </Link>
         <Link
           href="/"
-          className="text-gray-700 hover:text-indigo-600 dark:text-white"
+          className="block sm:inline text-gray-700 hover:text-indigo-600 dark:text-white"
         >
           Home
         </Link>
         <Link
           href="/about"
-          className="text-gray-700 hover:text-indigo-600 dark:text-white"
+          className="block sm:inline text-gray-700 hover:text-indigo-600 dark:text-white"
         >
           About
         </Link>
         <Link
           href="/contact"
-          className="text-gray-700 hover:text-indigo-600 dark:text-white"
+          className="block sm:inline text-gray-700 hover:text-indigo-600 dark:text-white"
         >
           Contact
         </Link>
         <Link
           href="/services"
-          className="text-gray-700 hover:text-indigo-600 dark:text-white"
+          className="block sm:inline text-gray-700 hover:text-indigo-600 dark:text-white"
         >
           Services
         </Link>
       </nav>
 
-      {/* CTA Button - absolute positioning */}
-      <div className="absolute right-[229px]">
+      {/* CTA Button */}
+      <div className="absolute right-4 sm:right-[229px]">
         <button
           onClick={() => setShowModal(true)}
           className="bg-[#F59E0B] hover:bg-[#FFC107] px-5 py-2 border-2 border-indigo-400 shadow-lg text-sm text-black font-semibold rounded-lg transition-transform transform hover:scale-105 ease-in-out"

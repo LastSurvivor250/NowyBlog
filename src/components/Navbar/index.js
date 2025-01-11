@@ -18,13 +18,8 @@ import Logo from "./Logo";
 
 const Navbar = () => {
   const [mode, setMode] = useThemeSwitch();
-  const [openMenu, setOpenMenu] = useState(null);
-  const [searchQuery, setSearchQuery] = useState(""); // State for search query
 
-  const toggleMenu = (menu) => {
-    // If the same menu is clicked, close it; otherwise, open the clicked menu
-    setOpenMenu(openMenu === menu ? null : menu);
-  };
+  const [searchQuery, setSearchQuery] = useState(""); // State for search query
 
   const handleSearch = (e) => {
     e.preventDefault();
@@ -41,8 +36,7 @@ const Navbar = () => {
     <nav className="bg-gradient-to-r from-indigo-400 via-indigo-500 to-indigo-700 border-b border-indigo-500">
       <div className="container py-8">
         <div className="flex items-center justify-between relative">
-          {/* Hamburger Menu for Mobile */}
-          <button
+          {/* Hamburger Menu for Mobile <button
             className="inline-block sm:hidden z-50 ml-4"
             onClick={() => toggleMenu("menu1")}
             aria-label="Hamburger Menu"
@@ -70,7 +64,7 @@ const Navbar = () => {
                 />
               </div>
             </div>
-          </button>
+          </button>*/}
 
           {/* Logo */}
           <div className="absolute left-4 sm:left-[164px]">

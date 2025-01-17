@@ -21,38 +21,38 @@ const HomeCoverSection = ({ blogs }) => {
           <section className="w-full mt-0 sm:mt-24 sm:px-10 md:px-24 sxl:px-32 flex flex-col items-center justify-center">
             <h3 className="text-center w-full inline-block font-bold capitalize text-2xl md:text-4xl text-dark dark:text-light">
               The Larger Consciousness Systems.
-              <div className="grid grid-cols-3 gap-6 sm:mt-16">
-                {/* Top Row */}
-                <article className="col-span-2 row-span-1 relative">
-                  <BlogLayoutOne blog={sortedBlogs[0]} />
-                </article>
-                <article className="col-span-1 row-span-1 relative">
-                  <BlogLayoutFour blog={sortedBlogs[1]} />
-                </article>
-                {/* Second Row */}
-                <article className="col-span-1 row-span-1 relative">
-                  <BlogLayoutFour blog={sortedBlogs[10]} />
-                </article>
-                <article className="col-span-1 row-span-1 relative">
-                  <BlogLayoutFour blog={sortedBlogs[9]} />
-                </article>
-                <article className="col-span-1 row-span-1 relative">
-                  <BlogLayoutFour blog={sortedBlogs[7]} />
-                </article>
-                {/* Second Row */}
-                <article className="col-span-1 row-span-1 relative">
-                  <BlogLayoutFour blog={sortedBlogs[8]} />
-                </article>
-                <article className="col-span-1 row-span-1 relative">
-                  <BlogLayoutFour blog={sortedBlogs[9]} />
-                </article>
-                <article className="col-span-1 row-span-1 relative">
-                  <BlogLayoutFour blog={sortedBlogs[6]} />
-                </article>
-                <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br />{" "}
-                <br />
-              </div>
             </h3>
+            <div className="grid grid-cols-3 gap-6 sm:mt-16">
+              {/* Top Row */}
+              <article className="col-span-2 row-span-1 relative">
+                <BlogLayoutOne blog={sortedBlogs[0]} />
+              </article>
+              <article className="col-span-1 row-span-1 relative">
+                <BlogLayoutFour blog={sortedBlogs[1]} />
+              </article>
+              {/* Second Row */}
+              <article className="col-span-1 row-span-1 relative">
+                <BlogLayoutFour blog={sortedBlogs[10]} />
+              </article>
+              <article className="col-span-1 row-span-1 relative">
+                <BlogLayoutFour blog={sortedBlogs[9]} />
+              </article>
+              <article className="col-span-1 row-span-1 relative">
+                <BlogLayoutFour blog={sortedBlogs[7]} />
+              </article>
+              {/* Second Row */}
+              <article className="col-span-1 row-span-1 relative">
+                <BlogLayoutFour blog={sortedBlogs[8]} />
+              </article>
+              <article className="col-span-1 row-span-1 relative">
+                <BlogLayoutFour blog={sortedBlogs[9]} />
+              </article>
+              <article className="col-span-1 row-span-1 relative">
+                <BlogLayoutFour blog={sortedBlogs[6]} />
+              </article>
+              <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br />{" "}
+              <br />
+            </div>
           </section>
         </article>
         <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br />{" "}

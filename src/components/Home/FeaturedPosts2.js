@@ -25,6 +25,9 @@ const FeaturedPosts2 = ({ blogs }) => {
           <br />
           <br />
           <br />
+          <br />
+          <br />
+          <br />
 
           <h2 className="text-center w-full inline-block font-bold capitalize text-2xl md:text-4xl text-dark dark:text-light">
             --- TRENDING NEWS ---

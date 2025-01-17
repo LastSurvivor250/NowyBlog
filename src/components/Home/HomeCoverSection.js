@@ -20,8 +20,7 @@ const HomeCoverSection = ({ blogs }) => {
           <ConnectedSite />
           <section className="w-full mt-0 sm:mt-24 sm:px-10 md:px-24 sxl:px-32 flex flex-col items-center justify-center">
             <h3 className="text-center w-full inline-block font-bold capitalize text-2xl md:text-4xl text-dark dark:text-light">
-              The Larger Consciousness System- The God.
-            </h3>
+              The Larger Consciousness Systems.
             <div className="grid grid-cols-3 gap-6 sm:mt-16">
               {/* Top Row */}
               <article className="col-span-2 row-span-1 relative">
@@ -42,13 +41,13 @@ const HomeCoverSection = ({ blogs }) => {
               </article>
               {/* Second Row */}
               <article className="col-span-1 row-span-1 relative">
-                <BlogLayoutFour blog={sortedBlogs[11]} />
+                <BlogLayoutFour blog={sortedBlogs[8]} />
               </article>
               <article className="col-span-1 row-span-1 relative">
                 <BlogLayoutFour blog={sortedBlogs[9]} />
               </article>
               <article className="col-span-1 row-span-1 relative">
-                <BlogLayoutFour blog={sortedBlogs[7]} />
+                <BlogLayoutFour blog={sortedBlogs[6]} />
               </article>
               <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br />{" "}
               <br />

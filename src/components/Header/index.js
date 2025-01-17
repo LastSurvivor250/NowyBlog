@@ -13,7 +13,7 @@ const Header = () => {
     setClick(!click);
   };
   return (
-    <header className="w-full h-16 relative flex items-center bg-gradient-to-r from-white via-gray-100 to-white dark:from-dark dark:via-gray-800 dark:to-dark shadow-md">
+    <header className="w-full p-4 h-16 relative flex items-center bg-gradient-to-r from-white via-gray-100 to-white dark:from-dark dark:via-gray-800 dark:to-dark shadow-md">
       {/* Hamburger Menu for Mobile */}
       <button
         className="inline-block sm:hidden z-50 ml-4"

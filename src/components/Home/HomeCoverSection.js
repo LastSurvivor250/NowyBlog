@@ -27,7 +27,6 @@ const HomeCoverSection = ({ blogs }) => {
               <article className="col-span-2 row-span-1 relative">
                 <BlogLayoutOne blog={sortedBlogs[0]} />
               </article>
-              <br />
               <article className="col-span-1 row-span-1 relative">
                 <BlogLayoutFour blog={sortedBlogs[1]} />
               </article>

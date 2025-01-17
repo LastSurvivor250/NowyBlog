@@ -50,11 +50,13 @@ const HomeCoverSection = ({ blogs }) => {
               <article className="col-span-1 row-span-1 relative">
                 <BlogLayoutFour blog={sortedBlogs[7]} />
               </article>
-              <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br />
+              <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br />{" "}
+              <br />
             </div>
           </section>
         </article>
-        <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br />
+        <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br />{" "}
+        <br />
       </div>
     </>
   );

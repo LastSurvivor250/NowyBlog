@@ -72,7 +72,7 @@ const Navbar = () => {
           </div>
 
           {/* SearchBar */}
-          <div className="hidden sm:flex absolute inset-x-1/2 transform -translate-x-1/2 justify-center">
+          <div className="hidden sm:flex absolute inset-x-1/2 transform -translate-x-1/2 justify-center ">
             <SearchBar
               query={searchQuery}
               onChange={setSearchQuery}

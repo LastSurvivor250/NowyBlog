@@ -20,7 +20,7 @@ const HomeCoverSection = ({ blogs }) => {
           <ConnectedSite />
           <section className="w-full mt-0 sm:mt-24 sm:px-10 md:px-24 sxl:px-32 flex flex-col items-center justify-center">
             <h3 className="text-center w-full inline-block font-bold capitalize text-2xl md:text-4xl text-dark dark:text-light">
-              Modern Understanding of ADHD will have an impact on our lives.
+              The Larger Consciousness System- The God.
             </h3>
             <div className="grid grid-cols-3 gap-6 sm:mt-16">
               {/* Top Row */}
@@ -33,6 +33,16 @@ const HomeCoverSection = ({ blogs }) => {
               {/* Second Row */}
               <article className="col-span-1 row-span-1 relative">
                 <BlogLayoutFour blog={sortedBlogs[10]} />
+              </article>
+              <article className="col-span-1 row-span-1 relative">
+                <BlogLayoutFour blog={sortedBlogs[9]} />
+              </article>
+              <article className="col-span-1 row-span-1 relative">
+                <BlogLayoutFour blog={sortedBlogs[7]} />
+              </article>
+              {/* Second Row */}
+              <article className="col-span-1 row-span-1 relative">
+                <BlogLayoutFour blog={sortedBlogs[11]} />
               </article>
               <article className="col-span-1 row-span-1 relative">
                 <BlogLayoutFour blog={sortedBlogs[9]} />

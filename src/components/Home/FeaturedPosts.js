@@ -34,7 +34,7 @@ const FeaturedPosts = ({ blogs }) => {
                   className=" col-span-2  sxl:col-span-1 row-span-2 relative"
                   style={{ width: "125%", left: "-195px" }}
                 >
-                  <BlogLayoutOne blog={sortedBlogs[2]} />
+                  <BlogLayoutOne blog={sortedBlogs[3]} />
                 </article>
               </div>
               <div className="flex justify-between align-items ">

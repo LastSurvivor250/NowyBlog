@@ -27,7 +27,7 @@ const FeaturedPosts = ({ blogs }) => {
                   {/* 82% zamiast 3/4 (75%) */}
                   <BlogLayoutFour blog={sortedBlogs[1]} />
                 </div>
-                <div className="md:-ml-96 md:w-[140%] relative z-10">
+                <div className="md:-ml-[-12,7rem] md:w-[140%] relative z-10">
                   {" "}
                   {/* Dodanie z-index */}
                   <BlogLayoutOne blog={sortedBlogs[3]} />

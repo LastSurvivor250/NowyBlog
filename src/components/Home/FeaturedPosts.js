@@ -38,10 +38,52 @@ const FeaturedPosts = ({ blogs }) => {
               </div>
               <br />
               {/* Bottom Row */}
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-6">
-                {[17, 16, 15, 14].map((index) => (
-                  <BlogLayoutFour key={index} blog={sortedBlogs[index]} />
-                ))}
+              <div className="relative">
+                {/* Scrollable Container */}
+                <div
+                  className="flex overflow-x-auto scroll-smooth snap-x snap-mandatory no-scrollbar"
+                  style={{ scrollBehavior: "smooth" }}
+                >
+                  {/* Map through all elements */}
+                  {sortedBlogs.slice(0, 10).map((blog, index) => (
+                    <div
+                      key={index}
+                      className="flex-shrink-0 w-full sm:w-1/2 md:w-1/3 lg:w-1/4 px-4 snap-start"
+                    >
+                      <BlogLayoutFour blog={blog} />
+                    </div>
+                  ))}
+                </div>
+
+                {/* Scroll Buttons (Optional) */}
+                <button
+                  onClick={() => {
+                    const container = document.querySelector(
+                      ".scrollable-container"
+                    );
+                    container.scrollBy({
+                      left: -container.offsetWidth,
+                      behavior: "smooth",
+                    });
+                  }}
+                  className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full shadow-lg hover:bg-gray-700"
+                >
+                  &larr;
+                </button>
+                <button
+                  onClick={() => {
+                    const container = document.querySelector(
+                      ".scrollable-container"
+                    );
+                    container.scrollBy({
+                      left: container.offsetWidth,
+                      behavior: "smooth",
+                    });
+                  }}
+                  className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full shadow-lg hover:bg-gray-700"
+                >
+                  &rarr;
+                </button>
               </div>
             </div>
           </section>

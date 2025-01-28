@@ -36,7 +36,7 @@ const FeaturedPosts = ({ blogs }) => {
                   <BlogLayoutFour key={index} blog={sortedBlogs[index]} />
                 ))}
               </div>
-
+              <br />
               {/* Bottom Row */}
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-6">
                 {[17, 16, 15, 14].map((index) => (

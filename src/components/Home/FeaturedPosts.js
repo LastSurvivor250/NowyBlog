@@ -22,12 +22,12 @@ const FeaturedPosts = ({ blogs }) => {
             <div className="grid gap-6">
               {/* Top Section */}
               <div className="grid md:grid-cols-2 gap-6">
-                <div className="md:w-[82%]">
+                <div className="md:w-[65%]">
                   {" "}
                   {/* 82% zamiast 3/4 (75%) */}
                   <BlogLayoutFour blog={sortedBlogs[1]} />
                 </div>
-                <div className="md:-ml-60 md:w-[140%] relative z-10">
+                <div className="md:-ml-200 md:w-[140%] relative z-10">
                   {" "}
                   {/* Dodanie z-index */}
                   <BlogLayoutOne blog={sortedBlogs[3]} />

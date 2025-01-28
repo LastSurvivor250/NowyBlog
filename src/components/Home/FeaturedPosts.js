@@ -27,7 +27,7 @@ const FeaturedPosts = ({ blogs }) => {
                   {/* Zmiana z 3/4 na 4/5 */}
                   <BlogLayoutFour blog={sortedBlogs[1]} />
                 </div>
-                <div className="md:-ml-56 md:w-[135%]">
+                <div className="md:-ml-56 md:w-[127%]">
                   {" "}
                   {/* Zwiększenie procentu i marginesu */}
                   <BlogLayoutOne blog={sortedBlogs[3]} />
@@ -50,10 +50,12 @@ const FeaturedPosts = ({ blogs }) => {
             </div>
           </section>
         </article>{" "}
-        <br></br>
-        <br></br>
-        <br></br>
       </div>
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
     </>
   );
 };

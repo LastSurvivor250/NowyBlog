@@ -1,3 +1,4 @@
+"use client";
 import { sortBlogs } from "@/src/utils";
 import React from "react";
 import BlogLayoutOne from "../Blog/BlogLayoutOne";

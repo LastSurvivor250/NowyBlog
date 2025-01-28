@@ -10,65 +10,43 @@ const FeaturedPosts = ({ blogs }) => {
   const blog = sortedBlogs[0];
   return (
     <>
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <div className="">
-        <article className="flex flex-row items-start justify-end  sm:mx-10 relative h-[164vh] sm:h-[85vh] ">
+      <div className="container mx-auto px-4 sm:px-10">
+        <article className="flex flex-col sm:flex-row items-start justify-end relative min-h-screen sm:h-[85vh]">
           <ConnectedSite />
-          <section className="w-full mt-0 margin-right:11rem margin-left:-174px sm:mt-24   sm:px-10 md:px-24  sxl:px-32 flex flex-col items-center justify-center">
-            <h2 className="text-center w-full inline-block font-bold capitalize text-2xl md:text-4xl text-dark dark:text-light">
+
+          <section className="w-full mt-4 sm:mt-24 lg:px-24 xl:px-32">
+            <h2 className="text-center font-bold text-2xl md:text-4xl text-dark dark:text-light mb-8">
               --- SMMA SCHOOL ---
             </h2>
-            <div className="grid grid-rows-3 gap-6 ">
-              <div className="grid grid-cols-2 grid-rows-1 gap-6   sm:mt-16 space-between margin-left:170px ">
-                <article
-                  className=" col-span-2 sm:col-span-1 row-span-1 relative width:72px "
-                  style={{ width: "70%", left: "0px", bottom: "-5px" }}
-                >
+
+            <div className="grid gap-6">
+              {/* Top Section */}
+              <div className="grid md:grid-cols-2 gap-6">
+                <div className="md:w-3/4">
                   <BlogLayoutFour blog={sortedBlogs[1]} />
-                </article>
-                <article
-                  className=" col-span-2  sxl:col-span-1 row-span-2 relative"
-                  style={{ width: "125%", left: "-195px" }}
-                >
+                </div>
+                <div className="md:-ml-48 md:w-[125%]">
                   <BlogLayoutOne blog={sortedBlogs[3]} />
-                </article>
+                </div>
               </div>
-              <div className="flex justify-between align-items ">
-                <article className=" col-span-1 sm:col-span-1 row-span-1 relative">
-                  <BlogLayoutFour blog={sortedBlogs[7]} />
-                </article>
-                <article className="col-span-1 sm:col-span-1 row-span-1 relative">
-                  <BlogLayoutFour blog={sortedBlogs[5]} />
-                </article>
-                <article className="col-span-1 sm:col-span-1 row-span-1 relative">
-                  <BlogLayoutFour blog={sortedBlogs[10]} />
-                </article>
+
+              {/* Middle Row */}
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                {[7, 5, 10].map((index) => (
+                  <BlogLayoutFour key={index} blog={sortedBlogs[index]} />
+                ))}
               </div>
-              <div className="flex justify-between align-items ">
-                <article className=" col-span-1 sm:col-span-1 row-span-1 relative">
-                  <BlogLayoutFour blog={sortedBlogs[17]} />
-                </article>
-                <article className="col-span-1 sm:col-span-1 row-span-1 relative">
-                  <BlogLayoutFour blog={sortedBlogs[16]} />
-                </article>
-                <article className="col-span-1 sm:col-span-1 row-span-1 relative">
-                  <BlogLayoutFour blog={sortedBlogs[15]} />
-                </article>
-                <article className="col-span-1 sm:col-span-1 row-span-1 relative">
-                  <BlogLayoutFour blog={sortedBlogs[15]} />
-                </article>
+
+              {/* Bottom Row */}
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-6">
+                {[17, 16, 15, 14].map((index) => (
+                  <BlogLayoutFour key={index} blog={sortedBlogs[index]} />
+                ))}
               </div>
             </div>
           </section>
-          <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br />
         </article>
-        <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br />
       </div>
-      ;
     </>
   );
 };

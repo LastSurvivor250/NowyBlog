@@ -47,6 +47,9 @@ const FeaturedPosts = ({ blogs }) => {
                 <article className="col-span-1 sm:col-span-1 row-span-1 relative">
                   <BlogLayoutFour blog={sortedBlogs[10]} />
                 </article>
+                <br /> <br /> <br /> <br /> <br /> <br /> <br />
+              </div>
+              <div className="flex justify-between align-items ">
                 <article className=" col-span-1 sm:col-span-1 row-span-1 relative">
                   <BlogLayoutFour blog={sortedBlogs[17]} />
                 </article>
@@ -56,7 +59,9 @@ const FeaturedPosts = ({ blogs }) => {
                 <article className="col-span-1 sm:col-span-1 row-span-1 relative">
                   <BlogLayoutFour blog={sortedBlogs[15]} />
                 </article>
-                <br /> <br /> <br /> <br /> <br /> <br /> <br />
+                <article className="col-span-1 sm:col-span-1 row-span-1 relative">
+                  <BlogLayoutFour blog={sortedBlogs[15]} />
+                </article>
               </div>
             </div>
           </section>

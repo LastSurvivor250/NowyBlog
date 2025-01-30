@@ -1,13 +1,11 @@
 import { sortBlogs } from "@/src/utils";
 import React from "react";
 import BlogLayoutOne from "../Blog/BlogLayoutOne";
-
 import BlogLayoutFour from "./../Blog/BlogLayoutFour";
 import ConnectedSite from "../ConnectedSite/ConnectedSite";
 
 const FeaturedPosts = ({ blogs }) => {
   const sortedBlogs = sortBlogs(blogs);
-  const blog = sortedBlogs[0];
 
   return (
     <>
@@ -23,10 +21,13 @@ const FeaturedPosts = ({ blogs }) => {
             <div className="grid gap-6 w-full max-w-[1600px] mx-auto">
               {/* Top Section */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
+                {/* BlogLayoutFour (Left) */}
                 <div className="sm:w-[85%] lg:w-[75%]">
                   <BlogLayoutFour blog={sortedBlogs[1]} />
                 </div>
-                <div className="sm:-translate-x-20 lg:-translate-x-24 xl:-translate-x-32">
+
+                {/* BlogLayoutOne (Right) */}
+                <div className="w-full">
                   <BlogLayoutOne blog={sortedBlogs[3]} />
                 </div>
               </div>

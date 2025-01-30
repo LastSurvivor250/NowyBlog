@@ -59,11 +59,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <Head>
-        <script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4408324347115409"
-          crossOrigin="anonymous"
-        ></script>
+        <meta name="google-adsense-account" content="ca-pub-4408324347115409" />
       </Head>
       <body
         className={cx(
@@ -72,6 +68,14 @@ export default function RootLayout({ children }) {
           " font-mr bg-light dark:bg-dark"
         )}
       >
+        <Script
+          id="adsense"
+          strategy="afterInteractive"
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4408324347115409"
+          crossOrigin="anonymous"
+        />
+
         <Script id="theme-switcher">
           {`if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
     document.documentElement.classList.add('dark')

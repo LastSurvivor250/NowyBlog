@@ -11,10 +11,10 @@ const FeaturedPosts = ({ blogs }) => {
   return (
     <div className="relative isolate overflow-hidden bg-gradient-to-b from-light/5 via-dark/5 to-light/5 dark:from-dark/5 dark:via-light/5 dark:to-dark/5">
       <ConnectedSite />
-      
+
       <section className="container mx-auto px-4 py-24 sm:px-6 sm:py-32 lg:px-8">
         <h2 className="sr-only">SMMA School</h2>
-        
+
         <div className="grid auto-rows-[minmax(300px,auto)] grid-cols-1 gap-6 sm:grid-cols-8 sm:gap-8 lg:gap-12">
           {/* Hero Post - Spans 4 columns */}
           <article className="relative z-10 sm:col-span-4 sm:row-span-2">

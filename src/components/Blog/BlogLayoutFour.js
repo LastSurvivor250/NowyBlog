@@ -1,36 +1,49 @@
 import { format } from "date-fns";
-import { Tag } from "lucide-react";
 import Image from "next/image";
-
+import Link from "next/link";
 import React from "react";
 
 const BlogLayoutFour = ({ blog }) => {
   return (
-    <div className="group relative h-full overflow-hidden rounded-2xl bg-light shadow-xl transition-all duration-500 hover:shadow-2xl dark:bg-dark">
-      <div className="grid h-full grid-cols-1 items-center gap-6 p-6 md:grid-cols-2">
-        <div className="relative aspect-[5/4] overflow-hidden rounded-xl">
+    <div className="group flex flex-col h-full gap-4 text-dark dark:text-light">
+      {/* Image Container */}
+      <div className="w-full h-[120px] sm:h-[140px] overflow-hidden rounded-lg">
+        {" "}
+        {/* Adjusted height */}
+        <Link href={blog.url} className="block h-full">
           <Image
             src={blog.image.filePath.replace("../public", "")}
+            placeholder="blur"
+            blurDataURL={blog.image.blurhashDataUrl}
             alt={blog.title}
-            fill
-            className="object-cover transition-transform duration-500 group-hover:scale-110"
+            width={blog.image.width}
+            height={blog.image.height}
+            className="w-full h-full object-cover object-center group-hover:scale-105 transition-all ease duration-300"
+            sizes="(max-width: 640px) 100vw,(max-width: 1024px) 50vw, 33vw"
           />
-        </div>
+        </Link>
+      </div>
 
-        <div className="flex flex-col justify-center space-y-4">
-          <Tag
-            tag={blog.tags[0]}
-            className="self-start bg-light/80 backdrop-blur-sm dark:bg-dark/80"
-          />
-          <h3 className="font-display text-xl font-semibold md:text-2xl">
-            <span className="bg-gradient-to-r from-accent to-accent bg-[length:0px_3px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500 group-hover:bg-[length:100%_3px]">
+      {/* Text Content */}
+      <div className="flex flex-col flex-grow">
+        <span className="uppercase text-accent dark:text-accentDark font-semibold text-xs sm:text-sm mb-1">
+          {blog.tags[0]}
+        </span>
+
+        <Link href={blog.url} className="flex-grow">
+          <h2 className="font-semibold text-base sm:text-lg line-clamp-2">
+            <span
+              className="bg-gradient-to-r from-accent/50 dark:from-accentDark/50 to-accent/50 dark:to-accentDark/50 bg-[length:0px_6px]
+                group-hover:bg-[length:100%_6px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500"
+            >
               {blog.title}
             </span>
-          </h3>
-          <time className="text-sm text-dark/70 dark:text-light/70">
-            {format(new Date(blog.publishedAt), "MMM dd, yyyy")}
-          </time>
-        </div>
+          </h2>
+        </Link>
+
+        <span className="capitalize text-gray dark:text-light/50 font-semibold text-xs sm:text-base mt-2">
+          {format(new Date(blog.publishedAt), "MMMM dd, yyyy")}
+        </span>
       </div>
     </div>
   );

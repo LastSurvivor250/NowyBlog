@@ -53,7 +53,7 @@ const FeaturedPosts = ({ blogs }) => {
               style={{ marginTop: "56px" }}
             >
               {/* Adjusted heights to match the total height of the central-left section */}
-              {[18, 19, 20].map((index) => (
+              {[18, 19, 17, 16].map((index) => (
                 <div key={index} className="h-[187.5px] flex">
                   <BlogLayoutFive blog={sortedBlogs[index]} />
                 </div>

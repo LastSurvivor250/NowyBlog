@@ -54,7 +54,10 @@ const FeaturedPosts = ({ blogs }) => {
             </div>
 
             {/* Right Column */}
-            <div className="w-full sm:w-1/3 max-w-[300px] flex flex-col gap-6">
+            <div
+              className="w-full sm:w-1/3 max-w-[300px] flex flex-col gap-6"
+              style={{ marginTop: "56px" }}
+            >
               {/* Adjusted heights to match the total height of the central-left section */}
               {[18, 19, 20, 21].map((index) => (
                 <div key={index} className="h-[187.5px] flex">

@@ -5,6 +5,7 @@ import Header from "@/src/components/Header";
 import Footer from "../components/Footer";
 import siteMetadata from "../utils/siteMetaData";
 import Script from "next/script";
+import Head from "next/head";
 
 import Navbar from "../components/Navbar";
 const inter = Inter({
@@ -57,6 +58,13 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <Head>
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4408324347115409"
+          crossOrigin="anonymous"
+        ></script>
+      </Head>
       <body
         className={cx(
           inter.variable,
@@ -73,7 +81,6 @@ export default function RootLayout({ children }) {
         </Script>
         <Navbar />
         <Header />
-
         {children}
         <Footer />
       </body>

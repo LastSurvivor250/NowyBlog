@@ -5,9 +5,9 @@ import React from "react";
 
 const BlogLayoutFive = ({ blog }) => {
   return (
-    <div className="group flex flex-row h-full gap-6 text-dark dark:text-light">
-      {/* Image Container */}
-      <div className="w-1/3 h-40 sm:h-48 overflow-hidden rounded-lg flex-shrink-0">
+    <div className="group flex flex-row h-full gap-4 text-dark dark:text-light">
+      {/* Image Container - Fixed Aspect Ratio */}
+      <div className="w-2/5 aspect-[4/3] overflow-hidden rounded-lg flex-shrink-0">
         <Link href={blog.url} className="block h-full">
           <Image
             src={blog.image.filePath.replace("../public", "")}
@@ -22,32 +22,24 @@ const BlogLayoutFive = ({ blog }) => {
         </Link>
       </div>
 
-      {/* Text Content */}
-      <div className="flex flex-col flex-grow w-2/3">
-        {/* Tag */}
-        <span className="uppercase text-accent dark:text-accentDark font-semibold text-xs sm:text-sm mb-1">
+      {/* Text Content - Adjusted Sizing */}
+      <div className="flex flex-col flex-grow w-3/5 justify-center">
+        <span className="uppercase text-accent dark:text-accentDark font-semibold text-[0.6rem] sm:text-xs mb-1">
           {blog.tags[0]}
         </span>
 
-        {/* Title */}
-        <Link href={blog.url} className="flex-grow">
-          <h2 className="font-semibold text-base sm:text-lg line-clamp-2">
-            <span
-              className="bg-gradient-to-r from-accent/50 dark:from-accentDark/50 to-accent/50 dark:to-accentDark/50 bg-[length:0px_6px]
-                group-hover:bg-[length:100%_6px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500"
-            >
+        <Link href={blog.url}>
+          <h2 className="font-semibold text-sm sm:text-base line-clamp-2 leading-tight">
+            <span className="bg-gradient-to-r from-accent/50 to-accent/50 dark:from-accentDark/50 dark:to-accentDark/50 bg-[length:0px_4px] group-hover:bg-[length:100%_4px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500">
               {blog.title}
             </span>
           </h2>
         </Link>
 
-        {/* Date */}
-        <span className="capitalize text-gray dark:text-light/50 font-semibold text-xs sm:text-base mt-2">
-          {format(new Date(blog.publishedAt), "MMMM dd, yyyy")}
+        <span className="text-gray dark:text-light/50 font-semibold text-[0.6rem] sm:text-xs mt-1">
+          {format(new Date(blog.publishedAt), "MMM dd, yyyy")}
         </span>
       </div>
     </div>
   );
 };
-
-export default BlogLayoutFive;

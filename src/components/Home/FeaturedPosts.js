@@ -9,61 +9,48 @@ const FeaturedPosts = ({ blogs }) => {
   const sortedBlogs = sortBlogs(blogs);
 
   return (
-    <>
-      <div className="mb-16 sm:mb-24">
-        <article className="flex flex-row items-start justify-center sm:justify-between sm:mx-10 relative">
-          <ConnectedSite />
+    <div className="mb-16 sm:mb-24">
+      <article className="flex flex-col sm:flex-row items-start sm:justify-between sm:mx-4 lg:mx-10 relative">
+        <ConnectedSite />
 
-          <section className="w-full mt-0 sm:mt-24 px-4 sm:px-10 md:px-24 sxl:px-32 flex flex-row items-start gap-6">
-            {/* Left & Center Grid */}
-            <div className="w-full max-w-[900px]">
-              {/* Title */}
-              <h2 className="text-center w-full font-bold capitalize text-2xl md:text-4xl text-dark dark:text-light mb-8">
-                --- SMMA SCHOOL ---
-              </h2>
+        <section className="w-full mt-0 sm:mt-24 px-4 sm:px-6 md:px-12 sxl:px-16 flex flex-col sm:flex-row gap-6">
+          {/* Main Content */}
+          <div className="w-full sm:w-2/3 flex flex-col">
+            <h2 className="text-center sm:text-left font-bold capitalize text-2xl md:text-3xl xl:text-4xl text-dark dark:text-light mb-6 sm:mb-8">
+              --- SMMA SCHOOL ---
+            </h2>
 
-              {/* Posts Grid */}
-              <div className="grid gap-6">
-                {/* First Row */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
-                  <div className="w-full h-[300px]">
-                    <BlogLayoutOne blog={sortedBlogs[11]} />
+            <div className="grid gap-4 sm:gap-6">
+              {/* Top Row */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+                {[11, 3].map((index) => (
+                  <div key={index} className="aspect-[2/1]">
+                    <BlogLayoutOne blog={sortedBlogs[index]} />
                   </div>
-                  <div className="w-full h-[300px]">
-                    <BlogLayoutOne blog={sortedBlogs[3]} />
+                ))}
+              </div>
+
+              {/* Middle Row */}
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
+                {[7, 5, 10].map((index) => (
+                  <div key={index} className="aspect-[4/3]">
+                    <BlogLayoutFour blog={sortedBlogs[index]} />
                   </div>
-                </div>
-
-                {/* Second Row */}
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8">
-                  {[7, 5, 10].map((index) => (
-                    <div key={index} className="w-full h-[250px]">
-                      <BlogLayoutFour blog={sortedBlogs[index]} />
-                    </div>
-                  ))}
-                </div>
-
-                {/* Third Row */}
+                ))}
               </div>
             </div>
+          </div>
 
-            {/* Right Column */}
-            <div
-              className="w-full sm:w-1/3 max-w-[300px] flex flex-col gap-6"
-              style={{ marginTop: "56px" }}
-            >
-              {/* Adjusted heights to match the total height of the central-left section */}
-              {[18, 19, 17, 16].map((index) => (
-                <div key={index} className="h-[187.5px] flex">
-                  <BlogLayoutFive blog={sortedBlogs[index]} />
-                </div>
-              ))}
-            </div>
-          </section>
-        </article>
-      </div>
-    </>
+          {/* Right Column - BlogLayoutFive Posts */}
+          <div className="w-full sm:w-1/3 flex flex-col gap-4 sm:gap-6 mt-6 sm:mt-[56px]">
+            {[18, 19, 17, 16].map((index) => (
+              <div key={index} className="aspect-[5/3]">
+                <BlogLayoutFive blog={sortedBlogs[index]} />
+              </div>
+            ))}
+          </div>
+        </section>
+      </article>
+    </div>
   );
 };
-
-export default FeaturedPosts;

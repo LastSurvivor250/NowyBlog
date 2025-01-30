@@ -44,13 +44,6 @@ const FeaturedPosts = ({ blogs }) => {
                 </div>
 
                 {/* Third Row */}
-                <div className="grid grid-cols-1 sm:grid-cols-4 gap-6 sm:gap-8">
-                  {[13, 14, 15, 16].map((index) => (
-                    <div key={index} className="w-full h-[200px]">
-                      <BlogLayoutFour blog={sortedBlogs[index]} />
-                    </div>
-                  ))}
-                </div>
               </div>
             </div>
 
@@ -60,7 +53,7 @@ const FeaturedPosts = ({ blogs }) => {
               style={{ marginTop: "56px" }}
             >
               {/* Adjusted heights to match the total height of the central-left section */}
-              {[18, 19, 20, 21].map((index) => (
+              {[18, 19, 20].map((index) => (
                 <div key={index} className="h-[187.5px] flex">
                   <BlogLayoutThree blog={sortedBlogs[index]} />
                 </div>

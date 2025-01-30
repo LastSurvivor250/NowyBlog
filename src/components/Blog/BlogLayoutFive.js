@@ -43,3 +43,5 @@ const BlogLayoutFive = ({ blog }) => {
     </div>
   );
 };
+
+export default BlogLayoutFive;

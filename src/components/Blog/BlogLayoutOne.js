@@ -6,7 +6,7 @@ import { slug } from "github-slugger";
 
 const BlogLayoutOne = ({ blog }) => {
   return (
-    <div className="group inline-block overflow-hidden rounded-lg w-full h-96 sm:h-[28rem] relative">
+    <div className="group inline-block overflow-hidden rounded-lg w-full h-72 sm:h-80 relative">
       <div
         className="absolute inset-0 w-full h-full
           bg-gradient-to-b from-transparent from-0% to-dark/90  
@@ -23,7 +23,7 @@ const BlogLayoutOne = ({ blog }) => {
         sizes="(max-width: 1180px) 100vw, 50vw"
       />
 
-      <div className="absolute bottom-0 p-4 xs:p-6 sm:p-10">
+      <div className="absolute bottom-0 p-4 xs:p-6 sm:p-8">
         <Tag
           link={`/categories/${slug(blog.tags[0])}`}
           name={blog.tags[0]}

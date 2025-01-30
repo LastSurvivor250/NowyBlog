@@ -7,7 +7,7 @@ const BlogLayoutFour = ({ blog }) => {
   return (
     <div className="group flex flex-col h-full gap-4 text-dark dark:text-light">
       {/* Image Container */}
-      <div className="w-full h-48 sm:h-56 overflow-hidden rounded-lg">
+      <div className="w-full h-40 sm:h-48 overflow-hidden rounded-lg">
         <Link href={blog.url} className="block h-full">
           <Image
             src={blog.image.filePath.replace("../public", "")}

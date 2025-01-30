@@ -22,10 +22,10 @@ const FeaturedPosts = ({ blogs }) => {
 
               {/* Top Section */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
-                <div className="w-full">
+                <div className="w-full aspect-square">
                   <BlogLayoutOne blog={sortedBlogs[11]} />
                 </div>
-                <div className="w-full">
+                <div className="w-full aspect-square">
                   <BlogLayoutOne blog={sortedBlogs[3]} />
                 </div>
               </div>
@@ -33,7 +33,7 @@ const FeaturedPosts = ({ blogs }) => {
               {/* Bottom Section */}
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8">
                 {[7, 5, 10].map((index) => (
-                  <div key={index}>
+                  <div key={index} className="aspect-square">
                     <BlogLayoutFour blog={sortedBlogs[index]} />
                   </div>
                 ))}
@@ -43,7 +43,7 @@ const FeaturedPosts = ({ blogs }) => {
             {/* Right Column */}
             <div className="w-full sm:w-1/3 max-w-[300px] flex flex-col gap-6">
               {[18, 19, 20, 21].map((index) => (
-                <div key={index} className="flex-1">
+                <div key={index} className="aspect-square">
                   <BlogLayoutFour blog={sortedBlogs[index]} />
                 </div>
               ))}

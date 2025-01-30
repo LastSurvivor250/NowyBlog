@@ -56,7 +56,7 @@ const FeaturedPosts = ({ blogs }) => {
 
           {/* Right Column - Matched Height */}
           <div className="w-full sm:w-1/3 flex flex-col gap-4 sm:gap-6 mt-6 sm:mt-[56px]">
-            {[18, 19, 17, 16].map((index) => (
+            {[18, 19, 17].map((index) => (
               <div key={index} className="h-[200px] sm:h-[220px]">
                 {" "}
                 {/* Fixed height */}

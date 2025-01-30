@@ -67,8 +67,9 @@ const FeaturedPosts = ({ blogs }) => {
           </section>
           <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br />
         </article>
+        <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br />
       </div>
-      <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br />;
+      ;
     </>
   );
 };

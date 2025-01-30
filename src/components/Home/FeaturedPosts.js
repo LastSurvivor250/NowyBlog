@@ -45,7 +45,7 @@ const FeaturedPosts = ({ blogs }) => {
               {[18, 19, 17, 16].map((index) => (
                 <div key={index} className="aspect-[8/5]">
                   {" "}
-                  {/* Changed from 5/3 */}
+                  {/* Arbitrary value */}
                   <BlogLayoutFive blog={sortedBlogs[index]} />
                 </div>
               ))}

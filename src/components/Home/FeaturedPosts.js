@@ -2,6 +2,7 @@ import { sortBlogs } from "@/src/utils";
 import React from "react";
 import BlogLayoutOne from "../Blog/BlogLayoutOne";
 import BlogLayoutFour from "./../Blog/BlogLayoutFour";
+import BlogLayoutThree from "./../Blog/BlogLayoutThree";
 import ConnectedSite from "../ConnectedSite/ConnectedSite";
 
 const FeaturedPosts = ({ blogs }) => {
@@ -61,7 +62,7 @@ const FeaturedPosts = ({ blogs }) => {
               {/* Adjusted heights to match the total height of the central-left section */}
               {[18, 19, 20, 21].map((index) => (
                 <div key={index} className="h-[187.5px] flex">
-                  <BlogLayoutFour blog={sortedBlogs[index]} />
+                  <BlogLayoutThree blog={sortedBlogs[index]} />
                 </div>
               ))}
             </div>

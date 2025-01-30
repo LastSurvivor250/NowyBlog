@@ -1,7 +1,7 @@
 import { format } from "date-fns";
 import { Tag } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
+
 import React from "react";
 
 const BlogLayoutFive = ({ blog }) => {

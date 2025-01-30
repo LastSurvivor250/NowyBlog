@@ -20,7 +20,8 @@ const FeaturedPosts = ({ blogs }) => {
               --- SMMA SCHOOL ---
             </h2>
 
-            <div className="grid gap-4 sm:gap-6 h-full">
+            <div className="grid gap-4 sm:gap-6">
+              {/* Top Row */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                 {[11, 3].map((index) => (
                   <div key={index} className="aspect-[2/1]">
@@ -29,6 +30,7 @@ const FeaturedPosts = ({ blogs }) => {
                 ))}
               </div>
 
+              {/* Middle Row */}
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
                 {[7, 5, 10].map((index) => (
                   <div key={index} className="aspect-[4/3]">
@@ -40,16 +42,14 @@ const FeaturedPosts = ({ blogs }) => {
           </div>
 
           {/* Right Column - Adjusted Height */}
-          <div className="w-full sm:w-1/3 flex flex-col gap-4 sm:gap-6 mt-6 sm:mt-[56px] h-full">
-            <div className="grid grid-rows-4 gap-4 sm:gap-6 h-full">
-              {[18, 19, 17, 16].map((index) => (
-                <div key={index} className="aspect-[8/5]">
-                  {" "}
-                  {/* Arbitrary value */}
-                  <BlogLayoutFive blog={sortedBlogs[index]} />
-                </div>
-              ))}
-            </div>
+          <div className="w-full sm:w-1/3 flex flex-col gap-4 sm:gap-6 mt-6 sm:mt-[56px]">
+            {[18, 19, 17, 16].map((index) => (
+              <div key={index} className="h-[200px] sm:h-[220px]">
+                {" "}
+                {/* Fixed height */}
+                <BlogLayoutFive blog={sortedBlogs[index]} />
+              </div>
+            ))}
           </div>
         </section>
       </article>

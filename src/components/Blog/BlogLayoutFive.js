@@ -6,8 +6,8 @@ import React from "react";
 const BlogLayoutFive = ({ blog }) => {
   return (
     <div className="group flex flex-row h-full gap-4 text-dark dark:text-light">
-      {/* Image Container - Fixed Aspect Ratio */}
-      <div className="w-2/5 aspect-[4/3] overflow-hidden rounded-lg flex-shrink-0">
+      {/* Image Container */}
+      <div className="w-2/5 h-full overflow-hidden rounded-lg flex-shrink-0">
         <Link href={blog.url} className="block h-full">
           <Image
             src={blog.image.filePath.replace("../public", "")}
@@ -22,7 +22,7 @@ const BlogLayoutFive = ({ blog }) => {
         </Link>
       </div>
 
-      {/* Text Content - Adjusted Sizing */}
+      {/* Text Content */}
       <div className="flex flex-col flex-grow w-3/5 justify-center">
         <span className="uppercase text-accent dark:text-accentDark font-semibold text-[0.6rem] sm:text-xs mb-1">
           {blog.tags[0]}

@@ -24,12 +24,10 @@ const BlogLayoutFour = ({ blog }) => {
 
       {/* Text Content */}
       <div className="flex flex-col flex-grow">
-        {/* Tag */}
         <span className="uppercase text-accent dark:text-accentDark font-semibold text-xs sm:text-sm mb-1">
           {blog.tags[0]}
         </span>
 
-        {/* Title */}
         <Link href={blog.url} className="flex-grow">
           <h2 className="font-semibold text-base sm:text-lg line-clamp-2">
             <span
@@ -41,7 +39,6 @@ const BlogLayoutFour = ({ blog }) => {
           </h2>
         </Link>
 
-        {/* Date */}
         <span className="capitalize text-gray dark:text-light/50 font-semibold text-xs sm:text-base mt-2">
           {format(new Date(blog.publishedAt), "MMMM dd, yyyy")}
         </span>

@@ -1,106 +1,116 @@
-"use client";
 import { sortBlogs } from "@/src/utils";
-import React from "react";
-import BlogLayoutOne from "../Blog/BlogLayoutOne";
+import React, { useRef, useState, useEffect } from "react";
 
+import BlogLayoutOne from "../Blog/BlogLayoutOne";
 import BlogLayoutFour from "./../Blog/BlogLayoutFour";
 import ConnectedSite from "../ConnectedSite/ConnectedSite";
 
 const FeaturedPosts = ({ blogs }) => {
   const sortedBlogs = sortBlogs(blogs);
   const blog = sortedBlogs[0];
+
+  // Scrollable row logic
+  const containerRef = useRef(null);
+  const itemRef = useRef(null);
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const [itemWidth, setItemWidth] = useState(0);
+  const [maxScroll, setMaxScroll] = useState(0);
+
+  useEffect(() => {
+    // Calculate item width and max scroll position
+    const updateDimensions = () => {
+      if (itemRef.current && containerRef.current) {
+        const width = itemRef.current.offsetWidth;
+        setItemWidth(width);
+        setMaxScroll(
+          containerRef.current.scrollWidth - containerRef.current.offsetWidth
+        );
+      }
+    };
+
+    updateDimensions();
+    window.addEventListener("resize", updateDimensions);
+    return () => window.removeEventListener("resize", updateDimensions);
+  }, []);
+
+  const scroll = (direction) => {
+    if (!containerRef.current) return;
+
+    const scrollAmount = itemWidth + 16; // 16px for gap
+    const newPosition =
+      direction === "next"
+        ? scrollPosition + scrollAmount
+        : scrollPosition - scrollAmount;
+
+    containerRef.current.scrollTo({
+      left: newPosition,
+      behavior: "smooth",
+    });
+
+    setScrollPosition(Math.max(0, Math.min(newPosition, maxScroll)));
+  };
+
   return (
     <>
-      <div className="container mx-auto px-4 sm:px-10">
-        <article className="flex flex-col sm:flex-row items-start justify-end relative min-h-screen sm:h-[85vh]">
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <div className="">
+        <article className="flex flex-row items-start justify-end  sm:mx-10 relative h-[164vh] sm:h-[85vh] ">
           <ConnectedSite />
-
-          <section className="w-full mt-4 sm:mt-24 lg:px-24 xl:px-32">
-            <h2 className="text-center font-bold text-2xl md:text-4xl text-dark dark:text-light mb-8">
+          <section className="w-full mt-0 margin-right:11rem margin-left:-174px sm:mt-24   sm:px-10 md:px-24  sxl:px-32 flex flex-col items-center justify-center">
+            <h2 className="text-center w-full inline-block font-bold capitalize text-2xl md:text-4xl text-dark dark:text-light">
               --- SMMA SCHOOL ---
             </h2>
-
-            <div className="grid gap-6">
-              {/* Top Section */}
-              <div className="grid md:grid-cols-2 gap-6">
-                <div className="md:w-3/4">
+            <div className="grid grid-rows-3 gap-6 ">
+              <div className="grid grid-cols-2 grid-rows-1 gap-6   sm:mt-16 space-between margin-left:170px ">
+                <article
+                  className=" col-span-2 sm:col-span-1 row-span-1 relative width:72px "
+                  style={{ width: "70%", left: "0px", bottom: "-5px" }}
+                >
                   <BlogLayoutFour blog={sortedBlogs[1]} />
-                </div>
-                <div className="md:-ml-48 md:w-[125%]">
+                </article>
+                <article
+                  className=" col-span-2  sxl:col-span-1 row-span-2 relative"
+                  style={{ width: "125%", left: "-195px" }}
+                >
                   <BlogLayoutOne blog={sortedBlogs[3]} />
-                </div>
+                </article>
               </div>
-
-              {/* Middle Row */}
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-                {[7, 5, 10].map((index) => (
-                  <BlogLayoutFour key={index} blog={sortedBlogs[index]} />
-                ))}
+              <div className="flex justify-between align-items ">
+                <article className=" col-span-1 sm:col-span-1 row-span-1 relative">
+                  <BlogLayoutFour blog={sortedBlogs[7]} />
+                </article>
+                <article className="col-span-1 sm:col-span-1 row-span-1 relative">
+                  <BlogLayoutFour blog={sortedBlogs[5]} />
+                </article>
+                <article className="col-span-1 sm:col-span-1 row-span-1 relative">
+                  <BlogLayoutFour blog={sortedBlogs[10]} />
+                </article>
               </div>
-              <br />
-              {/* Bottom Row */}
-              <div className="relative">
-                {/* Scrollable Container */}
-                <div
-                  className="flex overflow-x-auto scroll-smooth snap-x snap-mandatory no-scrollbar"
-                  style={{ scrollBehavior: "smooth" }}
-                >
-                  {/* Map through all elements */}
-                  {sortedBlogs.slice(0, 10).map((blog, index) => (
-                    <div
-                      key={index}
-                      className="flex-shrink-0 w-full sm:w-1/2 md:w-1/3 lg:w-1/4 px-4 snap-start"
-                    >
-                      <BlogLayoutFour blog={blog} />
-                    </div>
-                  ))}
-                </div>
-
-                {/* Scroll Buttons (Optional) */}
-                <button
-                  onClick={() => {
-                    const container = document.querySelector(
-                      ".scrollable-container"
-                    );
-                    container.scrollBy({
-                      left: -container.offsetWidth,
-                      behavior: "smooth",
-                    });
-                  }}
-                  className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full shadow-lg hover:bg-gray-700"
-                >
-                  &larr;
-                </button>
-                <button
-                  onClick={() => {
-                    const container = document.querySelector(
-                      ".scrollable-container"
-                    );
-                    container.scrollBy({
-                      left: container.offsetWidth,
-                      behavior: "smooth",
-                    });
-                  }}
-                  className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full shadow-lg hover:bg-gray-700"
-                >
-                  &rarr;
-                </button>
+              <div className="flex justify-between align-items ">
+                <article className=" col-span-1 sm:col-span-1 row-span-1 relative">
+                  <BlogLayoutFour blog={sortedBlogs[17]} />
+                </article>
+                <article className="col-span-1 sm:col-span-1 row-span-1 relative">
+                  <BlogLayoutFour blog={sortedBlogs[16]} />
+                </article>
+                <article className="col-span-1 sm:col-span-1 row-span-1 relative">
+                  <BlogLayoutFour blog={sortedBlogs[15]} />
+                </article>
+                <article className="col-span-1 sm:col-span-1 row-span-1 relative">
+                  <BlogLayoutFour blog={sortedBlogs[15]} />
+                </article>
               </div>
             </div>
           </section>
-        </article>{" "}
+          <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br />
+        </article>
+        <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br />
       </div>
-      <br />
-      <br />
-      <br />
-      <br />
-      <br /> <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br /> <br />
-      <br /> <br />
+      ;
     </>
   );
 };

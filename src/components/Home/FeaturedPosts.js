@@ -15,25 +15,34 @@ const FeaturedPosts = ({ blogs }) => {
 
           <section className="w-full mt-0 sm:mt-24 px-4 sm:px-10 md:px-24 sxl:px-32 flex flex-row items-start gap-6">
             {/* Left & Center Grid */}
-            <div className="w-full max-w-[900px] grid grid-cols-1 sm:grid-cols-2 gap-6">
-              <h2 className="text-center w-full font-bold capitalize text-2xl md:text-4xl text-dark dark:text-light mb-8 sm:col-span-2">
+            <div className="w-full max-w-[900px] grid gap-6">
+              <h2 className="text-center w-full font-bold capitalize text-2xl md:text-4xl text-dark dark:text-light mb-8">
                 --- SMMA SCHOOL ---
               </h2>
 
-              {/* Top Section */}
+              {/* First Row */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
-                <div className="w-full h-[300px] flex">
+                <div className="w-full h-[300px]">
                   <BlogLayoutOne blog={sortedBlogs[11]} />
                 </div>
-                <div className="w-full h-[300px] flex">
+                <div className="w-full h-[300px]">
                   <BlogLayoutOne blog={sortedBlogs[3]} />
                 </div>
               </div>
 
-              {/* Bottom Section */}
+              {/* Second Row */}
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8">
                 {[7, 5, 10].map((index) => (
-                  <div key={index} className="h-[250px] flex">
+                  <div key={index} className="w-full h-[250px]">
+                    <BlogLayoutFour blog={sortedBlogs[index]} />
+                  </div>
+                ))}
+              </div>
+
+              {/* Third Row */}
+              <div className="grid grid-cols-1 sm:grid-cols-4 gap-6 sm:gap-8">
+                {[13, 14, 15, 16].map((index) => (
+                  <div key={index} className="w-full h-[200px]">
                     <BlogLayoutFour blog={sortedBlogs[index]} />
                   </div>
                 ))}
@@ -42,8 +51,9 @@ const FeaturedPosts = ({ blogs }) => {
 
             {/* Right Column */}
             <div className="w-full sm:w-1/3 max-w-[300px] flex flex-col gap-6">
+              {/* Dostosowanie wysokości na podstawie sumy 3 rzędów */}
               {[18, 19, 20, 21].map((index) => (
-                <div key={index} className="h-[300px] flex">
+                <div key={index} className="h-[250px] flex">
                   <BlogLayoutFour blog={sortedBlogs[index]} />
                 </div>
               ))}

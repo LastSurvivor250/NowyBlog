@@ -24,7 +24,9 @@ const FeaturedPosts = ({ blogs }) => {
               {/* Top Row */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                 {[11, 3].map((index) => (
-                  <div key={index} className="aspect-[2/1]">
+                  <div key={index} className="h-[300px] sm:h-[350px]">
+                    {" "}
+                    {/* Fixed height */}
                     <BlogLayoutOne blog={sortedBlogs[index]} />
                   </div>
                 ))}
@@ -33,7 +35,9 @@ const FeaturedPosts = ({ blogs }) => {
               {/* Middle Row */}
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
                 {[7, 5, 10].map((index) => (
-                  <div key={index} className="aspect-[4/3]">
+                  <div key={index} className="h-[200px] sm:h-[220px]">
+                    {" "}
+                    {/* Fixed height */}
                     <BlogLayoutFour blog={sortedBlogs[index]} />
                   </div>
                 ))}
@@ -41,7 +45,7 @@ const FeaturedPosts = ({ blogs }) => {
             </div>
           </div>
 
-          {/* Right Column - Adjusted Height */}
+          {/* Right Column - Matched Height */}
           <div className="w-full sm:w-1/3 flex flex-col gap-4 sm:gap-6 mt-6 sm:mt-[56px]">
             {[18, 19, 17, 16].map((index) => (
               <div key={index} className="h-[200px] sm:h-[220px]">

@@ -1,54 +1,13 @@
 import { sortBlogs } from "@/src/utils";
-import React, { useRef, useState, useEffect } from "react";
-
+import React from "react";
 import BlogLayoutOne from "../Blog/BlogLayoutOne";
+
 import BlogLayoutFour from "./../Blog/BlogLayoutFour";
 import ConnectedSite from "../ConnectedSite/ConnectedSite";
 
 const FeaturedPosts = ({ blogs }) => {
   const sortedBlogs = sortBlogs(blogs);
   const blog = sortedBlogs[0];
-
-  // Scrollable row logic
-  const containerRef = useRef(null);
-  const itemRef = useRef(null);
-  const [scrollPosition, setScrollPosition] = useState(0);
-  const [itemWidth, setItemWidth] = useState(0);
-  const [maxScroll, setMaxScroll] = useState(0);
-
-  useEffect(() => {
-    // Calculate item width and max scroll position
-    const updateDimensions = () => {
-      if (itemRef.current && containerRef.current) {
-        const width = itemRef.current.offsetWidth;
-        setItemWidth(width);
-        setMaxScroll(
-          containerRef.current.scrollWidth - containerRef.current.offsetWidth
-        );
-      }
-    };
-
-    updateDimensions();
-    window.addEventListener("resize", updateDimensions);
-    return () => window.removeEventListener("resize", updateDimensions);
-  }, []);
-
-  const scroll = (direction) => {
-    if (!containerRef.current) return;
-
-    const scrollAmount = itemWidth + 16; // 16px for gap
-    const newPosition =
-      direction === "next"
-        ? scrollPosition + scrollAmount
-        : scrollPosition - scrollAmount;
-
-    containerRef.current.scrollTo({
-      left: newPosition,
-      behavior: "smooth",
-    });
-
-    setScrollPosition(Math.max(0, Math.min(newPosition, maxScroll)));
-  };
 
   return (
     <>

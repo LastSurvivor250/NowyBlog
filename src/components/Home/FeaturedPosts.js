@@ -42,6 +42,15 @@ const FeaturedPosts = ({ blogs }) => {
                   </div>
                 ))}
               </div>
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
+                {[7, 5, 10].map((index) => (
+                  <div key={index} className="h-[200px] sm:h-[220px]">
+                    {" "}
+                    {/* Fixed height */}
+                    <BlogLayoutFour blog={sortedBlogs[index]} />
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
 

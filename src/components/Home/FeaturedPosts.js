@@ -22,8 +22,8 @@ const FeaturedPosts = ({ blogs }) => {
               {/* Top Section */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
                 {/* BlogLayoutFour (Left) */}
-                <div className="sm:w-[85%] lg:w-[75%]">
-                  <BlogLayoutFour blog={sortedBlogs[1]} />
+                <div className="w-full">
+                  <BlogLayoutOne blog={sortedBlogs[11]} />
                 </div>
 
                 {/* BlogLayoutOne (Right) */}

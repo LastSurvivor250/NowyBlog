@@ -54,3 +54,5 @@ const FeaturedPosts = ({ blogs }) => {
     </div>
   );
 };
+
+export default FeaturedPosts;
